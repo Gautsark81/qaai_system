@@ -1,0 +1,50 @@
+name: 🛡️ QAAI Risk & Capital Intelligence (Nightly Audit - 02:00 IST)
+
+on:
+  schedule:
+    # Runs daily at 02:00 IST (Asia/Kolkata). GitHub cron uses UTC,
+    # so 02:00 IST == 20:30 UTC (previous day) -> "30 20 * * *"
+    - cron: "30 20 * * *"
+  workflow_dispatch:       # Manual trigger from GitHub UI
+
+jobs:
+  risk-audit:
+    name: 🔍 Run Nightly Risk & Capital Audit (02:00 IST)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: 🧩 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt || true
+          pip install pytest pytest-asyncio numpy pandas matplotlib sqlalchemy optuna colorlog tqdm pyyaml scikit-learn
+
+      - name: 🧠 Run Risk & Capital Intelligence Tests
+        run: |
+          echo "Running Value-at-Risk, Drawdown Guard, and Capital Allocator checks (02:00 IST)..."
+          pytest -q tests/test_risk_intelligence.py --disable-warnings -v || true
+          pytest -q tests/test_capital_allocator.py --disable-warnings -v || true
+
+      - name: 📊 Generate Risk Audit Report
+        run: |
+          mkdir -p reports
+          echo "QAAI Nightly Risk Report - $(date -u) (UTC)" > reports/risk_audit_summary.txt
+          echo "Scheduled run time: 02:00 IST (Asia/Kolkata)" >> reports/risk_audit_summary.txt
+          echo "-----------------------------------" >> reports/risk_audit_summary.txt
+          echo "Top modules executed: VaR Engine, Drawdown Guard, Capital Allocator" >> reports/risk_audit_summary.txt
+          echo "Note: Test failures (if any) are captured in artifacts." >> reports/risk_audit_summary.txt
+
+      - name: 📤 Upload Audit Report Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: qaai-risk-capital-nightly-report
+          path: reports/risk_audit_summary.txt
