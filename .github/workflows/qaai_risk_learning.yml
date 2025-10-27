@@ -1,12 +1,9 @@
 name: 🧠 QAAI Risk Learning (Weekly Retrain - 02:00 AM IST)
 
 on:
-  # ✅ Manual trigger from the GitHub Actions UI
-  workflow_dispatch:
-
-  # ✅ Automatic schedule (every Sunday at 02:00 AM IST = 20:30 UTC Saturday)
-  schedule:
-    - cron: '30 20 * * 6'
+  workflow_dispatch:        # ✅ Manual trigger from GitHub UI
+  schedule:                 # ✅ Automatic schedule (02:00 AM IST every Sunday)
+    - cron: "30 20 * * 6"   # 20:30 UTC = 02:00 AM IST Sunday
 
 jobs:
   risk-learning:
@@ -18,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -30,7 +27,6 @@ jobs:
           echo "🧠 Starting Weekly Risk Intelligence Retraining..."
           python - <<'EOF'
           import os, datetime, json, pathlib
-
           ts = datetime.datetime.now().isoformat()
           result = {
               "timestamp": ts,
