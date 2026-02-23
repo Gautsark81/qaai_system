@@ -1,0 +1,291 @@
+#!/usr/bin/env python3
+"""
+services/live_market.py  — production-ready Dhan market feed runner
+
+Features:
+ - Loads config from .env (via python-dotenv) and from real environment variables
+ - Supports tokens in the form:
+      NSE_EQ:1333
+      NSE_EQ:1333:Full
+      NSE:11915:Ticker
+ - Graceful shutdown via SIGINT/SIGTERM
+ - Exponential reconnect backoff with jitter
+ - Optional Redis publish (PUB/SUB) to stream ticks
+ - Safe-mode and dry-run flags
+ - Lightweight healthfile for systemd/k8s livenessProbe integration
+ - Clear logging and errors for troubleshooting
+"""
+
+import os
+import time
+import json
+import logging
+import random
+import signal
+from typing import Optional, Tuple, List
+
+# dotenv is a small dependency; your venv already has python-dotenv installed.
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except Exception:
+    # If python-dotenv not available, we still fallback to os.environ
+    pass
+
+# ===============================
+# ENV / CONFIG (defaults + overrides)
+# ===============================
+DHAN_CLIENT_ID = os.getenv("DHAN_CLIENT_ID")
+DHAN_ACCESS_TOKEN = os.getenv("DHAN_ACCESS_TOKEN")
+DHAN_API_VERSION = os.getenv("DHAN_API_VERSION", "v2")
+
+# Comma separated tokens, tokens may be 'SEG:SECID' or 'SEG:SECID:Subscription'
+DHAN_V2_INSTRUMENTS = os.getenv("DHAN_V2_INSTRUMENTS", "")
+
+# Default subscription type when not provided in token
+DHAN_SUBSCRIPTION_DEFAULT = os.getenv("DHAN_SUBSCRIPTION_DEFAULT", "Ticker")
+
+# Optional Redis URL, or blank to disable
+REDIS_URL = os.getenv("REDIS_URL", "")
+REDIS_CHANNEL = os.getenv("REDIS_CHANNEL", "market:ticks")
+
+# Whether we are in safe mode — feed only, no trading logic (for future)
+SAFE_MODE = os.getenv("SAFE_MODE", "true").lower() in ("1", "true", "yes")
+
+# Logging
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
+
+# Health file path (touch file updated to indicate running/healthy)
+HEALTHFILE = os.getenv("LIVE_MARKET_HEALTHFILE", "/tmp/live_market.healthy")
+
+# Backoff params
+BACKOFF_INITIAL = float(os.getenv("BACKOFF_INITIAL", "1.0"))
+BACKOFF_MAX = float(os.getenv("BACKOFF_MAX", "60.0"))
+BACKOFF_JITTER = float(os.getenv("BACKOFF_JITTER", "0.25"))  # fraction of backoff
+
+# ===============================
+# Logging config
+# ===============================
+logging.basicConfig(
+    level=getattr(logging, LOG_LEVEL, logging.INFO),
+    format="%(asctime)s %(levelname)s [%(name)s] %(message)s",
+)
+logger = logging.getLogger("live.market")
+
+# ===============================
+# Redis client (optional)
+# ===============================
+redis_client = None
+if REDIS_URL:
+    try:
+        import redis
+        redis_client = redis.from_url(REDIS_URL)
+        # Quick ping to check connection (not fatal if fails)
+        try:
+            redis_client.ping()
+            logger.info("Connected to Redis at %s", REDIS_URL)
+        except Exception as e:
+            logger.warning("Redis ping failed: %s — continuing without Redis", e)
+            redis_client = None
+    except Exception as e:
+        logger.warning("Redis library not available or connection failed: %s", e)
+        redis_client = None
+
+# Graceful shutdown flag
+_shutdown_requested = False
+
+
+def _on_signal(signum, frame):
+    global _shutdown_requested
+    logger.info("Signal %s received — requesting shutdown", signum)
+    _shutdown_requested = True
+
+
+signal.signal(signal.SIGINT, _on_signal)
+signal.signal(signal.SIGTERM, _on_signal)
+
+
+# ===============================
+# Token parsing helpers
+# ===============================
+def parse_token(token: str) -> Tuple[str, str, Optional[str]]:
+    """
+    Parse an instrument token.
+    Acceptable forms:
+      - SEG:SECID
+      - SEG:SECID:Subscription (e.g. NSE_EQ:1333:Full)
+    Returns (segment, secid, subscription_or_None)
+    """
+    parts = token.split(":")
+    if len(parts) == 2:
+        seg, secid = parts
+        return seg.strip(), secid.strip(), None
+    elif len(parts) == 3:
+        seg, secid, sub = parts
+        return seg.strip(), secid.strip(), sub.strip()
+    else:
+        raise ValueError(f"Invalid instrument token: {token!r}")
+
+
+def map_segment(MF, name: str):
+    """
+    Map common segment strings to MarketFeed constants.
+    MF is expected to be the MarketFeed class from Dhan SDK.
+    """
+    mapping = {
+        "NSE": getattr(MF, "NSE", None),
+        "NSE_EQ": getattr(MF, "NSE", None),
+        "BSE": getattr(MF, "BSE", None),
+        "BSE_EQ": getattr(MF, "BSE", None),
+    }
+    # Try direct mapping first, fallback to attribute lookup
+    if name in mapping and mapping[name] is not None:
+        return mapping[name]
+    return getattr(MF, name, None)
+
+
+def map_subscription(MF, sub_name: Optional[str]):
+    """
+    Map string like 'Full' / 'Quote' / 'Ticker' to MarketFeed subscription constant.
+    """
+    if sub_name is None or sub_name == "":
+        return getattr(MF, DHAN_SUBSCRIPTION_DEFAULT, getattr(MF, "Ticker"))
+    # Try multiple casings
+    for cand in (sub_name, sub_name.lower(), sub_name.upper(), sub_name.capitalize()):
+        if hasattr(MF, cand):
+            return getattr(MF, cand)
+    # fallback default
+    return getattr(MF, DHAN_SUBSCRIPTION_DEFAULT, getattr(MF, "Ticker"))
+
+
+# ===============================
+# Publish wrapper
+# ===============================
+def publish_tick(tick: dict):
+    """Publish tick to Redis if configured (non-blocking attempt)."""
+    if not redis_client:
+        return
+    try:
+        redis_client.publish(REDIS_CHANNEL, json.dumps(tick))
+    except Exception as e:
+        # don't fail feed on Redis errors; log at debug level
+        logger.debug("Redis publish failed: %s", e)
+
+
+# ===============================
+# Healthfile helper
+# ===============================
+def touch_healthfile():
+    try:
+        with open(HEALTHFILE, "w") as fh:
+            fh.write(str(int(time.time())))
+    except Exception:
+        logger.debug("Failed to touch healthfile %s", HEALTHFILE)
+
+
+# ===============================
+# Main runner
+# ===============================
+def run():
+    # Import SDK lazily so module import doesn't fail during testing
+    try:
+        from dhanhq import DhanContext, MarketFeed
+    except Exception as e:
+        logger.error("Failed to import dhanhq SDK: %s", e)
+        raise SystemExit(1)
+
+    # Validate credentials
+    if not DHAN_CLIENT_ID or not DHAN_ACCESS_TOKEN:
+        logger.error("DHAN_CLIENT_ID or DHAN_ACCESS_TOKEN missing. Set them in .env or environment.")
+        raise SystemExit(1)
+
+    ctx = DhanContext(DHAN_CLIENT_ID, DHAN_ACCESS_TOKEN)
+    logger.info("DhanContext initialized (client_id=%s) using API v%s", DHAN_CLIENT_ID, DHAN_API_VERSION)
+
+    # Build instruments list
+    tokens = [x.strip() for x in DHAN_V2_INSTRUMENTS.split(",") if x.strip()]
+    instruments = []
+    for tok in tokens:
+        try:
+            seg, secid, sub = parse_token(tok)
+        except Exception as e:
+            logger.warning("Skipping instrument token %r: %s", tok, e)
+            continue
+        seg_const = map_segment(MarketFeed, seg)
+        if seg_const is None:
+            logger.warning("Unknown segment for token %s -> %s", tok, seg)
+            continue
+        sub_const = map_subscription(MarketFeed, sub)
+        instruments.append((seg_const, secid, sub_const))
+
+    if not instruments:
+        logger.error("No valid instruments parsed from DHAN_V2_INSTRUMENTS. Exiting.")
+        raise SystemExit(1)
+
+    logger.info("Subscribing to %d instruments", len(instruments))
+    feed = MarketFeed(ctx, instruments, DHAN_API_VERSION)
+
+    # Backoff loop
+    backoff = BACKOFF_INITIAL
+    while not _shutdown_requested:
+        try:
+            logger.info("Starting feed.run_forever()")
+            feed.run_forever()
+        except KeyboardInterrupt:
+            logger.info("KeyboardInterrupt — shutting down")
+            break
+        except Exception as e:
+            logger.exception("Market feed error: %s", e)
+
+        # Drain any pending items from SDK if available
+        if hasattr(feed, "get_data"):
+            try:
+                while True:
+                    pkt = feed.get_data()
+                    if not pkt:
+                        break
+                    if isinstance(pkt, list):
+                        for p in pkt:
+                            publish_tick(p)
+                    else:
+                        publish_tick(pkt)
+            except Exception:
+                # ignore drain errors
+                pass
+
+        if _shutdown_requested:
+            break
+
+        # Exponential backoff + jitter
+        jitter = backoff * BACKOFF_JITTER * (random.random() - 0.5) * 2
+        wait = min(BACKOFF_MAX, backoff + jitter)
+        logger.warning("Feed disconnected — retrying in %.1f seconds", wait)
+        # touch healthfile so external monitors know we attempted reconnection
+        touch_healthfile()
+        time.sleep(max(0.1, wait))
+        backoff = min(BACKOFF_MAX, backoff * 2)
+
+    # graceful shutdown
+    try:
+        if hasattr(feed, "stop"):
+            logger.info("Stopping feed.stop()")
+            feed.stop()
+    except Exception as e:
+        logger.debug("Feed stop failed: %s", e)
+
+    logger.info("Live market runner stopped.")
+
+
+# -------------------------------
+# CLI entrypoint
+# -------------------------------
+if __name__ == "__main__":
+    logger.info("Starting live_market runner (safe_mode=%s)", SAFE_MODE)
+    touch_healthfile()
+    try:
+        run()
+    except SystemExit:
+        raise
+    except Exception as e:
+        logger.exception("Unhandled error in live_market runner: %s", e)
+        raise

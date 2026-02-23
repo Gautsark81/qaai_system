@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Repo Scan Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 18px; }
+    .summary { margin-bottom: 18px; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 18px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    tr:nth-child(even){background-color: #f9f9f9;}
+    .token { font-weight: bold; }
+    .small { font-size: 0.9em; color: #666; }
+    .badge { background: #eee; padding: 4px 8px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>Repo Scan Report</h1>
+  <div class="summary">
+    <p><strong>Generated:</strong> {{ generated_at }}</p>
+    <p>
+      <span class="badge">Scanned: {{ summary.scanned }}</span>
+      <span class="badge">Results: {{ summary.results_count }}</span>
+      <span class="badge">TODOs: {{ summary.todos_count }}</span>
+      <span class="badge">Skipped large: {{ summary.skipped_large }}</span>
+      <span class="badge">Skipped binary: {{ summary.skipped_binary }}</span>
+      <span class="badge">Errors: {{ summary.errors }}</span>
+      <span class="small">Duration: {{ summary.duration_sec }}s</span>
+    </p>
+  </div>
+
+  <h2>Findings</h2>
+  <table>
+    <thead>
+      <tr><th>Path</th><th>Type</th><th>Details</th></tr>
+    </thead>
+    <tbody>
+    {% for r in results %}
+      <tr>
+        <td><code>{{ r.path }}</code></td>
+        <td>
+          {% if r.todos %}TODOs ({{ r.todos|length }})
+          {% elif r.skipped_large %}Skipped (large)
+          {% elif r.skipped_binary_ext %}Skipped (binary ext)
+          {% elif r.error %}Error
+          {% else %}Info
+          {% endif %}
+        </td>
+        <td>
+          {% if r.todos %}
+            <ul>
+              {% for t in r.todos %}
+                <li><span class="token">{{ t.token }}</span> @{{ t.line }}: {{ t.line_text|e }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <span class="small">{{ r.size or '' }} {{ r.error or '' }}</span>
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

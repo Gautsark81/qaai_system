@@ -1,0 +1,17 @@
+version: v1
+
+# --- Average risk per trade ---
+max_avg_risk: 0.02
+warn_avg_risk: 0.015
+
+# --- Risk volatility ---
+risk_volatility_warn: 0.01
+risk_volatility_bad: 0.02
+
+# --- Tail risk ---
+tail_n: 5
+tail_loss_bad: 0.10
+
+# --- Governance ---
+fail_score_cap: 0.25
+risk_range_warn: 0.012

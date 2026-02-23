@@ -1,0 +1,1268 @@
+Can you check we are on the right track? and what is the status of my project? Below I pasted which we already discussed. Build an autonomous, self-improving trading ecosystem that: Screens ALL NSE stocks daily Produces a Top 200 Watchlist Auto-creates new trading strategies (param search + ML + AI) Backtests them on 6-month rolling windows Paper-tests in live markets Promotes only stable, 80%+ win-rate strategies Assigns the best strategy per stock via a meta-model Executes the trading plan automatically Evolves daily without manual intervention 2. CORE MODULES (MANDATORY) 2.1 Data & Universe Layer Location: modules/data_pipeline/ Tasks: Daily at 8:30 AM IST: Pull OHLCV + fundamentals for all NSE stocks Compute stock features: Liquidity: vol, value, bid-ask stability Volatility: ATR, HV, realized vol Trend/momentum: ADX, RSI, EMA slopes ML stock scoring Sector strength AI Strategy Generator Location: modules/strategy_factory/ Three layers of strategy creation: Param Search Generator Evolutionary / Bayesian Optimizer AI/LLM-Generated strategies Required behavior: Generate many variants Auto-register them Auto-backtest Promote if metrics pass thresholds 2.7 Promotion / Demotion Engine Location: modules/strategy_lifecycle/ Backtest-Approved Thresholds: backtest trades >= 200 win rate >= 0.80 PF >= 1.4 DD <= 0.15 Paper-Approved: paper trades >= 100 win rate >= 0.80 PF >= 1.4 regime stability = true Live-Approved: Backtest-Approved = true Paper-Approved = true Confidence threshold OR manual override
+
+
+Which file should we patch first?
+
+execution/router.py
+execution/orchestrator.py
+execution/risk_manager.py
+
+(Recommended order: Router → Orchestrator → RiskManager)
+
+MASTER PROJECT INSTRUCTION DOCUMENT (FINAL)
+✔ Includes all 25 Supercharge Upgrades
+✔ Includes All 14 Phases
+✔ Includes Your Risk Manager, Trade Executor, Trade Manager Rules
+✔ Includes NSE + Dhan + IST Constraints
+✔ Includes Scheduler, Monitoring, Notification Engine
+✔ Includes Data Ingestion + Alternative Data Sources
+
+
+Great — I’ll do this the practical way: first I’ll give you a clear, prioritized roadmap for the whole project (phases, milestones, outcomes). Right after that I’ll immediately complete the first development work items from the roadmap (so we make concrete progress now):
+
+make approved_for_live safe by default (set to False) and add a small unit test verifying the default; and
+
+add a compact test suite that ensures the broker-caller helper (_call_broker_submit) supports the 3 common adapter signatures (kwargs, single-dict, controlled positional).
+
+I’ll include the exact file contents and the git/PowerShell commands you can run to apply the patches and run tests locally. If you want me to continue after these two items, say “continue” and I’ll complete the next batch of items from the roadmap in the same reply (no background work, everything done now).
+
+Roadmap — high level & actionable (phases + milestones)
+
+I break the roadmap into 6 phases. Each phase lists concrete deliverables you can check off, test artifacts, and the immediate next step.
+
+Phase A — Safety, infra, and developer experience (CURRENT PRIORITY)
+
+Goal: Make the codebase safe for local/CI and remove accidental live promotion risks.
+
+A1 — approved_for_live default to False (safety).
+Deliverable: execution/order_manager.py change + unit test asserting default is False.
+Test: tests/test_approved_for_live.py.
+
+A2 — Broker-call compatibility tests (3 signatures).
+Deliverable: tests/test_broker_signature_adapter.py (3 tests).
+Purpose: prevents regressions when changing _call_broker_submit.
+
+A3 — Atomic paper-trade persistence (safe writes).
+Deliverable: safer _persist_paper_trade using write-to-temp + rename.
+
+A4 — CI gating: add GitHub Actions workflow to run tests and enforce approved_for_live not set to True on main unless explicitly allowed.
+Deliverable: .github/workflows/ci.yml.
+
+
+Phase B — Robustness & modularization
+
+Goal: Split monoliths into clean modules, add more tests, ensure deterministic simulations.
+
+B1 — Separate OrderManager into PaperOrderManager and LiveOrderManager.
+B2 — Add deterministic dry-run mode for ExecutionEngine with deterministic fills.
+B3 — Unit tests for ExecutionEngine wiring with both managers.
+
+
+Phase C — Data pipeline & features
+
+Goal: daily data ingestion, rolling features for ML.
+
+C1 — Implement modules/data_pipeline/ tasks (OHLCV pull, fundamentals).
+C2 — Implement analytics/feature_engine.py robust unit tests and sample outputs.
+C3 — Small backfill utilities to bootstrap ML dataset.
+
+Phase D — Strategy factory & automated generation
+
+Goal: generate, backtest, and register candidate strategies.
+
+D1 — Param search generator + API for registration.
+D2 — Bayesian/Evolutionary optimizer integration.
+D3 — LLM-assisted strategy generation (audit & templates).
+
+Phase E — Promotion engine & meta-model
+
+Goal: evaluate and promote strategies in a controlled, auditable way.
+
+E1 — Implement modules/strategy_lifecycle/ with thresholds you specified.
+E2 — Meta-model to assign best strategy per symbol.
+E3 — Canary live promotions with limits.
+
+Phase F — Observability, retraining & continuous evolution
+
+Goal: live monitoring, retraining, and automated adaptation.
+
+F1 — Metrics exporter and dashboards (Prometheus/Grafana).
+F2 — Daily retraining pipeline for meta-model and shadow models.
+F3 — Auto-rollback and safety alarms.
+
+
+
+
+
+🧠 GOLDEN RULES — FINAL, ENFORCEABLE FORM
+
+These are repo-level invariants, not suggestions.
+
+🟨 System Golden Rules (Authoritative)
+
+Decision ≠ Action
+The module that decides must never act.
+
+Single Source of Truth Is Law
+If two modules answer the same question → bug.
+
+Execution Is a Critical System
+Treat execution like aircraft software, not app code.
+
+Risk Always Precedes Intelligence
+A dumb safe strategy beats a smart unsafe one.
+
+Nothing Is Implicit
+Live trading, promotions, overrides must be explicit, logged, reversible.
+
+Fallbacks Must Be Deterministic
+Emergency behavior must be predictable, testable, one-time.
+
+State Lives in One Place
+Duplicated state will diverge → financial loss.
+
+Every Trade Is an Audit Event
+If you can’t explain it later, the system is broken today.
+
+🎯 MASTER GOALS — HOW PHASE-B ENABLES THEM
+
+Here is the direct causality, not hand-waving.
+
+✔ Autonomous Strategy Promotion
+
+Enabled because:
+
+Execution is deterministic
+
+PnL attribution is clean
+
+Risk events are centralized
+
+✔ Safe Live Deployment
+
+Enabled because:
+
+Kill switch lives in one place
+
+No implicit live execution
+
+Router cannot bypass risk
+
+✔ Daily Self-Evolution
+
+Enabled because:
+
+Execution behavior is stable
+
+Strategies can be compared apples-to-apples
+
+No execution noise leaks into ML signals
+
+✔ Meta-Model Strategy Assignment
+
+Enabled because:
+
+Execution outcomes are explainable
+
+Risk decisions are auditable
+
+Strategy confidence is trustworthy
+
+✔ Kill-Switch Safety
+
+Enabled because:
+
+Kill switch cannot be overridden accidentally
+
+Operator vs automatic kills are distinguishable
+
+Enforcement happens before execution
+
+✔ NSE-Grade Robustness
+
+Enabled because:
+
+Circuit breakers are centralized
+
+Reservations prevent over-allocation
+
+Cancel semantics are guaranteed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Partially done / in-place but needs finishing (◐)
+
+
+B1 — Data pipeline:
+
+
+Core building blocks exist (fetcher, features, store). These are functional and tested with DummyFetcher. ◐
+
+
+Missing: production connectors (Dhan/http provider fetcher), robust rate-limit/retry logic, S3/GCS abstraction, partitioning policy and manifest upload to remote. (Pending)
+
+
+
+
+B2 — Backtester:
+
+
+There are backtester-related tests in your repo and some backtester files (many backtester tests passed), but a full supercharged backtester (with pluggable slippage models, integrated fill-model hook and event-driven strategy orchestration) is not yet completed as a single clean module. ◐
+
+
+
+
+B6 — Execution & Order Routing (beyond OrderManager):
+
+
+OrderManager + broker signature adapter ✓.
+
+
+Missing: risk checks (symbol caps, portfolio exposure enforcement before submit), idempotency integration across distributed workers, advanced retry strategies. ◐
+
+
+
+
+Pending / not implemented (✗)
+These Phase B modules / features are still pending, or only exist as design (not code):
+
+
+B3 — Strategy Factory (param search, optimizer, LLM strategy generator): ✗
+
+
+No production-ready generator, optimization workflow, or strategy catalog + registration API implemented.
+
+
+
+
+B4 — Promotion / Demotion Engine (full lifecycle automation, audit + metrics gating): ✗
+
+
+You have safety guard (approved_for_live) and paper fallback; however a promotion/demotion engine with thresholds, automated promotion, and audit trails is not yet implemented.
+
+
+
+
+B5 — Meta-Model (pick best strategy per symbol): ✗
+
+
+B7 — Model Ops & Repro (artifact store, training pipelines, reproducibility guarantees): ✗
+
+
+B8 — Observability & Ops (prometheus, alerts, kill-switch, CI for deployments): ✗
+
+
+You have structured logs and local tests; but production-grade monitoring, alerting, and GitHub Actions CI are pending.
+
+
+
+
+
+Concrete prioritized checklist to complete Phase B
+I split Phase B into small, reviewable tasks you can implement and test one-by-one. I prioritized the items so each step builds on the previous.
+
+Priority Group 1 — Finish Data Infra & Local Pipelines (B1 full)
+
+
+Add production fetcher(s)
+
+
+Tasks: implement modules.data_pipeline.providers.dhan_fetcher (REST + websocket optional), with retry/backoff and rate-limit handling.
+
+
+Tests: unit tests with HTTP mocks; smoke ingest test for 5 symbols.
+
+
+Acceptance: ingest_universe for 5 symbols writes parquet manifests and passes tests.
+
+
+
+
+Add S3/GCS storage adapter
+
+
+Tasks: extend store.py to support object storage via a simple pluggable adapter (LocalStore and S3Store stub).
+
+
+Tests: run write/read using local adapter and a mocked S3 (or boto3 stub).
+
+
+Acceptance: same APIs work for both adapters.
+
+
+
+
+Add robust partitioning & manifest spec
+
+
+Tasks: define manifest schema (rows, checksum, timestamp, version), write manifest on write operation.
+
+
+Acceptance: manifest present and used by ingestion tests.
+
+
+
+
+
+Priority Group 2 — Backtester & Fill-model integration (B2)
+
+
+Backtester skeleton + slippage model
+
+
+Tasks: implement backtester/supercharged_backtester.py with: Backtester class, SlippageModel interface (pct & fixed tick implementations), run() returning BacktestResult.
+
+
+Tests: synthetic test comparing naive fills vs slippage model outputs.
+
+
+Acceptance: deterministic runs, trade log with PnL.
+
+
+
+
+Integrate shadow fill ML model into the backtester
+
+
+Tasks: create a hook to call ml.infer_fill as the fill-model inside backtester to decide partial/full fills per order.
+
+
+Tests: unit tests that call backtester with known seed and assert fill probabilities and trade logs.
+
+
+Acceptance: backtester uses the same infer-fill model as OrderManager and produces consistent trade outputs.
+
+
+
+
+Add event-driven strategy runner (optional for B2)
+
+
+Tasks: allow strategies to be event-driven with callback semantics.
+
+
+Acceptance: one example strategy runs.
+
+
+
+
+
+Priority Group 3 — Strategy Factory (B3)
+
+
+Param-search generator
+
+
+Tasks: simple grid generator that produces strategy variants and backtests them in parallel.
+
+
+Tests: generator produces N variants and backtester evaluates each.
+
+
+Acceptance: can generate catalog CSV {strategy_id, params, backtest_metrics}.
+
+
+
+
+Bayesian / evolutionary optimizer (optuna)
+
+
+Tasks: integrate Optuna to search hyperparameter space; store trials and top results.
+
+
+Acceptance: optimizer finds better objective value than a random baseline in controlled test.
+
+
+
+
+LLM strategy template pipeline (gated)
+
+
+Tasks: DSL + template + sandboxed translator to strategy code; requires heavy safety constraints.
+
+
+Acceptance: generate strategies as templates, not directly live-promoted.
+
+
+
+
+
+Priority Group 4 — Promotion & Meta-model (B4 + B5)
+
+
+Promotion engine (rules + audit)
+
+
+Tasks: promotion service that consumes metrics, applies configurable thresholds, writes immutable audit records.
+
+
+Acceptance: given synthetic metrics stream, promotion decisions follow rules and produce audit JSONL.
+
+
+
+
+Paper execution orchestration and metrics ingestion
+
+
+Tasks: route selected strategies to paper-mode live testing; collect fills & compute rolling stats.
+
+
+Acceptance: paper trades persist and metrics computed (win-rate, PF, trades count).
+
+
+
+
+Meta-model training pipeline
+
+
+Tasks: build dataset assembler to train a meta-model (features: previous performance + regime features).
+
+
+Acceptance: a simple logistic/regressor trained on synthetic dataset with scoring.
+
+
+
+
+
+Priority Group 5 — Execution, Risk, Ops (B6+B7+B8)
+
+
+Risk checks & enforcement before submit
+
+
+Tasks: implement symbol caps, daily loss limit, portfolio exposure checks in OrderManager pre-submit path.
+
+
+Acceptance: attempts to create orders violating risk are rejected with a clear error and logged.
+
+
+
+
+Model registry / artifact management
+
+
+Tasks: implement simple artifact folder layout + manifest for models; optionally add MLflow skeleton.
+
+
+Acceptance: trained model saved with metadata and reproducible training metadata.
+
+
+
+
+Monitoring & CI
+
+
+Tasks: GitHub Actions to run pytest and flake8; add basic Prometheus/alerting stubs; implement kill-switch control.
+
+
+Acceptance: CI runs on PR; basic alerting triggers on simulated failure.
+
+
+
+
+
+Small immediate next tasks I recommend you run now (top-2)
+These are the highest-leverage items to complete Phase B quickly.
+
+
+Backtester skeleton + integration with current fill model (this unlocks realistic paper testing and strategy selection).
+
+
+Why first: backtests drive promotion decisions; without a solid backtester promotions/meta-model cannot be trusted.
+
+
+
+
+Promotion engine minimal implementation (rules + audit logging).
+
+
+Why second: you already have approved_for_live guard; adding a rules engine with audit closes the loop from backtest -> paper -> live.
+
+
+
+
+I can generate the Backtester skeleton (code + unit tests) now and a minimal Promotion engine next — ready to apply as files/patches. Which should I produce first? (I can produce both immediately if you want.)
+
+Acceptance criteria to mark Phase B complete
+We will consider Phase B complete when all of the following are true:
+
+
+Data infra:
+
+
+production fetchers are implemented + ingest pipeline reliably writes partitioned parquet manifests (tested).
+
+
+
+
+Backtester:
+
+
+event-driven or vectorized backtester exists, integrates fill-model, deterministic results with seed.
+
+
+
+
+Strategy factory:
+
+
+param search + optimizer produce candidate strategies and a catalog.
+
+
+
+
+Promotion engine:
+
+
+automated promotion/demotion based on configurable thresholds; immutable audit logs.
+
+
+
+
+Meta-model:
+
+
+trained meta-model exists and picks strategies for symbols with evaluation metrics.
+
+
+
+
+Execution & risk:
+
+
+OrderManager + risk checks / idempotency working; paper execution integrated.
+
+
+
+
+Ops:
+
+
+CI runs tests & linters; basic monitoring + kill-switch in place.
+
+
+
+
+When you want, I’ll start implementing the backtester skeleton (or the promotion engine). Tell me whether to:
+
+
+A — implement Backtester skeleton + unit tests + fill-model hook now, or
+
+
+B — implement Promotion engine minimal (rules + audit) now.
+
+
+Say A or B (or A+B) and I’ll produce the code, tests and small README/usage so you can run them immediately.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Here is your Phase B status as of now, based on all work completed in this and previous chats — including the successful integration of the new execution pipeline and all passing tests.
+
+✅ PHASE B — STATUS SUMMARY
+
+Phase B covered:
+B1 – Data Pipeline Enhancements
+B3 – Strategy Factory
+B5 – Meta-Model Integration
+B6 – Execution & Order Routing
+B7 – Model Operations
+B8 – Observability & CI
+
+Below is the accurate, up-to-date status.
+
+✅ B1 — Data Pipeline (Partially complete → Mostly done)
+✔ Completed
+
+Dhan Fetcher API client
+
+Retry + backoff + error guards
+
+Rate-limit handling (429 + Retry-After)
+
+Test suite for rate-limit logic
+
+Feature-generation base system
+
+Base storage abstractions
+
+Manifests logic partially integrated
+
+❗ Pending / still needed
+
+WebSocket provider for live feeds
+
+S3/GCS storage adapter (currently filesystem only)
+
+Manifest generation + manifest upload (for batch jobs)
+
+Data freshness watchdog / pipeline health checks
+
+Status: ~70% complete
+
+⚪ B3 — Strategy Factory (Not yet started)
+
+This part is still untouched.
+
+Pending
+
+Strategy registry + dynamic loader
+
+Common interface: prepare(), predict(), generate_orders()
+
+Versioning + metadata
+
+Taking feature snapshots and injecting into strategies
+
+JIT loading strategies in backtests and live trading
+
+Status: 0% implemented
+
+⚪ B5 — Meta-Model (Not started)
+
+The meta-model is a key part of the architecture (RandomForest/LGBM ensemble using rolling features).
+No modules have been written in repo yet.
+
+Pending
+
+Meta-model training pipeline (offline + incremental modes)
+
+Rolling feature windows + robust normalization
+
+Prediction probability calibration
+
+Export formats + checkpoint storage
+
+Integration with StrategyEngine
+
+Status: 0% implemented
+
+✅ B6 — Execution & Order Routing (Major milestone: Completed)
+✔ Completed
+
+You now have two execution layers:
+
+(1) Existing Production OrderManager (execution/order_manager.py)
+
+Fully working, tested (all tests passed)
+
+Supports idempotency, retries, Dhan execution
+
+Stable API used across repo
+
+(2) New Modern Execution Pipeline (modules/order/manager.py)
+
+Router-based execution
+
+Idempotent order creation with client hints
+
+SQLite persistence
+
+Partial-fill handling
+
+Strong retry / backoff system
+
+Cancel idempotency
+
+Extendable execution engine architecture
+
+Full new pytest suite passed
+
+This is a big upgrade milestone.
+
+❗ Optional Enhancements (Not required for B6 completion but recommended)
+
+Async version
+
+Websocket fill ingestion
+
+Circuit-breaker routing
+
+Execution QoS scoring
+
+Reconciliation with broker positions/orders
+
+Status: Core B6 = Complete
+Improvements = optional
+
+⚪ B7 — Model Ops (Not started)
+
+Pending items:
+
+Registry for promoted models
+
+Auto-promotion logic tied to backtests
+
+Commit/Tagging of promoted strategies
+
+Storage of metrics + model artifacts
+
+Rollback mechanism
+
+“Active model” selector for live engine
+
+Status: 0% implemented (except PromotionRunner in Phase A)
+
+⚪ B8 — Observability / CI / Infra (Basic tests done, rest pending)
+✔ Completed
+
+Large, stable pytest ecosystem (600+ tests)
+
+Deterministic outputs
+
+Patch Orchestrator integration visible in logs
+
+Basic structured logs across modules
+
+Execution engine now emits structured events
+
+❗ Pending
+
+Prometheus metrics export
+
+Grafana dashboards
+
+Pipeline health alerts
+
+CI rules (linting, mypy, coverage thresholds)
+
+Error budget tracking
+
+Deployment checks (pre-deploy backtest gates)
+
+Status: ~20% complete
+
+🚦 Overall Phase B Progress
+Task	Status	Notes
+B1 — Data Pipeline	🟨 70%	Missing WS + S3 + manifest ops
+B3 — Strategy Factory	⛔ 0%	Not started
+B5 — Meta-Model	⛔ 0%	Not started
+B6 — Execution & Routing	🟩 100%	Fully complete (major milestone)
+B7 — Model Ops	⛔ 0%	Not started
+B8 — Observability / CI	🟨 20%	Only basic logs/tests exist
+
+Phase B completion: ~35%
+
+📌 Recommendation — Next Work Units
+
+If you want to proceed in the smartest order:
+
+1. Finish B1 fully (WS feeds + S3 + manifest pipeline)
+
+This unlocks live data & training.
+
+2. Move to B3 Strategy Factory
+
+Critical for running multiple strategies cleanly.
+
+3. Implement B5 Meta-Model
+
+This is the “brain” of the system.
+
+4. Address B7 Model Ops
+
+Needed before live deployment.
+
+5. Add B8 Observability hooks last
+
+Monitoring is best layered after engine is stable.
+
+👉 What would you like to start next?
+
+Choices:
+
+Continue B1 — Build WebSocket Provider (recommended next step)
+
+Start B3 — Strategy Factory module (registry + loader)
+
+Start B5 — Meta-Model training + inference pipeline
+
+Start B7 — Model Ops (registry, promotion, artifacts)
+
+Something else?
+
+
+
+
+
+
+
+
+🚀 PHASE C — AUTONOMOUS STRATEGY INTELLIGENCE (MASTER ROADMAP)
+
+Goal:
+Build a self-learning, self-healing, self-evolving trading organism that creates, evaluates, promotes, assigns, executes, and retires strategies automatically — without violating stability or safety.
+
+🔒 NON-NEGOTIABLE PRINCIPLES (LOCKED)
+
+Execution & risk logic are immutable
+
+Strategies generate intents, never actions
+
+ML & AI advise, never override
+
+Everything is replayable, auditable, explainable
+
+Failure must be loud, fast, and reversible
+
+🧩 PHASE C STRUCTURE (OVERVIEW)
+Phase C
+├── C1 Strategy Factory (Generation)
+├── C2 Strategy Evaluation & Robustness
+├── C3 Strategy Lifecycle (Promotion / Demotion)
+├── C4 Meta-Brain (Assignment & Selection)
+├── C5 Continuous Evolution Engine
+├── C6 Regime Intelligence & Self-Healing
+└── C7 Governance, Audit & Explainability
+
+🧠 PHASE C1 — STRATEGY FACTORY (AUTO-GENERATION)
+
+📍 modules/strategy_factory/
+
+Objective
+
+Generate thousands of strategy variants safely, deterministically, and reproducibly.
+
+C1.1 StrategySpec (DNA of Everything)
+
+Every strategy is defined as a strict schema (JSON / Pydantic)
+
+Core sections:
+
+universe filter
+
+indicators
+
+entry logic
+
+exit logic
+
+risk model
+
+position sizing
+
+regime constraints
+
+No Python strategies allowed at runtime.
+
+C1.2 Indicator Capability Matrix
+
+Each indicator declares:
+
+compatible timeframes
+
+valid parameter ranges
+
+regime suitability
+
+computation cost
+
+stability score
+
+This prevents invalid combinations.
+
+C1.3 Strategy Generation Engines (3-Layer)
+🔹 1️⃣ Param Search Generator
+
+Sobol / Bayesian
+
+grid pruning
+
+stability-first objective
+
+sensitivity-aware scoring
+
+Produces baseline strategies.
+
+🔹 2️⃣ Evolutionary / Bayesian Generator
+
+population-based
+
+elitism + diversity
+
+regime-aware fitness
+
+lineage tracking
+
+Produces refined strategies.
+
+🔹 3️⃣ AI / LLM Strategy Generator (Sandboxed)
+
+Generates StrategySpec only
+
+Cannot see execution code
+
+Validator-gated
+
+Deterministic seedable prompts
+
+Produces novel strategies.
+
+🧬 ENTRY LOGIC MUTATION (NEW — CRITICAL)
+
+This is where alpha truly evolves.
+
+Entry logic is decomposed into atomic parts:
+Entry Logic =
+    Signal Trigger
+  + Confirmation Layer
+  + Timing Filter
+  + Market Context Gate
+
+Mutation Types (EXPLICIT)
+🔹 A. Trigger Mutation
+
+RSI threshold shifts
+
+ADX gating added/removed
+
+breakout vs retest
+
+SuperTrend direction inversion
+
+EMA cross → slope
+
+🔹 B. Confirmation Mutation
+
+volume confirmation on/off
+
+multi-timeframe confirmation
+
+volatility expansion filter
+
+candle structure confirmation
+
+🔹 C. Timing Mutation
+
+entry on close → entry on pullback
+
+delayed entry N bars
+
+opening range only
+
+time-of-day window shifts
+
+🔹 D. Context Mutation
+
+sector strength gating
+
+index trend alignment
+
+VIX / volatility regime
+
+news blackout windows
+
+📌 Rule:
+Only one mutation dimension per generation → stability preserved.
+
+C1.4 Strategy Validators (Gatekeepers)
+
+Before anything runs:
+
+logical consistency
+
+indicator compatibility
+
+no look-ahead bias
+
+no forbidden constructs
+
+risk bounded
+
+Invalid strategies never enter backtesting.
+
+📊 PHASE C2 — STRATEGY EVALUATION & ROBUSTNESS
+
+📍 modules/strategy_evaluation/
+
+Objective
+
+Kill fragile strategies early and brutally.
+
+C2.1 Backtest Engine (Enhanced)
+
+rolling 6-month windows
+
+walk-forward validation
+
+slippage & latency modeling
+
+execution realism (already strong in your system)
+
+C2.2 Robustness Tests (MANDATORY)
+
+Each strategy must survive:
+
+parameter perturbation
+
+regime slicing
+
+random start dates
+
+volatility shocks
+
+reduced liquidity
+
+Failure → hard rejection.
+
+C2.3 Metric Vector (Not Single Score)
+
+Store full vector:
+
+win rate
+
+PF
+
+DD
+
+expectancy
+
+trade frequency
+
+stability score
+
+regime consistency
+
+No single-metric optimization.
+
+🔁 PHASE C3 — STRATEGY LIFECYCLE (PROMOTION / DEMOTION)
+
+📍 modules/strategy_lifecycle/
+
+Objective
+
+Automate trust.
+
+C3.1 Promotion Pipeline (You Defined — Perfect)
+Backtest Approved
+
+trades ≥ 200
+
+win rate ≥ 0.80
+
+PF ≥ 1.4
+
+DD ≤ 0.15
+
+multi-regime stability = true
+
+Paper Approved
+
+trades ≥ 100
+
+win rate ≥ 0.80
+
+PF ≥ 1.4
+
+slippage tolerance passed
+
+regime stability true
+
+Live Approved
+
+all above true
+
+confidence threshold met
+
+kill-switch armed
+
+C3.2 Demotion Rules (Self-Healing)
+
+Triggers:
+
+rolling drawdown spike
+
+win-rate decay
+
+regime mismatch
+
+execution anomaly
+
+Actions:
+
+confidence decay
+
+capital reduction
+
+shadow-only mode
+
+retirement
+
+🧠 PHASE C4 — META-BRAIN (STRATEGY ASSIGNMENT)
+
+📍 modules/meta_model/
+
+Objective
+
+Answer one question:
+
+“Which strategy should trade this symbol today?”
+
+Inputs:
+
+symbol features
+
+regime features
+
+strategy fingerprint
+
+historical performance
+
+confidence decay
+
+recent execution quality
+
+Outputs:
+
+probability of success
+
+position size modifier
+
+allow / block decision
+
+📌 No price prediction.
+📌 No override of hard rules.
+
+🧬 PHASE C5 — CONTINUOUS EVOLUTION ENGINE
+
+📍 modules/evolution_engine/
+
+Objective
+
+Daily improvement without chaos.
+
+Evolution Cycle (Daily / Weekly)
+
+Select top performers
+
+Clone strategy
+
+Apply one mutation
+
+Validate
+
+Backtest
+
+Compare to parent
+
+Promote or kill
+
+Lineage always preserved.
+
+🧯 PHASE C6 — REGIME INTELLIGENCE & SELF-HEALING
+
+📍 modules/regime_engine/
+
+Detect:
+
+volatility expansion
+
+trend/range transitions
+
+event days
+
+liquidity collapse
+
+Actions:
+
+block unsuitable strategies
+
+widen stops
+
+reduce size
+
+swap alternatives
+
+No human intervention required.
+
+🧾 PHASE C7 — GOVERNANCE & EXPLAINABILITY
+
+📍 modules/audit/
+
+Every trade answers:
+
+which strategy?
+
+why allowed?
+
+what regime?
+
+what confidence?
+
+what mutation lineage?
+
+This is non-optional.
+
+✅ FINAL STATUS
+Phase B
+
+✔ 100% complete
+✔ Deterministic
+✔ Crash-safe
+✔ Exactly-once PnL
+✔ Ledger invariant enforced
+
+Phase C
+
+🔥 This roadmap is institutional-grade
+🔥 Supports unlimited evolution without entropy
+🔥 Fully autonomous
+🔥 Explainable & auditable
+
+🎯 NEXT ACTION (Recommended)
+
+If you want maximum leverage, next we should:
+
+Option A: Design StrategySpec schema
+Option B: Design entry-logic mutation grammar
+Option C: Create Phase C directory + contracts
+Option D: Meta-Brain feature vector design

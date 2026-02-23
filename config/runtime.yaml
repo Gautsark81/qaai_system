@@ -1,0 +1,26 @@
+env: local
+
+bootstrap:
+  deterministic_test_trade: true
+
+execution:
+  mode: paper
+  max_cycles: 1
+
+strategy:
+  enabled:
+    deterministic_once:
+      type: modules.strategy.deterministic_once:DeterministicOnceStrategy
+      params: {}
+
+audit:
+  sink: json
+  path: audit/
+
+state:
+  path: state/
+
+broker:
+  paper:
+    slippage_bps: 0
+    fill_delay_ms: 0

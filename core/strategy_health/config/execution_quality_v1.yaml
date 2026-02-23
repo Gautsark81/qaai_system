@@ -1,0 +1,20 @@
+version: v1
+
+# --- Slippage ---
+avg_slippage_warn: 0.002
+avg_slippage_bad: 0.005
+tail_slippage_bad: 0.01
+tail_n: 5
+
+# --- Latency (ms) ---
+avg_latency_bad: 800
+max_latency_bad: 2000
+latency_volatility_warn: 400
+
+# --- Order quality ---
+reject_rate_warn: 0.02
+reject_rate_bad: 0.05
+partial_rate_bad: 0.10
+
+# --- Governance ---
+fail_score_cap: 0.25

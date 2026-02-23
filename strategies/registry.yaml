@@ -1,0 +1,29 @@
+strategies:
+  mean_rev_intraday:
+    versions:
+      "7":
+        status: Backtest-Approved      # or Paper-Approved / Live-Approved / Retired
+        family: mean_reversion
+        params:
+          lookback: 20
+          entry_z: -1.5
+          exit_z: 0.0
+          sl_mult: 1.5
+          tp_mult: 2.0
+        capital_allocation: 0.05       # 5% of total risk capital
+        allowed_universe_tags:
+          - LARGE
+          - MID
+        allowed_regimes:
+          - RANGE
+  breakout_trend:
+    versions:
+      "3":
+        status: Paper-Approved
+        family: breakout
+        params:
+          lookback_high: 55
+          lookback_low: 20
+          sl_mult: 1.2
+          tp_mult: 3.0
+        capital_allocation: 0.1

@@ -1,0 +1,2 @@
+class DecayDetectionError(RuntimeError):
+    pass

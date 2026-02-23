@@ -1,0 +1,660 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-8.4.1, pluggy-1.6.0 -- C:\Users\topta\OneDrive\Documents\qaai_system\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\topta\OneDrive\Documents\qaai_system
+configfile: pytest.ini
+plugins: anyio-4.9.0, cov-6.2.1
+collecting ... collected 317 items
+
+tests/test_audit_charts.py::test_equity_curve_chart_valid PASSED         [  0%]
+tests/test_audit_charts.py::test_equity_curve_chart_missing_columns PASSED [  0%]
+tests/test_audit_charts.py::test_trade_distribution_chart_valid PASSED   [  0%]
+tests/test_audit_charts.py::test_trade_distribution_chart_missing PASSED [  1%]
+tests/test_audit_charts.py::test_sl_tp_scatter_plot_valid PASSED         [  1%]
+tests/test_audit_charts.py::test_sl_tp_scatter_plot_missing_columns PASSED [  1%]
+tests/test_audit_charts.py::test_trade_distribution_chart_missing_values PASSED [  2%]
+tests/test_audit_charts_edge.py::test_equity_curve_chart_empty_df PASSED [  2%]
+tests/test_audit_charts_edge.py::test_equity_curve_chart_with_nans PASSED [  2%]
+tests/test_audit_charts_edge.py::test_trade_distribution_chart_large_input PASSED [  3%]
+tests/test_audit_charts_edge.py::test_sl_tp_scatter_plot_with_missing_values PASSED [  3%]
+tests/test_audit_charts_edge.py::test_sl_tp_scatter_plot_large_input PASSED [  3%]
+tests/test_audit_loader.py::test_load_trade_data_csv PASSED              [  4%]
+tests/test_audit_loader.py::test_missing_file PASSED                     [  4%]
+tests/test_audit_loader.py::test_invalid_source PASSED                   [  4%]
+tests/test_auto_updater.py::TestAutoWatchlistBuilder::test_update_watchlist_failure PASSED [  5%]
+tests/test_auto_updater.py::TestAutoWatchlistBuilder::test_update_watchlist_success PASSED [  5%]
+tests/test_backtester.py::test_backtest_strategy_metrics PASSED          [  5%]
+tests/test_backtesting_upgrades.py::test_noise_models_slippage_and_spread PASSED [  5%]
+tests/test_backtesting_upgrades.py::test_latency_non_negative PASSED     [  6%]
+tests/test_backtesting_upgrades.py::test_regime_detector_bull_bear_sideways PASSED [  6%]
+tests/test_backtesting_upgrades.py::test_explainability_logger_jsonl PASSED [  6%]
+tests/test_backtesting_upgrades.py::test_backtest_execution_fill_series PASSED [  7%]
+tests/test_backtesting_upgrades.py::test_tuner_runs_without_optuna[5] PASSED [  7%]
+tests/test_bracket_manager.py::test_register_and_trigger_take_profit PASSED [  7%]
+tests/test_bracket_manager.py::test_stop_loss_cancels_take_profit PASSED [  8%]
+tests/test_bracket_manager.py::test_trailing_stop_moves_up_only PASSED   [  8%]
+tests/test_bracket_manager.py::test_partial_take_profit_reduces_position PASSED [  8%]
+tests/test_bracket_manager.py::test_trailing_stop_anchor_threshold PASSED [  9%]
+tests/test_bracket_manager.py::test_stop_fill_clears_bracket PASSED      [  9%]
+tests/test_bracket_manager.py::test_persistence_roundtrip PASSED         [  9%]
+tests/test_bracket_manager.py::test_on_child_fill_reduces_position PASSED [ 10%]
+tests/test_bracket_manager.py::test_trailing_stop_using_atr PASSED       [ 10%]
+tests/test_bracket_manager.py::test_multiple_trailing_ratchets PASSED    [ 10%]
+tests/test_bracket_manager.py::test_short_side_bracket_behavior PASSED   [ 11%]
+tests/test_bracket_manager.py::test_last_price_fallback_logic PASSED     [ 11%]
+tests/test_bracket_manager.py::test_dummyrouter_unique_orders_deduplicates PASSED [ 11%]
+tests/test_circuit_breaker.py::test_circuit_breaker_blocks PASSED        [ 11%]
+tests/test_cleaner.py::test_cleaner_filters_volume PASSED                [ 12%]
+tests/test_config_loader.py::test_config_exists PASSED                   [ 12%]
+tests/test_daily_loss_limit.py::test_daily_loss_limit_blocks PASSED      [ 12%]
+tests/test_daily_loss_reset.py::test_daily_loss_resets PASSED            [ 13%]
+tests/test_daily_loss_reset_hour.py::test_reset_hour_triggers PASSED     [ 13%]
+tests/test_dhan_adapter_sandbox.py::test_submit_and_get_status_basic PASSED [ 13%]
+tests/test_dhan_adapter_sandbox.py::test_cancel_order_sets_status_to_cancelled PASSED [ 14%]
+tests/test_dhan_adapter_sandbox.py::test_simulate_partial_and_full_fills_updates_positions_and_order_status PASSED [ 14%]
+tests/test_dhan_adapter_sandbox.py::test_slippage_model_changes_executed_price PASSED [ 14%]
+tests/test_dhan_adapter_sandbox.py::test_fetch_ohlcv_returns_bars_and_timeframe_respected PASSED [ 15%]
+tests/test_dhan_adapter_sandbox.py::test_reconcile_with_trade_log_detects_missing_entries PASSED [ 15%]
+tests/test_dhan_adapter_sandbox.py::test_rate_limit_raises_when_called_too_fast PASSED [ 15%]
+tests/test_dhan_adapter_sandbox.py::test_partial_close_and_pnl_updates_positions PASSED [ 16%]
+tests/test_dhan_client.py::test_fetch_ohlcv_success PASSED               [ 16%]
+tests/test_dhan_live.py::test_ping_success PASSED                        [ 16%]
+tests/test_dhan_live.py::test_submit_order_map PASSED                    [ 17%]
+tests/test_env_config.py::test_env_config_defaults PASSED                [ 17%]
+tests/test_env_config.py::test_ensure_dirs PASSED                        [ 17%]
+tests/test_execution_feedback_loop.py::test_feedback_loop_called PASSED  [ 17%]
+tests/test_execution_feedback_loop_enhanced.py::test_tp_hit_updates_feedback PASSED [ 18%]
+tests/test_execution_feedback_loop_enhanced.py::test_sl_hit_updates_feedback PASSED [ 18%]
+tests/test_execution_feedback_loop_enhanced.py::test_auto_tune_on_batch PASSED [ 18%]
+tests/test_execution_feedback_loop_enhanced.py::test_concurrency_stress PASSED [ 19%]
+tests/test_execution_feedback_loop_enhanced.py::test_volatility_and_regime_sl_tp_scaling PASSED [ 19%]
+tests/test_execution_feedback_loop_enhanced.py::test_position_size_auto_tuning_under_drawdown PASSED [ 19%]
+tests/test_execution_feedback_loop_enhanced.py::test_trade_reason_logging PASSED [ 20%]
+tests/test_execution_feedback_loop_enhanced.py::test_battle_mode_high_volatility PASSED [ 20%]
+tests/test_execution_orchestrator.py::test_order_submission_and_status PASSED [ 20%]
+tests/test_execution_orchestrator.py::test_cancel_order PASSED           [ 21%]
+tests/test_execution_orchestrator.py::test_symbol_cap_blocked PASSED     [ 21%]
+tests/test_execution_orchestrator.py::test_risk_evaluation_blocked PASSED [ 21%]
+tests/test_execution_orchestrator.py::test_account_status_check PASSED   [ 22%]
+tests/test_execution_orchestrator.py::test_kill_switch_blocks_trading PASSED [ 22%]
+tests/test_execution_orchestrator.py::test_poll_feedback_dispatch PASSED [ 22%]
+tests/test_execution_orchestrator.py::test_order_status_merging PASSED   [ 23%]
+tests/test_execution_pipeline.py::test_execution_pipeline_process_signals_and_monitor PASSED [ 23%]
+tests/test_export_helpers.py::test_sanitize_and_export PASSED            [ 23%]
+tests/test_export_scheduler.py::test_run_overlay_export_success PASSED   [ 23%]
+tests/test_export_scheduler.py::test_run_overlay_export_failure PASSED   [ 24%]
+tests/test_feedback_integration.py::test_on_fill_calls_register PASSED   [ 24%]
+tests/test_feedback_loop_exec.py::test_feedback_loop_updates_meta PASSED [ 24%]
+tests/test_feedback_loop_portfolio.py::test_feedback_loop_updates_portfolio_weights PASSED [ 25%]
+tests/test_ingestion.py::test_primary_fallback PASSED                    [ 25%]
+tests/test_kill_switch.py::test_kill_switch_blocks PASSED                [ 25%]
+tests/test_logging_utils.py::test_get_logger_and_log PASSED              [ 26%]
+tests/test_logging_utils.py::test_log_data_source_info PASSED            [ 26%]
+tests/test_logging_utils.py::test_log_data_source_warning PASSED         [ 26%]
+tests/test_main_orchestrator.py::test_main_orchestrator_runs_clean PASSED [ 27%]
+tests/test_orchestrator.py::test_submit_order_creates_reservation_and_persists PASSED [ 27%]
+tests/test_orchestrator.py::test_router_exception_releases_reservation PASSED [ 27%]
+tests/test_orchestrator.py::test_provider_exception_releases_reservation PASSED [ 28%]
+tests/test_orchestrator.py::test_cancel_releases_reservation PASSED      [ 28%]
+tests/test_orchestrator.py::test_kill_switch_blocks PASSED               [ 28%]
+tests/test_orchestrator_feedback_pnl.py::test_feedback_receives_realized_pnl_fifo PASSED [ 29%]
+tests/test_orchestrator_risk_controls.py::test_kill_switch_blocks_new_orders PASSED [ 29%]
+tests/test_orchestrator_risk_controls.py::test_circuit_breaker_blocks_after_drawdown PASSED [ 29%]
+tests/test_orchestrator_risk_controls.py::test_static_kill_switch_raises PASSED [ 29%]
+tests/test_orchestrator_risk_controls.py::test_symbol_cap_blocks_order PASSED [ 30%]
+tests/test_orchestrator_risk_controls.py::test_risk_evaluation_blocks_order PASSED [ 30%]
+tests/test_orchestrator_risk_controls.py::test_arm_kill_switch_cancels_orders PASSED [ 30%]
+tests/test_orchestrator_strategies.py::test_multi_strategy_flow_and_feedback_roundtrip PASSED [ 31%]
+tests/test_paper_broker_brackets_and_trailing.py::test_bracket_tp_cancels_sl PASSED [ 31%]
+tests/test_paper_broker_brackets_and_trailing.py::test_bracket_sl_triggers_and_tp_canceled PASSED [ 31%]
+tests/test_paper_broker_brackets_and_trailing.py::test_trailing_stop_ratchets_and_triggers PASSED [ 32%]
+tests/test_paper_broker_risk_and_brackets.py::test_bracket_stop_loss_triggers PASSED [ 32%]
+tests/test_paper_broker_risk_and_brackets.py::test_bracket_take_profit_triggers PASSED [ 32%]
+tests/test_paper_broker_risk_and_brackets.py::test_trailing_stop_triggers_from_peak PASSED [ 33%]
+tests/test_paper_broker_risk_and_brackets.py::test_max_positions_enforced PASSED [ 33%]
+tests/test_paper_broker_risk_and_brackets.py::test_drawdown_halts_trading PASSED [ 33%]
+tests/test_paper_broker_risk_and_brackets.py::test_exposure_cap_blocks_oversized_trade PASSED [ 34%]
+tests/test_paper_trading_upgrades.py::test_position_sizer_basic PASSED   [ 34%]
+tests/test_paper_trading_upgrades.py::test_scale_manager_monotonic PASSED [ 34%]
+tests/test_paper_trading_upgrades.py::test_feedback_loop_updates PASSED  [ 35%]
+tests/test_paper_trading_upgrades.py::test_paper_broker_roundtrip_profit_no_noise PASSED [ 35%]
+tests/test_paper_trading_upgrades.py::test_paper_broker_with_noise_cash_and_equity PASSED [ 35%]
+tests/test_patch_fix_validation.py::test_symbol_cap_exceeded_raises FAILED [ 35%]
+tests/test_patch_fix_validation.py::test_circuit_breaker_first_fill_fallback PASSED [ 36%]
+tests/test_patch_fix_validation.py::test_circuit_breaker_disallowed_trading_blocks_after_first FAILED [ 36%]
+tests/test_patch_fix_validation.py::test_circuit_breaker_first_fill_persistence PASSED [ 36%]
+tests/test_patch_fix_validation.py::test_circuit_breaker_blocks_after_first_fill PASSED [ 37%]
+tests/test_patch_orchestrator_helper.py::test_symbol_cap_blocked FAILED  [ 37%]
+tests/test_patch_orchestrator_helper.py::test_kill_switch_blocks_runtimeerror PASSED [ 37%]
+tests/test_patch_orchestrator_helper.py::test_circuit_breaker_blocks_after_first PASSED [ 38%]
+tests/test_patch_orchestrator_helper.py::test_router_exception_returns_error PASSED [ 38%]
+tests/test_patch_sanity.py::test_kill_switch_set_blocks_uppercase PASSED [ 38%]
+tests/test_patch_sanity.py::test_kill_switch_trigger_blocks_lowercase PASSED [ 39%]
+tests/test_patch_sanity.py::test_circuit_breaker_allows_first_order_then_blocks FAILED [ 39%]
+tests/test_patch_sanity.py::test_symbol_cap_blocks_order PASSED          [ 39%]
+tests/test_patch_sanity.py::test_config_kill_switch_blocks_orders PASSED [ 40%]
+tests/test_pnl_calculator.py::test_compute_trade_pnl_closed_buy PASSED   [ 40%]
+tests/test_pnl_calculator.py::test_compute_trade_pnl_open_sell PASSED    [ 40%]
+tests/test_pnl_calculator.py::test_portfolio_and_summary PASSED          [ 41%]
+tests/test_portfolio_manager_brackets.py::test_bracket_attached_for_take_profit_and_stop_loss PASSED [ 41%]
+tests/test_portfolio_manager_brackets.py::test_bracket_attached_for_trailing_stop PASSED [ 41%]
+tests/test_portfolio_manager_brackets.py::test_no_bracket_if_no_tp_sl_trail PASSED [ 41%]
+tests/test_portfolio_manager_brackets.py::test_bracket_manager_failure_is_logged PASSED [ 42%]
+tests/test_portfolio_manager_caps.py::test_global_symbol_cap_applies PASSED [ 42%]
+tests/test_portfolio_manager_caps.py::test_per_strategy_cap_applies PASSED [ 42%]
+tests/test_portfolio_manager_caps.py::test_allocation_scaling_applies PASSED [ 43%]
+tests/test_portfolio_manager_caps.py::test_global_exposure_cap_scales_orders PASSED [ 43%]
+tests/test_portfolio_manager_exposure.py::test_exposure_below_cap_no_scaling PASSED [ 43%]
+tests/test_portfolio_manager_exposure.py::test_exposure_equal_to_cap_no_scaling PASSED [ 44%]
+tests/test_portfolio_manager_exposure.py::test_exposure_above_cap_scales_down PASSED [ 44%]
+tests/test_portfolio_manager_exposure.py::test_multiple_orders_scaled_proportionally PASSED [ 44%]
+tests/test_portfolio_manager_exposure.py::test_zero_equity_skips_scaling PASSED [ 45%]
+tests/test_portfolio_manager_exposure.py::test_no_equity_param_skips_scaling PASSED [ 45%]
+tests/test_portfolio_manager_exposure.py::test_price_survives_netting PASSED [ 45%]
+tests/test_portfolio_manager_exposure.py::test_exposure_with_zero_equity_and_cap_drops_orders PASSED [ 46%]
+tests/test_portfolio_manager_exposure.py::test_qty_preserved_when_quantity_missing PASSED [ 46%]
+tests/test_portfolio_manager_exposure.py::test_missing_qty_and_quantity_defaults_to_zero PASSED [ 46%]
+tests/test_portfolio_manager_full.py::test_register_and_list_strategies PASSED [ 47%]
+tests/test_portfolio_manager_full.py::test_generate_and_net_orders_basic PASSED [ 47%]
+tests/test_portfolio_manager_full.py::test_conflicting_sides_stay_separate PASSED [ 47%]
+tests/test_portfolio_manager_full.py::test_risk_manager_filtering_and_global_caps PASSED [ 47%]
+tests/test_portfolio_manager_full.py::test_per_strategy_and_global_symbol_caps_and_bracket_attach PASSED [ 48%]
+tests/test_portfolio_manager_full.py::test_feedback_recording_and_strategy_hook PASSED [ 48%]
+tests/test_portfolio_manager_symbol_caps.py::test_single_symbol_cap_trims_orders_proportionally PASSED [ 48%]
+tests/test_portfolio_manager_symbol_caps.py::test_multiple_symbols_only_capped_one PASSED [ 49%]
+tests/test_portfolio_manager_symbol_caps.py::test_no_cap_means_no_trimming PASSED [ 49%]
+tests/test_portfolio_manager_symbol_caps.py::test_cap_lower_than_total_splits_fairly PASSED [ 49%]
+tests/test_portfolio_manager_symbol_caps.py::test_caps_apply_separately_to_buys_and_sells PASSED [ 50%]
+tests/test_portfolio_manager_symbol_caps.py::test_caps_independent_for_buys_and_sells PASSED [ 50%]
+tests/test_portfolio_manager_unit.py::test_register_and_list PASSED      [ 50%]
+tests/test_portfolio_manager_unit.py::test_generate_portfolio_plan_merges PASSED [ 51%]
+tests/test_portfolio_manager_unit.py::test_record_trade_result_updates_feedback_and_weights PASSED [ 51%]
+tests/test_portfolio_manager_unit.py::test_feedback_updates_strategy_weights PASSED [ 51%]
+tests/test_portfolio_manager_unit.py::test_register_strategy_with_feedback_links_hooks PASSED [ 52%]
+tests/test_portfolio_manager_unit.py::test_unregister_strategy_removes_from_registry PASSED [ 52%]
+tests/test_portfolio_manager_unit.py::test_aggregate_and_net_merges_and_caps PASSED [ 52%]
+tests/test_portfolio_manager_unit.py::test_risk_manager_filters_orders PASSED [ 52%]
+tests/test_portfolio_manager_unit.py::test_bracket_attach_called_on_orders PASSED [ 53%]
+tests/test_portfolio_simulator.py::test_portfolio_simulator_basic PASSED [ 53%]
+tests/test_position_manager.py::test_fifo_basic_buy_sell_unrealized_realized PASSED [ 53%]
+tests/test_position_manager.py::test_avg_basic_behavior PASSED           [ 54%]
+tests/test_position_manager_persistent.py::test_persistent_restore PASSED [ 54%]
+tests/test_position_provider_integration.py::test_provider_position_manager_fifo_integration PASSED [ 54%]
+tests/test_position_provider_integration.py::test_provider_avg_integration PASSED [ 55%]
+tests/test_position_store.py::test_position_store_persistence PASSED     [ 55%]
+tests/test_quality_control.py::test_evaluate_signal_quality_structure PASSED [ 55%]
+tests/test_quality_control.py::test_evaluate_signal_quality_score_range PASSED [ 56%]
+tests/test_quality_control.py::test_auto_tune_thresholds_output PASSED   [ 56%]
+tests/test_quality_control.py::test_auto_tune_thresholds_minimal_inputs PASSED [ 56%]
+tests/test_risk_manager.py::test_kill_switch PASSED                      [ 57%]
+tests/test_risk_manager.py::test_daily_loss_limit_blocks PASSED          [ 57%]
+tests/test_risk_manager.py::test_drawdown_trips_breaker PASSED           [ 57%]
+tests/test_risk_manager.py::test_symbol_cap_blocks PASSED                [ 58%]
+tests/test_risk_manager.py::test_evaluate_risk_conditions PASSED         [ 58%]
+tests/test_risk_manager.py::test_update_trade_log_and_exposure PASSED    [ 58%]
+tests/test_risk_manager.py::test_diagnostics_snapshot PASSED             [ 58%]
+tests/test_risk_manager_extended.py::test_kill_switch_blocks PASSED      [ 59%]
+tests/test_risk_manager_extended.py::test_circuit_breaker_on_drawdown PASSED [ 59%]
+tests/test_risk_manager_extended.py::test_heartbeat_detection PASSED     [ 59%]
+tests/test_risk_manager_kill_and_caps.py::test_kill_switch_blocks_orders PASSED [ 60%]
+tests/test_risk_manager_kill_and_caps.py::test_symbol_cap_blocks_order PASSED [ 60%]
+tests/test_risk_manager_kill_and_caps.py::test_kill_switch_cancel_open_orders PASSED [ 60%]
+tests/test_router.py::test_parent_response_dict_and_str_behavior PASSED  [ 61%]
+tests/test_router.py::test_router_submit_and_settle_full_fill PASSED     [ 61%]
+tests/test_router.py::test_router_handles_rejected_due_to_risk PASSED    [ 61%]
+tests/test_router.py::test_router_settle_with_no_fills_creates_fallback_fill PASSED [ 62%]
+tests/test_router.py::test_execution_router_lightweight_submit PASSED    [ 62%]
+tests/test_sanity_pipeline.py::test_signal_engine_run_returns_df PASSED  [ 62%]
+tests/test_sanity_pipeline.py::test_execution_engine_process_and_monitor PASSED [ 63%]
+tests/test_sanity_pipeline.py::test_router_parentresponse_handling PASSED [ 63%]
+tests/test_sanity_pipeline.py::test_symbol_cap_uses_provider_positions FAILED [ 63%]
+tests/test_sanity_pipeline.py::test_execution_engine_broker_wrap_and_submit PASSED [ 64%]
+tests/test_schema_validator.py::test_schema_valid PASSED                 [ 64%]
+tests/test_screener_to_watchlist.py::test_sync_updates_preferred_api PASSED [ 64%]
+tests/test_screener_to_watchlist.py::test_sync_updates_fallback_api PASSED [ 64%]
+tests/test_screening_engine_supercharged.py::test_engine_runs_and_returns_sorted_list PASSED [ 65%]
+tests/test_screening_engine_supercharged.py::test_rule_and_ml_scores_reasonable PASSED [ 65%]
+tests/test_screening_engine_supercharged.py::test_weights_affect_final_score PASSED [ 65%]
+tests/test_screening_engine_supercharged.py::test_topk_limits_results PASSED [ 66%]
+tests/test_screening_meta_upgrade.py::test_multi_timeframe_blocks_inconsistent_symbol PASSED [ 66%]
+tests/test_screening_meta_upgrade.py::test_feedback_drives_weight_adaptation_and_blacklist PASSED [ 66%]
+tests/test_screening_meta_upgrade.py::test_meta_runs_and_produces_sorted_list PASSED [ 67%]
+tests/test_screening_upgrades.py::test_screen_filters_and_ranking PASSED [ 67%]
+tests/test_screening_upgrades.py::test_feedback_updates_reranks PASSED   [ 67%]
+tests/test_screening_upgrades.py::test_add_feedback_examples_and_online_fit PASSED [ 68%]
+tests/test_selector_utils.py::test_generate_features_shape PASSED        [ 68%]
+tests/test_selector_utils.py::test_generate_features_expected_columns PASSED [ 68%]
+tests/test_selector_utils.py::test_generate_features_nan_safe PASSED     [ 69%]
+tests/test_selector_utils.py::test_generate_features_return_types PASSED [ 69%]
+tests/test_selector_utils.py::test_generate_features_empty_input PASSED  [ 69%]
+tests/test_signal_engine.py::test_signal_engine_run_and_generate PASSED  [ 70%]
+tests/test_signal_engine.py::test_dynamic_sl_tp_and_sizeing PASSED       [ 70%]
+tests/test_signal_engine.py::test_blend_scores_and_explain_produces_reason PASSED [ 70%]
+tests/test_signal_engine.py::test_register_trade_result_stores_feedback PASSED [ 70%]
+tests/test_signal_engine_edge.py::test_signal_engine_run_with_empty_df PASSED [ 71%]
+tests/test_signal_engine_edge.py::test_signal_engine_run_with_missing_columns PASSED [ 71%]
+tests/test_signal_engine_edge.py::test_signal_engine_run_with_nan_values PASSED [ 71%]
+tests/test_signal_engine_edge.py::test_signal_engine_large_dataset PASSED [ 72%]
+tests/test_signal_engine_edge_full.py::test_signal_engine_run_with_empty_df PASSED [ 72%]
+tests/test_signal_engine_edge_full.py::test_signal_engine_run_with_missing_columns PASSED [ 72%]
+tests/test_signal_engine_edge_full.py::test_signal_engine_run_with_nan_values PASSED [ 73%]
+tests/test_signal_engine_edge_full.py::test_signal_engine_large_dataset PASSED [ 73%]
+tests/test_signal_engine_edge_full.py::test_signal_engine_reproducibility PASSED [ 73%]
+tests/test_signal_engine_edge_full.py::test_column_consistency PASSED    [ 74%]
+tests/test_signal_engine_edge_full.py::test_integration_with_pipeline PASSED [ 74%]
+tests/test_signal_engine_edge_full.py::test_small_dataset_signal_correctness PASSED [ 74%]
+tests/test_signal_engine_edge_param.py::test_signal_engine_various_inputs[df_input0-True] PASSED [ 75%]
+tests/test_signal_engine_edge_param.py::test_signal_engine_various_inputs[df_input1-False] PASSED [ 75%]
+tests/test_signal_engine_edge_param.py::test_signal_engine_various_inputs[df_input2-False] PASSED [ 75%]
+tests/test_signal_engine_edge_param.py::test_signal_engine_dataset_scaling[10] PASSED [ 76%]
+tests/test_signal_engine_edge_param.py::test_signal_engine_dataset_scaling[100] PASSED [ 76%]
+tests/test_signal_engine_edge_param.py::test_signal_engine_dataset_scaling[1000] PASSED [ 76%]
+tests/test_signal_engine_edge_param.py::test_signal_engine_column_types[col_dtypes0] PASSED [ 76%]
+tests/test_signal_engine_edge_param.py::test_signal_engine_column_types[col_dtypes1] PASSED [ 77%]
+tests/test_signal_engine_edge_week1.py::test_run_with_invalid_symbols PASSED [ 77%]
+tests/test_signal_engine_edge_week1.py::test_run_with_missing_columns PASSED [ 77%]
+tests/test_signal_engine_edge_week1.py::test_run_with_nan_and_inf PASSED [ 78%]
+tests/test_signal_engine_edge_week1.py::test_run_with_empty_dataframe PASSED [ 78%]
+tests/test_signal_engine_edge_week2.py::test_large_dataset_run PASSED    [ 78%]
+tests/test_signal_engine_edge_week2.py::test_runtime_efficiency PASSED   [ 79%]
+tests/test_signal_engine_edge_week3.py::test_signal_correctness PASSED   [ 79%]
+tests/test_signal_engine_edge_week3.py::test_column_consistency PASSED   [ 79%]
+tests/test_signal_engine_edge_week3.py::test_reproducibility_with_random_seed PASSED [ 80%]
+tests/test_signal_engine_edge_week3.py::test_integration_with_pipeline PASSED [ 80%]
+tests/test_signal_engine_integration.py::test_signal_engine_reproducibility[42] PASSED [ 80%]
+tests/test_signal_engine_integration.py::test_signal_engine_reproducibility[123] PASSED [ 81%]
+tests/test_signal_engine_integration.py::test_signal_engine_reproducibility[999] PASSED [ 81%]
+tests/test_signal_engine_integration.py::test_signal_engine_pipeline PASSED [ 81%]
+tests/test_signal_engine_integration.py::test_signal_engine_large_pipeline[1000] PASSED [ 82%]
+tests/test_signal_engine_integration.py::test_signal_engine_large_pipeline[5000] PASSED [ 82%]
+tests/test_signal_engine_master.py::test_signal_engine_edge_cases[df_in0-Empty DataFrame] PASSED [ 82%]
+tests/test_signal_engine_master.py::test_signal_engine_edge_cases[df_in1-Missing OHLCV columns] PASSED [ 82%]
+tests/test_signal_engine_master.py::test_signal_engine_edge_cases[df_in2-NaN values] PASSED [ 83%]
+tests/test_signal_engine_master.py::test_column_consistency PASSED       [ 83%]
+tests/test_signal_engine_master.py::test_signal_engine_reproducibility[42] PASSED [ 83%]
+tests/test_signal_engine_master.py::test_signal_engine_reproducibility[123] PASSED [ 84%]
+tests/test_signal_engine_master.py::test_signal_engine_reproducibility[999] PASSED [ 84%]
+tests/test_signal_engine_master.py::test_signal_engine_pipeline PASSED   [ 84%]
+tests/test_signal_engine_master.py::test_signal_engine_large_pipeline[1000] PASSED [ 85%]
+tests/test_signal_engine_master.py::test_signal_engine_large_pipeline[5000] PASSED [ 85%]
+tests/test_signal_engine_master.py::test_ma_crossover_signal[df_in0-expected_ma_signal0-MA crossover bullish] PASSED [ 85%]
+tests/test_signal_engine_master.py::test_ma_crossover_signal[df_in1-expected_ma_signal1-MA crossover bearish] PASSED [ 86%]
+tests/test_signal_engine_supercharged.py::test_supertrend_output PASSED  [ 86%]
+tests/test_signal_engine_supercharged.py::test_indicators PASSED         [ 86%]
+tests/test_signal_engine_supercharged.py::test_transform_for_ml PASSED   [ 87%]
+tests/test_signal_generator.py::test_generate_signals_output_structure PASSED [ 87%]
+tests/test_signal_generator.py::test_generate_signals_filtering PASSED   [ 87%]
+tests/test_signal_generator.py::test_generate_signals_sl_tp_calculation PASSED [ 88%]
+tests/test_signal_generator.py::test_generate_signals_basic PASSED       [ 88%]
+tests/test_status_report.py::test_parse_pytest_counts_basic PASSED       [ 88%]
+tests/test_status_report.py::test_parse_pytest_counts_with_errors PASSED [ 88%]
+tests/test_status_report.py::test_parse_coverage_total_percent PASSED    [ 89%]
+tests/test_status_report.py::test_parse_coverage_file_percentages PASSED [ 89%]
+tests/test_status_report.py::test_compute_progress_score_full_points PASSED [ 89%]
+tests/test_status_report.py::test_compute_progress_score_with_stubs_and_low_cov PASSED [ 90%]
+tests/test_status_report.py::test_render_progress_bar_bounds PASSED      [ 90%]
+tests/test_status_report.py::test_run_cmd_success PASSED                 [ 90%]
+tests/test_status_report.py::test_run_cmd_failure PASSED                 [ 91%]
+tests/test_status_report.py::test_run_smoke_tests_pass PASSED            [ 91%]
+tests/test_status_report.py::test_run_smoke_tests_fail PASSED            [ 91%]
+tests/test_status_report.py::test_run_full_tests_with_coverage PASSED    [ 92%]
+tests/test_status_report.py::test_count_todos_and_fixmes PASSED          [ 92%]
+tests/test_status_report.py::test_detect_stubs_simple PASSED             [ 92%]
+tests/test_status_report.py::test_dependency_audit_json PASSED           [ 93%]
+tests/test_status_report.py::test_dependency_audit_text PASSED           [ 93%]
+tests/test_status_report.py::test_post_to_slack PASSED                   [ 93%]
+tests/test_status_report.py::test_post_to_telegram PASSED                [ 94%]
+tests/test_stock_screener.py::test_screening_passes PASSED               [ 94%]
+tests/test_stock_screener.py::test_stock_screener_init_and_screen PASSED [ 94%]
+tests/test_trade_classifier.py::test_intraday_classification_rule_based PASSED [ 94%]
+tests/test_trade_classifier.py::test_swing_classification_rule_based PASSED [ 95%]
+tests/test_trade_classifier.py::test_entry_allowed_intraday PASSED       [ 95%]
+tests/test_trade_classifier.py::test_entry_not_allowed_intraday PASSED   [ 95%]
+tests/test_trade_classifier.py::test_force_exit_intraday PASSED          [ 96%]
+tests/test_trade_classifier.py::test_no_force_exit_swing PASSED          [ 96%]
+tests/test_watchlist.py::test_fetch_watchlist_not_empty PASSED           [ 96%]
+tests/test_watchlist_advanced.py::test_risk_weights_sum_and_caps PASSED  [ 97%]
+tests/test_watchlist_advanced.py::test_reasons_have_expected_keys PASSED [ 97%]
+tests/test_watchlist_advanced.py::test_adaptive_refresh_reacts_to_vol_and_churn PASSED [ 97%]
+tests/test_watchlist_manager.py::test_watchlist_top_k PASSED             [ 98%]
+tests/test_watchlist_manager.py::test_watchlist_ranking_order PASSED     [ 98%]
+tests/test_watchlist_manager.py::test_filter_for_signal_generation PASSED [ 98%]
+tests/test_watchlist_ml.py::test_train_model_logistic PASSED             [ 99%]
+tests/test_watchlist_ml.py::test_score_candidates_output PASSED          [ 99%]
+tests/test_watchlist_ml.py::test_score_candidates_conf_threshold PASSED  [ 99%]
+tests/test_watchlist_ml.py::test_score_candidates_top_k PASSED           [100%]
+
+================================== FAILURES ===================================
+_______________________ test_symbol_cap_exceeded_raises _______________________
+
+    def test_symbol_cap_exceeded_raises():
+        """Ensure symbol cap enforcement raises ValueError properly."""
+        rm = RiskManager({"max_symbol_weight": 0.5})
+        orch = ExecutionOrchestrator(
+            router=DummyRouter(),
+            risk=rm,
+            positions=DummyPositions(),
+            config={"starting_cash": 10_000}
+        )
+    
+        # Should raise ValueError since buying 10 more shares breaches 50% symbol cap
+>       with pytest.raises(ValueError, match="Symbol cap exceeded for SYM"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_patch_fix_validation.py:52: Failed
+---------------------------- Captured stderr call -----------------------------
+[DEBUG] submit_order called with order={'symbol': 'SYM', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 667, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+[DEBUG] router.submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+------------------------------ Captured log call ------------------------------
+DEBUG    patch_orchestrator:patch_orchestrator.py:220 submit_order called with order={'symbol': 'SYM', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+DEBUG    patch_orchestrator:patch_orchestrator.py:375 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:677 Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 667, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:1160 router.submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+_________ test_circuit_breaker_disallowed_trading_blocks_after_first __________
+
+    def test_circuit_breaker_disallowed_trading_blocks_after_first():
+        """Ensure trading disallowed after first order under drawdown condition."""
+        rm = RiskManager({"max_drawdown_pct": 1.0})
+        orch = ExecutionOrchestrator(
+            router=DummyRouter(),
+            risk=rm,
+            positions=DummyPositions(),
+            config={"starting_cash": 100_000},
+        )
+    
+        # First call should be filled (fallback)
+        resp1 = orch.submit_order({"symbol": "AAA", "side": "buy", "quantity": 10, "price": 100.0})
+        assert resp1["status"] == "filled"
+    
+        # Simulate drawdown exceeded
+        rm._peak_equity = 100_000
+        rm.is_trading_allowed(account_equity=98_000)  # trip breaker
+    
+        # Now any new order should be blocked or raise ValueError
+>       with pytest.raises(ValueError, match="Trading not allowed by circuit breaker"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_patch_fix_validation.py:94: Failed
+---------------------------- Captured stderr call -----------------------------
+[DEBUG] submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 638, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+[DEBUG] Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 667, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+[DEBUG] router.submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+[DEBUG] FIRST-FILL FALLBACK applied (order_id=ord_firstfill_1761330385707), reason=ROUTER_ERROR
+[DEBUG] submit_order called with order={'symbol': 'BBB', 'side': 'buy', 'quantity': 5, 'price': 50.0}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] CIRCUIT BREAKER TRIGGERED - Trading not allowed.
+------------------------------ Captured log call ------------------------------
+DEBUG    patch_orchestrator:patch_orchestrator.py:220 submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+DEBUG    patch_orchestrator:patch_orchestrator.py:375 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:657 Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 638, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:677 Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 667, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:1160 router.submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+DEBUG    patch_orchestrator:patch_orchestrator.py:1378 FIRST-FILL FALLBACK applied (order_id=ord_firstfill_1761330385707), reason=ROUTER_ERROR
+DEBUG    patch_orchestrator:patch_orchestrator.py:220 submit_order called with order={'symbol': 'BBB', 'side': 'buy', 'quantity': 5, 'price': 50.0}
+DEBUG    patch_orchestrator:patch_orchestrator.py:375 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:515 CIRCUIT BREAKER TRIGGERED - Trading not allowed.
+___________________________ test_symbol_cap_blocked ___________________________
+
+tmp_path = WindowsPath('C:/Users/topta/AppData/Local/Temp/pytest-of-topta/pytest-54/test_symbol_cap_blocked1')
+
+    def test_symbol_cap_blocked(tmp_path):
+        cfg = {"risk": {"max_symbol_weight": 0.5}}
+        orch = ExecutionOrchestrator(router=DummyRouter(), risk=RiskManager(cfg), positions=DummyPositions(), config={"starting_cash": 10000})
+        provider = orch.provider
+        provider._account_nav = 10000
+        provider._positions["SYM"] = 45
+        provider._positions["__last_price__:SYM"] = 100
+>       with pytest.raises(ValueError, match="Symbol cap exceeded for SYM"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_patch_orchestrator_helper.py:23: Failed
+---------------------------- Captured stderr call -----------------------------
+[DEBUG] submit_order called with order={'symbol': 'SYM', 'qty': 10, 'side': 'buy', 'price': 100}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 638, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+[DEBUG] Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 667, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+[DEBUG] orig submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+------------------------------ Captured log call ------------------------------
+DEBUG    patch_orchestrator:patch_orchestrator.py:220 submit_order called with order={'symbol': 'SYM', 'qty': 10, 'side': 'buy', 'price': 100}
+DEBUG    patch_orchestrator:patch_orchestrator.py:375 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:657 Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 638, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:677 Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 667, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:1170 orig submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+_____________ test_circuit_breaker_allows_first_order_then_blocks _____________
+
+    def test_circuit_breaker_allows_first_order_then_blocks():
+        rm = RiskManager(config={"max_drawdown_pct": 1.0})
+        orch = ExecutionOrchestrator(
+            router=DummyRouter(),
+            risk=rm,
+            positions=PositionManager(),
+            config={"starting_cash": 100_000},
+        )
+        # First order should go through
+        resp1 = orch.submit_order({"symbol": "AAA", "side": "buy", "quantity": 10, "price": 100.0})
+        assert resp1["status"] == "filled"
+    
+        # Simulate equity drop to trigger breaker
+        rm._peak_equity = 100_000
+        rm._current_equity = 90_000  # >10% drawdown
+        assert rm.is_trading_allowed(account_equity=90_000) is False
+    
+>       with pytest.raises(ValueError, match="Trading not allowed"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_patch_sanity.py:45: Failed
+---------------------------- Captured stderr call -----------------------------
+[DEBUG] submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 638, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+[DEBUG] Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 667, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+[DEBUG] router.submit returned: {'status': 'filled', 'order_id': 'dummy_1761330385744'}
+[DEBUG] submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] CIRCUIT BREAKER TRIGGERED - Trading not allowed.
+------------------------------ Captured log call ------------------------------
+DEBUG    patch_orchestrator:patch_orchestrator.py:220 submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+DEBUG    patch_orchestrator:patch_orchestrator.py:375 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:657 Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 638, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:677 Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 667, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:1160 router.submit returned: {'status': 'filled', 'order_id': 'dummy_1761330385744'}
+DEBUG    patch_orchestrator:patch_orchestrator.py:220 submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+DEBUG    patch_orchestrator:patch_orchestrator.py:375 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:515 CIRCUIT BREAKER TRIGGERED - Trading not allowed.
+___________________ test_symbol_cap_uses_provider_positions ___________________
+
+    def test_symbol_cap_uses_provider_positions():
+        cfg = {"risk": {"max_symbol_weight": 0.5}}
+        rm = RiskManager(cfg)
+        orch = ExecutionOrchestrator(router=DummyRouter(), risk=rm, positions=PositionManager(), config={"starting_cash": 10000})
+        provider = orch.provider
+        provider._account_nav = 10000
+        provider._positions["SYM"] = 45
+        provider._positions["__last_price__:SYM"] = 100
+>       with pytest.raises(ValueError, match="Symbol cap exceeded for SYM"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_sanity_pipeline.py:73: Failed
+---------------------------- Captured stderr call -----------------------------
+[DEBUG] submit_order called with order={'symbol': 'SYM', 'side': 'buy', 'quantity': 10, 'price': 100}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 638, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+[DEBUG] Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 667, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+[DEBUG] router.submit returned: {'status': 'filled', 'order_id': 'dummy_1761330387207'}
+------------------------------ Captured log call ------------------------------
+DEBUG    patch_orchestrator:patch_orchestrator.py:220 submit_order called with order={'symbol': 'SYM', 'side': 'buy', 'quantity': 10, 'price': 100}
+DEBUG    patch_orchestrator:patch_orchestrator.py:375 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 357, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:657 Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 638, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:677 Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 667, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:1160 router.submit returned: {'status': 'filled', 'order_id': 'dummy_1761330387207'}
+=========================== short test summary info ===========================
+FAILED tests/test_patch_fix_validation.py::test_symbol_cap_exceeded_raises - ...
+FAILED tests/test_patch_fix_validation.py::test_circuit_breaker_disallowed_trading_blocks_after_first
+FAILED tests/test_patch_orchestrator_helper.py::test_symbol_cap_blocked - Fai...
+FAILED tests/test_patch_sanity.py::test_circuit_breaker_allows_first_order_then_blocks
+FAILED tests/test_sanity_pipeline.py::test_symbol_cap_uses_provider_positions
+======================= 5 failed, 312 passed in 12.15s ========================

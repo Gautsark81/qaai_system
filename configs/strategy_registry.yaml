@@ -1,0 +1,30 @@
+strategies:
+  mean_rev_intraday:
+    family: mean_reversion
+    description: "Intraday mean reversion for large caps"
+    versions:
+      "1":
+        status: Backtest-Approved
+        params:
+          lookback: 20
+          entry_z: -1.5
+          exit_z: 0.0
+          sl_mult: 1.5
+          tp_mult: 2.0
+        capital_allocation: 0.03
+        allowed_segments: [LARGE]
+        allowed_regimes: [RANGE]
+  breakout_trend:
+    family: breakout
+    description: "Breakout + trend filter"
+    versions:
+      "1":
+        status: Backtest-Approved
+        params:
+          lookback_high: 55
+          lookback_low: 20
+          sl_mult: 1.2
+          tp_mult: 3.0
+        capital_allocation: 0.05
+        allowed_segments: [LARGE]
+        allowed_regimes: [TREND]

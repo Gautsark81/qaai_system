@@ -1,0 +1,2 @@
+trade_id,pnl,sl_hit,tp_hit,meta
+0f7eb67d-d315-44f3-ab4c-65ce6ed2bc7b,0.0,False,False,"{'symbol': 'MOCK', 'side': 'BUY', 'filled_qty': 1, 'avg_price': 100.0}"

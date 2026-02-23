@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qaai_system"
+version = "0.1.0"
+description = "QA AI System — autonomous trading & multi-agent execution framework"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Gautam Sarkar" }]
+dependencies = [
+  "requests>=2.28",
+  "pandas>=2.2",
+  "numpy>=1.26",
+  "scikit-learn==1.7.2"
+]
+dynamic = ["classifiers"]
+
+[project.optional-dependencies]
+dev = ["black", "isort", "mypy"]
+test = ["pytest", "pytest-mock"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests", "venv"]
+
+[tool.pytest.ini_options]
+markers = [
+    "phase13: integration phase 13 tests",
+]
+filterwarnings = [
+    "error"
+]
+

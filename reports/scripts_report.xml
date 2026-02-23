@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="1.595" timestamp="2026-01-13T16:12:54.044212+05:30" hostname="TopTalentHunt"><testcase classname="scripts.test_strategy_factory" name="test_strategy_factory_generation" time="0.005" /></testsuite></testsuites>

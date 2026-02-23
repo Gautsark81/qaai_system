@@ -1,0 +1,2 @@
+class DryRunError(RuntimeError):
+    pass

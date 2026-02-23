@@ -1,0 +1,47 @@
+
+# =========================
+# Next-Gen Algo Config (Example)
+# =========================
+mode: "paper"           # "paper" or "live"
+starting_cash: 1000000  # used if provider doesn't supply equity
+
+risk:
+  kill_switch: false
+  starting_cash: 1000000
+  reset_hour: 0
+  max_risk_pct_per_trade: 0.01
+  max_position_size_pct: 0.10
+  max_order_notional: 250000
+  max_symbol_weight: 0.20
+  max_gross_exposure: 0.80
+  heartbeat_interval: 30
+  max_drawdown_pct: 15
+  daily_loss_limit: 0.05      # 5% of starting_cash if 0<limit<1
+
+portfolio:
+  global_exposure_cap: 0.60
+
+strategies:
+  - id: "ensemble_meta_v1"
+    module: "strategies.ensemble_meta"
+    class: "EnsembleMetaStrategy"
+    allocation: 0.75
+    per_symbol_cap: 100
+
+symbols:
+  - "RELIANCE"
+  - "TCS"
+  - "INFY"
+  - "HDFCBANK"
+
+data:
+  # In production replace with your feed adapters
+  price: "mock"   # or "nse", "dhan", etc.
+
+telemetry:
+  telegram_bot_token: ""
+  telegram_chat_id: ""
+
+logging:
+  level: "INFO"
+  file: "runtime.log"

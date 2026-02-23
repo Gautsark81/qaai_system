@@ -1,0 +1,8026 @@
+{
+  "root": "C:\\Users\\topta\\OneDrive\\Documents\\qaai_system",
+  "generated_at": 1764587494.2233288,
+  "files": [
+    {
+      "path": ".coverage",
+      "size": 86016,
+      "ext": ""
+    },
+    {
+      "path": ".env",
+      "size": 1391,
+      "ext": ""
+    },
+    {
+      "path": ".flake8.txt",
+      "size": 176,
+      "ext": ".txt"
+    },
+    {
+      "path": ".gitignore",
+      "size": 58,
+      "ext": ""
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "size": 284,
+      "ext": ".yaml"
+    },
+    {
+      "path": "Advanced SMART AI-DRIVEN TRADING PI.txt",
+      "size": 18177,
+      "ext": ".txt"
+    },
+    {
+      "path": "Alpha Trading Intelligence.pdf",
+      "size": 64385,
+      "ext": ".pdf"
+    },
+    {
+      "path": "API Documentation.txt",
+      "size": 123400,
+      "ext": ".txt"
+    },
+    {
+      "path": "apply_patch_and_test.ps1",
+      "size": 4680,
+      "ext": ".ps1"
+    },
+    {
+      "path": "apply_refactor.py",
+      "size": 2953,
+      "ext": ".py"
+    },
+    {
+      "path": "backup.py",
+      "size": 1300,
+      "ext": ".py"
+    },
+    {
+      "path": "config.example.yaml",
+      "size": 991,
+      "ext": ".yaml"
+    },
+    {
+      "path": "coverage_history.json",
+      "size": 77,
+      "ext": ".json"
+    },
+    {
+      "path": "db_utils.py",
+      "size": 1466,
+      "ext": ".py"
+    },
+    {
+      "path": "dhanhq-2.0.2.tar.gz",
+      "size": 21375,
+      "ext": ".gz"
+    },
+    {
+      "path": "env_config.py",
+      "size": 3017,
+      "ext": ".py"
+    },
+    {
+      "path": "env_validator.py",
+      "size": 959,
+      "ext": ".py"
+    },
+    {
+      "path": "explain_log.jsonl",
+      "size": 2800,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "export_helpers.py",
+      "size": 388,
+      "ext": ".py"
+    },
+    {
+      "path": "folder_structure.txt",
+      "size": 4905420,
+      "ext": ".txt"
+    },
+    {
+      "path": "Instruction for trade.txt",
+      "size": 14771,
+      "ext": ".txt"
+    },
+    {
+      "path": "main_orchestrator.py",
+      "size": 12610,
+      "ext": ".py"
+    },
+    {
+      "path": "MASTER DOCUMENT (Main System Specification).docx",
+      "size": 101209,
+      "ext": ".docx"
+    },
+    {
+      "path": "MASTER PROJECT INSTRUCTION DOCUMENT.docx",
+      "size": 29395,
+      "ext": ".docx"
+    },
+    {
+      "path": "MASTER_BLUEPRINT.md",
+      "size": 9002,
+      "ext": ".md"
+    },
+    {
+      "path": "patch_orchestrator.backup.py",
+      "size": 83527,
+      "ext": ".py"
+    },
+    {
+      "path": "patch_orchestrator.py",
+      "size": 85487,
+      "ext": ".py"
+    },
+    {
+      "path": "patch_router.py",
+      "size": 5275,
+      "ext": ".py"
+    },
+    {
+      "path": "phase_audit_report.csv",
+      "size": 1814750,
+      "ext": ".csv"
+    },
+    {
+      "path": "phase_summary.csv",
+      "size": 528,
+      "ext": ".csv"
+    },
+    {
+      "path": "pip-freeze.txt",
+      "size": 2355,
+      "ext": ".txt"
+    },
+    {
+      "path": "project_audit.json",
+      "size": 4240534,
+      "ext": ".json"
+    },
+    {
+      "path": "project_audit.py",
+      "size": 4558,
+      "ext": ".py"
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 580,
+      "ext": ".toml"
+    },
+    {
+      "path": "pytest.ini",
+      "size": 63,
+      "ext": ".ini"
+    },
+    {
+      "path": "pytest_full_log.txt",
+      "size": 50069,
+      "ext": ".txt"
+    },
+    {
+      "path": "qaai.db",
+      "size": 61440,
+      "ext": ".db"
+    },
+    {
+      "path": "README.md",
+      "size": 3399,
+      "ext": ".md"
+    },
+    {
+      "path": "RELEASE_READINESS.md",
+      "size": 1279,
+      "ext": ".md"
+    },
+    {
+      "path": "repo_scan.json",
+      "size": 1895937,
+      "ext": ".json"
+    },
+    {
+      "path": "repo_snapshot.py",
+      "size": 3339,
+      "ext": ".py"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "size": 296,
+      "ext": ".txt"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 2488,
+      "ext": ".txt"
+    },
+    {
+      "path": "ruff-report.json",
+      "size": 0,
+      "ext": ".json"
+    },
+    {
+      "path": "run_algo.py",
+      "size": 4524,
+      "ext": ".py"
+    },
+    {
+      "path": "run_full_test.py",
+      "size": 1024,
+      "ext": ".py"
+    },
+    {
+      "path": "run_phase_screening.py",
+      "size": 1046,
+      "ext": ".py"
+    },
+    {
+      "path": "scheduler.py",
+      "size": 2123,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_feedback_log.csv",
+      "size": 166,
+      "ext": ".csv"
+    },
+    {
+      "path": "status_cache.json",
+      "size": 50,
+      "ext": ".json"
+    },
+    {
+      "path": "status_report.md",
+      "size": 11869120,
+      "ext": ".md"
+    },
+    {
+      "path": "status_report.py",
+      "size": 17905,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_export_helpers.py",
+      "size": 563,
+      "ext": ".py"
+    },
+    {
+      "path": "SUPER-MASTER BLUEPRINT \u2014 EXTENDED (.txt",
+      "size": 22455,
+      "ext": ".txt"
+    },
+    {
+      "path": "test_report.log",
+      "size": 19103,
+      "ext": ".log"
+    },
+    {
+      "path": "todo_backlog.csv",
+      "size": 15576864,
+      "ext": ".csv"
+    },
+    {
+      "path": "todo_summary.csv",
+      "size": 1396,
+      "ext": ".csv"
+    },
+    {
+      "path": "verify_report.txt",
+      "size": 22964,
+      "ext": ".txt"
+    },
+    {
+      "path": "watchlist.xlsx",
+      "size": 5059,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "watchlist_advanced.py",
+      "size": 9807,
+      "ext": ".py"
+    },
+    {
+      "path": "ws_test_async.py",
+      "size": 1013,
+      "ext": ".py"
+    },
+    {
+      "path": "ws_try_header_variants.py",
+      "size": 942,
+      "ext": ".py"
+    },
+    {
+      "path": "ws_try_queryparam.py",
+      "size": 562,
+      "ext": ".py"
+    },
+    {
+      "path": "ws_try_subprotocol.py",
+      "size": 673,
+      "ext": ".py"
+    },
+    {
+      "path": "__init__.py",
+      "size": 1357,
+      "ext": ".py"
+    },
+    {
+      "path": ".github\\workflows\\ci.yml",
+      "size": 5983,
+      "ext": ".yml"
+    },
+    {
+      "path": ".github\\workflows\\ml_train.yml",
+      "size": 972,
+      "ext": ".yml"
+    },
+    {
+      "path": ".github\\workflows\\retrain-nightly.yml",
+      "size": 942,
+      "ext": ".yml"
+    },
+    {
+      "path": ".github\\workflows\\status.yml",
+      "size": 2820,
+      "ext": ".yml"
+    },
+    {
+      "path": ".github\\workflows\\tests.yml",
+      "size": 1762,
+      "ext": ".yml"
+    },
+    {
+      "path": ".mypy_cache\\.gitignore",
+      "size": 36,
+      "ext": ""
+    },
+    {
+      "path": ".mypy_cache\\CACHEDIR.TAG",
+      "size": 193,
+      "ext": ".tag"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\@plugins_snapshot.json",
+      "size": 2,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\abc.data.json",
+      "size": 30329,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\abc.meta.json",
+      "size": 1771,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\ast.data.json",
+      "size": 517414,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\ast.meta.json",
+      "size": 1823,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\builtins.data.json",
+      "size": 1974091,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\builtins.meta.json",
+      "size": 1891,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\codecs.data.json",
+      "size": 148431,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\codecs.meta.json",
+      "size": 1816,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\contextlib.data.json",
+      "size": 155489,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\contextlib.meta.json",
+      "size": 1821,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\contextvars.data.json",
+      "size": 2649,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\contextvars.meta.json",
+      "size": 1744,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\dataclasses.data.json",
+      "size": 90116,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\dataclasses.meta.json",
+      "size": 1825,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\enum.data.json",
+      "size": 134704,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\enum.meta.json",
+      "size": 1798,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\genericpath.data.json",
+      "size": 35273,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\genericpath.meta.json",
+      "size": 1811,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\io.data.json",
+      "size": 9857,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\io.meta.json",
+      "size": 1759,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\ntpath.data.json",
+      "size": 21134,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\ntpath.meta.json",
+      "size": 1813,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\posixpath.data.json",
+      "size": 132452,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\posixpath.meta.json",
+      "size": 1825,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\re.data.json",
+      "size": 270556,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\re.meta.json",
+      "size": 1845,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\signal.data.json",
+      "size": 20262,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\signal.meta.json",
+      "size": 1811,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\sre_compile.data.json",
+      "size": 15085,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\sre_compile.meta.json",
+      "size": 1769,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\sre_constants.data.json",
+      "size": 32269,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\sre_constants.meta.json",
+      "size": 1790,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\sre_parse.data.json",
+      "size": 56979,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\sre_parse.meta.json",
+      "size": 1837,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\subprocess.data.json",
+      "size": 257585,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\subprocess.meta.json",
+      "size": 1836,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\threading.data.json",
+      "size": 73395,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\threading.meta.json",
+      "size": 1838,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\time.data.json",
+      "size": 42080,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\time.meta.json",
+      "size": 1762,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\types.data.json",
+      "size": 385606,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\types.meta.json",
+      "size": 1844,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\typing.data.json",
+      "size": 610429,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\typing.meta.json",
+      "size": 1838,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\typing_extensions.data.json",
+      "size": 206227,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\typing_extensions.meta.json",
+      "size": 1864,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\zipimport.data.json",
+      "size": 19682,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\zipimport.meta.json",
+      "size": 1944,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_ast.data.json",
+      "size": 12373,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_ast.meta.json",
+      "size": 1751,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_codecs.data.json",
+      "size": 67237,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_codecs.meta.json",
+      "size": 1817,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_collections_abc.data.json",
+      "size": 31787,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_collections_abc.meta.json",
+      "size": 1774,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_contextvars.data.json",
+      "size": 75237,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_contextvars.meta.json",
+      "size": 1813,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_frozen_importlib.data.json",
+      "size": 45340,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_frozen_importlib.meta.json",
+      "size": 1911,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_frozen_importlib_external.data.json",
+      "size": 71461,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_frozen_importlib_external.meta.json",
+      "size": 2110,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_io.data.json",
+      "size": 129080,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_io.meta.json",
+      "size": 1832,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_sitebuiltins.data.json",
+      "size": 8954,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_sitebuiltins.meta.json",
+      "size": 1761,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_thread.data.json",
+      "size": 61085,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_thread.meta.json",
+      "size": 1844,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_winapi.data.json",
+      "size": 88580,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_winapi.meta.json",
+      "size": 1792,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\__future__.data.json",
+      "size": 9062,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\__future__.meta.json",
+      "size": 1747,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\collections\\abc.data.json",
+      "size": 4096,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\collections\\abc.meta.json",
+      "size": 1756,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\collections\\__init__.data.json",
+      "size": 839807,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\collections\\__init__.meta.json",
+      "size": 1847,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\charset.data.json",
+      "size": 22384,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\charset.meta.json",
+      "size": 1772,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\contentmanager.data.json",
+      "size": 8164,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\contentmanager.meta.json",
+      "size": 1785,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\errors.data.json",
+      "size": 26909,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\errors.meta.json",
+      "size": 1770,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\header.data.json",
+      "size": 10861,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\header.meta.json",
+      "size": 1770,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\message.data.json",
+      "size": 208704,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\message.meta.json",
+      "size": 1927,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\policy.data.json",
+      "size": 34914,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\policy.meta.json",
+      "size": 1848,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\_policybase.data.json",
+      "size": 55053,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\_policybase.meta.json",
+      "size": 1819,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\__init__.data.json",
+      "size": 82038,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\email\\__init__.meta.json",
+      "size": 1845,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\abc.data.json",
+      "size": 38164,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\abc.meta.json",
+      "size": 2027,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\machinery.data.json",
+      "size": 4308,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\machinery.meta.json",
+      "size": 1834,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\readers.data.json",
+      "size": 24207,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\readers.meta.json",
+      "size": 2022,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\_abc.data.json",
+      "size": 6862,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\_abc.meta.json",
+      "size": 1822,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\_bootstrap.data.json",
+      "size": 2457,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\_bootstrap.meta.json",
+      "size": 1743,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\_bootstrap_external.data.json",
+      "size": 4538,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\_bootstrap_external.meta.json",
+      "size": 1795,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\__init__.data.json",
+      "size": 6807,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\__init__.meta.json",
+      "size": 1864,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\metadata\\_meta.data.json",
+      "size": 21602,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\metadata\\_meta.meta.json",
+      "size": 1835,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\metadata\\__init__.data.json",
+      "size": 130736,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\metadata\\__init__.meta.json",
+      "size": 1968,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\resources\\abc.data.json",
+      "size": 33006,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\resources\\abc.meta.json",
+      "size": 1820,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\resources\\_common.data.json",
+      "size": 8128,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\resources\\_common.meta.json",
+      "size": 1919,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\resources\\__init__.data.json",
+      "size": 10405,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\importlib\\resources\\__init__.meta.json",
+      "size": 1945,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\logging\\__init__.data.json",
+      "size": 181045,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\logging\\__init__.meta.json",
+      "size": 1910,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\os\\path.data.json",
+      "size": 5352,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\os\\path.meta.json",
+      "size": 1742,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\os\\__init__.data.json",
+      "size": 306760,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\os\\__init__.meta.json",
+      "size": 1863,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\pathlib\\__init__.data.json",
+      "size": 113806,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\pathlib\\__init__.meta.json",
+      "size": 1847,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\qaai_system\\__init__.data.json",
+      "size": 1849,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\qaai_system\\__init__.meta.json",
+      "size": 1670,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\qaai_system\\execution\\order_manager.data.json",
+      "size": 32914,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\qaai_system\\execution\\order_manager.meta.json",
+      "size": 1795,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\qaai_system\\execution\\__init__.data.json",
+      "size": 2859,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\qaai_system\\execution\\__init__.meta.json",
+      "size": 1723,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\string\\__init__.data.json",
+      "size": 36388,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\string\\__init__.meta.json",
+      "size": 1819,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\sys\\__init__.data.json",
+      "size": 183188,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\sys\\__init__.meta.json",
+      "size": 1847,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\zipfile\\__init__.data.json",
+      "size": 121563,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\zipfile\\__init__.meta.json",
+      "size": 1842,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_typeshed\\importlib.data.json",
+      "size": 7946,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_typeshed\\importlib.meta.json",
+      "size": 1801,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_typeshed\\__init__.data.json",
+      "size": 144671,
+      "ext": ".json"
+    },
+    {
+      "path": ".mypy_cache\\3.11\\_typeshed\\__init__.meta.json",
+      "size": 1846,
+      "ext": ".json"
+    },
+    {
+      "path": ".ruff_cache\\.gitignore",
+      "size": 35,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\CACHEDIR.TAG",
+      "size": 43,
+      "ext": ".tag"
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\10136927798056224366",
+      "size": 95,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\11088223175440548750",
+      "size": 129,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\11368179666433700139",
+      "size": 87,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\1175997441930403698",
+      "size": 102,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\14802036445223268559",
+      "size": 89,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\1541737015201903359",
+      "size": 136,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\15520719517218393334",
+      "size": 362,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\16959831797550659791",
+      "size": 17427,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\4258038586111564231",
+      "size": 198,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\4883855696953632352",
+      "size": 206,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\5444171976485853628",
+      "size": 99,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\5567875554547501575",
+      "size": 88,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\6951617930990679890",
+      "size": 101,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\8102742001113473127",
+      "size": 203,
+      "ext": ""
+    },
+    {
+      "path": ".ruff_cache\\0.14.6\\9307713385111811209",
+      "size": 273,
+      "ext": ""
+    },
+    {
+      "path": ".vscode\\tasks.json",
+      "size": 559,
+      "ext": ".json"
+    },
+    {
+      "path": "audit\\audit_charts.py",
+      "size": 2176,
+      "ext": ".py"
+    },
+    {
+      "path": "audit\\pipeline_run_20250914_043449.jsonl",
+      "size": 0,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250914_052413.jsonl",
+      "size": 0,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250914_060816.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250914_061235.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250914_061512.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250914_062208.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250914_062404.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250914_075043.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250914_085607.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250915_042612.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250915_061409.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250915_095230.jsonl",
+      "size": 593,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250915_110212.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250915_120145.jsonl",
+      "size": 593,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_153233.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_154213.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_155225.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_160110.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_160410.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_160642.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_161022.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_161500.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_161638.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_161913.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_162206.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_173616.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_173859.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_173938.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_174348.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_174427.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_180536.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250916_180615.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_081651.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_151649.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_151720.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_153405.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_155929.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_180552.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_181301.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_183020.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_183737.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_190000.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_191346.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250917_192226.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250918_045148.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250918_081241.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250918_104007.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250918_105917.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250918_111005.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250918_151732.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250918_160541.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250918_175744.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250918_181517.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250919_032410.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250919_034814.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250919_043109.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250920_034901.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250920_041325.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250920_043001.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250920_091127.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250920_091759.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250920_110813.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250920_114513.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250920_121556.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250920_122636.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250920_153243.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250921_065801.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250921_071019.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250921_075336.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250921_081146.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_033941.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_052752.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_052953.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_101007.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_111630.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_120306.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_121551.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_125126.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_141101.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_143438.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_144752.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_165125.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_170616.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_182324.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250922_184020.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250923_064647.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250923_145020.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250923_160454.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_024455.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_025102.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_030142.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_031006.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_032048.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_032142.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_033319.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_040400.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_075730.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_120824.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_122202.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_164445.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_165347.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_171748.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_172754.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_174037.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_174853.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_180034.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_180630.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_182408.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_190024.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_200750.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250924_202119.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250925_031639.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250925_031918.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250925_033155.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250925_041428.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250925_041708.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250925_042756.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250925_045744.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250925_151009.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250925_151702.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250925_155239.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250926_042317.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250926_174557.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250926_181834.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250927_030003.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250927_042534.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250927_043957.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250927_050808.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250927_052505.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250927_060438.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250927_061112.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250927_063420.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250927_064806.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250927_074202.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_104814.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_105708.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_135632.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_135723.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_135834.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_140025.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_151331.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_204146.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_210107.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_214404.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_214626.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_220326.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_220530.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_220815.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_221016.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_221346.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_221618.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_221931.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_222232.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_222527.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_222759.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_223107.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_223338.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_224204.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_224503.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20250929_225323.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_054156.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_054405.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_055301.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_055823.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_060238.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_061033.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_061509.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_061921.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_062307.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_062751.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_063206.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_065843.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_065917.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_071756.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_072529.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_073639.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_075537.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_104051.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_105019.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_111516.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_111859.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_112118.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_112202.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_112232.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_112415.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_112613.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_112824.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_113106.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_113224.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_113943.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_114222.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_115605.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_120418.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_120554.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_121846.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_122821.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_124652.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_125016.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_125639.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_134517.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_135115.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_135640.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_143004.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_231530.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_232149.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_232419.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_233159.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251001_233628.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_061048.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_071527.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_073056.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_083357.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_084742.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_091003.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_091447.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_092743.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_100049.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_100513.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_101911.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_102312.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_103044.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_103620.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_104455.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_105256.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_110123.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_112445.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_114215.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_114658.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_115356.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_115802.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_120004.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_120159.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_120729.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_121129.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_121327.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_165256.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_165559.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_171818.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_172246.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_174227.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_174727.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_174920.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_203123.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_203733.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_204459.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_204648.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251002_204925.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_025831.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_031214.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_031657.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_033103.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_033809.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_045337.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_104727.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_155656.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_172226.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_172825.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_172950.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_181454.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_183308.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_190459.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_191217.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_191750.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_192109.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251003_193239.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_100955.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_113204.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_113316.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_113351.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_114048.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_114139.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_120607.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_120939.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_121204.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_121749.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_122135.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_122452.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_122921.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_123303.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_134659.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_142232.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_142727.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_191650.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_193020.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251004_201919.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_092035.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_092136.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_093223.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_093412.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_093624.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_093815.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_094222.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_094252.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_095110.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_095137.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_102215.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_102821.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_104922.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_105541.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_115851.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251005_125953.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_033354.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_033926.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_035139.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_041216.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_061146.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_071329.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_074903.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_101326.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_133555.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_134756.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_140519.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_141352.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_142319.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_143054.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_143911.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_144417.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_144506.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_144703.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_164223.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_173836.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_173917.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_174443.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_201827.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_204456.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251006_220336.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_050513.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_052222.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_054727.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_062013.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_062755.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_070325.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_070813.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_071400.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_072014.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_074648.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_081210.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_090449.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_111756.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_131137.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_131748.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_132118.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_133956.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_141728.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_144603.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_153237.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_161823.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_180711.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_182106.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_184435.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_191209.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_193453.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251008_194732.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251009_031609.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251009_033907.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251009_105331.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251009_152706.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251009_172447.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251009_174100.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251009_175100.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_042006.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_043720.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_044425.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_044613.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_052253.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_052353.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_060418.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_060802.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_061135.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_061220.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_062916.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_063104.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_063315.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_063439.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_063617.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_075114.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_075613.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_080329.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_081222.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_081513.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_082226.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_082520.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_083243.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_083618.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_085132.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_085239.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_092723.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_092921.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_095441.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_100234.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_100626.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_101816.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_102551.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_103125.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_104049.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_104551.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_111011.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_155342.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251012_161748.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_051020.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_051750.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_051854.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_053214.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_053944.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_080453.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_103046.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_103141.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_105631.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_110911.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_112426.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_125836.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_130238.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_134917.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_134959.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_135120.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_135910.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_141426.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_142003.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_142740.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_143419.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_155008.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_155216.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_160357.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_161058.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_161658.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_163631.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_170801.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_173454.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_174639.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_174922.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_175916.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_182740.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251013_183425.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251014_160055.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251014_160738.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251014_160804.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251014_163207.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251014_164247.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251014_164320.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251014_165141.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251014_165618.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251015_065313.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251015_074153.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251015_075508.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251015_080627.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251015_082131.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251015_110236.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251015_114725.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251015_122031.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251015_125136.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_102434.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_113743.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_113845.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_113954.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_114217.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_114430.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_123938.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_124757.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_130401.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_130733.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_132025.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_160720.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_162737.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_164243.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_164321.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_170434.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_171023.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_171649.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_172047.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_173522.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_174315.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_174619.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_174829.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_175212.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_175719.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_180010.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_181553.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_181622.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_182458.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_182531.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_183045.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251016_183110.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_082236.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_082305.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_100139.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_100650.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_105057.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_105640.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_110152.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_113750.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_122203.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_122407.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_122911.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_123025.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_123957.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_124027.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_133912.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_134651.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_195134.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_195206.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_200916.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_200955.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_201842.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_203044.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_203116.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251017_203313.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_032553.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_035243.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_040654.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_041354.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_042022.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_044213.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_052123.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_055210.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_055259.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_055925.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_080526.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_082208.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_082243.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_084548.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_085736.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_093702.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_093915.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_094301.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_142225.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_193228.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_195033.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_195131.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_195758.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_200449.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_201246.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_201750.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251018_203114.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251019_063208.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251019_071304.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251019_072336.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251019_075741.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251019_075849.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251020_051853.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251020_052006.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251020_062518.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251020_070509.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251020_072319.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251020_143208.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251020_143932.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251020_150542.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251020_155944.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251020_160039.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_200739.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_200809.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_201344.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_201544.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_202828.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_202912.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_204310.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_204440.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_204707.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_204830.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_213537.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_214311.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_215825.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_221123.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_221612.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_222332.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251022_230355.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_111951.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_112605.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_113633.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_125109.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_130659.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_140220.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_144638.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_155553.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_160037.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_161013.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_174339.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_175513.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_180008.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_180538.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_181007.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_181441.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251023_182029.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_041445.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_043209.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_043240.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_070321.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_103931.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_150043.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_151408.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_152107.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_152534.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_152723.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_153923.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_153954.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_154948.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_165251.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_175932.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_175944.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251024_182625.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251118_071624.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251118_072833.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251118_072848.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_120326.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_122918.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_122943.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_163558.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_163838.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_164855.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_164939.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_165025.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_172452.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_181052.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_183248.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251119_183639.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251120_034711.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251120_040638.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251120_061554.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251120_081721.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251120_090704.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251120_091316.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251120_100932.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251120_174838.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251120_180413.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251120_182815.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251121_043403.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251121_051335.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251121_055518.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251121_055548.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251121_061506.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251121_071711.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251123_054856.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251123_060634.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251123_061558.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251123_062929.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251123_063833.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251123_070157.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251123_072039.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251123_073557.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_033155.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_041111.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_041729.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_043720.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_044707.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_045958.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_061019.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_111857.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_112547.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_113352.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_113946.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_114243.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_121322.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_121434.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_121950.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_141552.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_153956.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_155217.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_155248.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_155331.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_155432.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_155512.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_155603.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_155849.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_160021.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_160152.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_160426.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_160537.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251124_161415.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_050231.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_065506.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_070326.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_072508.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_072908.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_073405.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_090134.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_090759.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_090937.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_093047.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_093353.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_093817.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_094022.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_094630.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_095201.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_101811.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_141955.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_142756.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_143814.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_144942.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_145620.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_150108.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_152616.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_153111.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_153322.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_155259.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251125_155347.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251127_082532.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251127_090219.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251127_091739.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251127_092117.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251127_125406.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251127_125540.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251127_132123.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251127_132210.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_035729.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_041303.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_041713.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_042721.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_042750.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_052047.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_055745.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_061538.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_062625.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_064221.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_075458.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_082610.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251128_112530.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_094331.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_094746.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_100931.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_102128.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_102331.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_103416.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_105023.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_105048.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_112110.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_112220.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_131611.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251130_132019.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251201_074028.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\pipeline_run_20251201_074939.jsonl",
+      "size": 1703,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "audit\\__init__.py",
+      "size": 372,
+      "ext": ".py"
+    },
+    {
+      "path": "backtest\\backtester.py",
+      "size": 4612,
+      "ext": ".py"
+    },
+    {
+      "path": "backtest\\backtest_price_feed.py",
+      "size": 1889,
+      "ext": ".py"
+    },
+    {
+      "path": "backtest\\blotter.py",
+      "size": 2386,
+      "ext": ".py"
+    },
+    {
+      "path": "backtest\\engine.py",
+      "size": 3959,
+      "ext": ".py"
+    },
+    {
+      "path": "backtest\\execution_stats.py",
+      "size": 2577,
+      "ext": ".py"
+    },
+    {
+      "path": "backtest\\pnl.py",
+      "size": 2041,
+      "ext": ".py"
+    },
+    {
+      "path": "backtest\\position_manager.py",
+      "size": 779,
+      "ext": ".py"
+    },
+    {
+      "path": "backtest\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "backtester\\backtester.py",
+      "size": 13006,
+      "ext": ".py"
+    },
+    {
+      "path": "backtester\\core.py",
+      "size": 888,
+      "ext": ".py"
+    },
+    {
+      "path": "backtester\\explainability.py",
+      "size": 826,
+      "ext": ".py"
+    },
+    {
+      "path": "backtester\\noise_models.py",
+      "size": 1476,
+      "ext": ".py"
+    },
+    {
+      "path": "backtester\\regime_detector.py",
+      "size": 744,
+      "ext": ".py"
+    },
+    {
+      "path": "backtester\\tuner.py",
+      "size": 2285,
+      "ext": ".py"
+    },
+    {
+      "path": "backtester\\__init__.py",
+      "size": 245,
+      "ext": ".py"
+    },
+    {
+      "path": "backtesting\\__init__.py",
+      "size": 38,
+      "ext": ".py"
+    },
+    {
+      "path": "Backup\\patch_orchestrator.py",
+      "size": 93428,
+      "ext": ".py"
+    },
+    {
+      "path": "broker\\Dhan_codebase usage.py",
+      "size": 2051,
+      "ext": ".py"
+    },
+    {
+      "path": "broker\\dhan_live.py",
+      "size": 915,
+      "ext": ".py"
+    },
+    {
+      "path": "broker\\Dhan_Tradehull.py",
+      "size": 83554,
+      "ext": ".py"
+    },
+    {
+      "path": "broker\\Dhan_websocket.py",
+      "size": 7548,
+      "ext": ".py"
+    },
+    {
+      "path": "checks\\validate_structure.py",
+      "size": 2376,
+      "ext": ".py"
+    },
+    {
+      "path": "config\\db_paths.yaml",
+      "size": 142,
+      "ext": ".yaml"
+    },
+    {
+      "path": "config\\execution.yaml",
+      "size": 801,
+      "ext": ".yaml"
+    },
+    {
+      "path": "dashboard\\app.py",
+      "size": 399,
+      "ext": ".py"
+    },
+    {
+      "path": "dashboard\\streamlit_dashboard.py",
+      "size": 1712,
+      "ext": ".py"
+    },
+    {
+      "path": "dashboard\\watchlist_trigger_ui.py",
+      "size": 554,
+      "ext": ".py"
+    },
+    {
+      "path": "dashboard\\watchlist_ui.py",
+      "size": 1572,
+      "ext": ".py"
+    },
+    {
+      "path": "dashboard\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "db\\audit.db",
+      "size": 49152,
+      "ext": ".db"
+    },
+    {
+      "path": "db\\database.py",
+      "size": 1364,
+      "ext": ".py"
+    },
+    {
+      "path": "db\\db_utils.py",
+      "size": 9968,
+      "ext": ".py"
+    },
+    {
+      "path": "db\\features.db",
+      "size": 49152,
+      "ext": ".db"
+    },
+    {
+      "path": "db\\models.py",
+      "size": 1879,
+      "ext": ".py"
+    },
+    {
+      "path": "db\\ohlcv.db",
+      "size": 49152,
+      "ext": ".db"
+    },
+    {
+      "path": "db\\ohlcv_loader.py",
+      "size": 2577,
+      "ext": ".py"
+    },
+    {
+      "path": "db\\schema.sql",
+      "size": 1375,
+      "ext": ".sql"
+    },
+    {
+      "path": "db\\ticks.db",
+      "size": 81920,
+      "ext": ".db"
+    },
+    {
+      "path": "db\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "dhanhq-2.0.2\\LICENSE",
+      "size": 1061,
+      "ext": ""
+    },
+    {
+      "path": "dhanhq-2.0.2\\MANIFEST.in",
+      "size": 35,
+      "ext": ".in"
+    },
+    {
+      "path": "dhanhq-2.0.2\\PKG-INFO",
+      "size": 8582,
+      "ext": ""
+    },
+    {
+      "path": "dhanhq-2.0.2\\README.md",
+      "size": 8441,
+      "ext": ".md"
+    },
+    {
+      "path": "dhanhq-2.0.2\\setup.cfg",
+      "size": 79,
+      "ext": ".cfg"
+    },
+    {
+      "path": "dhanhq-2.0.2\\setup.py",
+      "size": 889,
+      "ext": ".py"
+    },
+    {
+      "path": "dhanhq-2.0.2\\dhanhq\\dhanhq.py",
+      "size": 48160,
+      "ext": ".py"
+    },
+    {
+      "path": "dhanhq-2.0.2\\dhanhq\\marketfeed.py",
+      "size": 24736,
+      "ext": ".py"
+    },
+    {
+      "path": "dhanhq-2.0.2\\dhanhq\\orderupdate.py",
+      "size": 3193,
+      "ext": ".py"
+    },
+    {
+      "path": "dhanhq-2.0.2\\dhanhq\\__init__.py",
+      "size": 118,
+      "ext": ".py"
+    },
+    {
+      "path": "dhanhq-2.0.2\\dhanhq.egg-info\\dependency_links.txt",
+      "size": 1,
+      "ext": ".txt"
+    },
+    {
+      "path": "dhanhq-2.0.2\\dhanhq.egg-info\\PKG-INFO",
+      "size": 8582,
+      "ext": ""
+    },
+    {
+      "path": "dhanhq-2.0.2\\dhanhq.egg-info\\requires.txt",
+      "size": 68,
+      "ext": ".txt"
+    },
+    {
+      "path": "dhanhq-2.0.2\\dhanhq.egg-info\\SOURCES.txt",
+      "size": 295,
+      "ext": ".txt"
+    },
+    {
+      "path": "dhanhq-2.0.2\\dhanhq.egg-info\\top_level.txt",
+      "size": 7,
+      "ext": ".txt"
+    },
+    {
+      "path": "dhanhq-2.0.2\\examples\\orders.py",
+      "size": 3068,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\base.py",
+      "size": 2059,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\bracket_manager.py",
+      "size": 38028,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\broker_adapter.py",
+      "size": 13622,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\execution_engine.py",
+      "size": 20538,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\execution_orchestrator.py",
+      "size": 2226,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\fill_monitor.py",
+      "size": 1580,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\live_broker.py",
+      "size": 4099,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\live_provider.py",
+      "size": 1096,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\orchestrator.py",
+      "size": 57234,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\orchestrator.py.bak",
+      "size": 51179,
+      "ext": ".bak"
+    },
+    {
+      "path": "execution\\order_manager.py",
+      "size": 14237,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\order_manager.py.bak",
+      "size": 13616,
+      "ext": ".bak"
+    },
+    {
+      "path": "execution\\paper_provider.py",
+      "size": 4088,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\parent_module.py",
+      "size": 113,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\performance_tracker.py",
+      "size": 2868,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\policy.py",
+      "size": 4147,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\portfolio_manager.py",
+      "size": 21971,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\positions.py",
+      "size": 192,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\position_manager.py",
+      "size": 8985,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\position_manager_persistent.py",
+      "size": 1679,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\position_store.py",
+      "size": 1981,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\providers.py",
+      "size": 4633,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\risk.py",
+      "size": 4231,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\risk_manager.py",
+      "size": 37030,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\risk_manager.py.bak",
+      "size": 22418,
+      "ext": ".bak"
+    },
+    {
+      "path": "execution\\router.py",
+      "size": 22215,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\signal_engine.py",
+      "size": 8163,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\strategy_base.py",
+      "size": 177,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\trade_classifier.py",
+      "size": 4009,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\trade_logger.py",
+      "size": 3372,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\utils.py",
+      "size": 776,
+      "ext": ".py"
+    },
+    {
+      "path": "execution\\__init__.py",
+      "size": 653,
+      "ext": ".py"
+    },
+    {
+      "path": "exports\\overlay_export_20250808_115037.xlsx",
+      "size": 5028,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "exports\\overlay_export_20250808_115046.xlsx",
+      "size": 5028,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "exports\\overlay_export_20250808_115233.xlsx",
+      "size": 5028,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "exports\\overlay_export_20250808_120229.xlsx",
+      "size": 5066,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "exports\\overlay_export_20250808_120636.xlsx",
+      "size": 5064,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "exports\\overlay_export_20250808_121651.xlsx",
+      "size": 5137,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "exports\\overlay_export_20250808_123010.xlsx",
+      "size": 5153,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "exports\\overlay_export_20250808_123329.xlsx",
+      "size": 5156,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "exports\\overlay_export_20250808_124416.xlsx",
+      "size": 5124,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "exports\\overlay_export_20250808_130623.xlsx",
+      "size": 5067,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "exports\\overlay_export_20250808_132444.xlsx",
+      "size": 5131,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "exports\\test_overlay.xlsx",
+      "size": 5024,
+      "ext": ".xlsx"
+    },
+    {
+      "path": "features\\indicators.py",
+      "size": 7612,
+      "ext": ".py"
+    },
+    {
+      "path": "features\\__init__.py",
+      "size": 112,
+      "ext": ".py"
+    },
+    {
+      "path": "htmlcov\\class_index.html",
+      "size": 154394,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\coverage_html_cb_497bf287.js",
+      "size": 26207,
+      "ext": ".js"
+    },
+    {
+      "path": "htmlcov\\env_config_py.html",
+      "size": 31967,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\favicon_32_cb_58284776.png",
+      "size": 1732,
+      "ext": ".png"
+    },
+    {
+      "path": "htmlcov\\function_index.html",
+      "size": 561510,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\index.html",
+      "size": 66684,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\keybd_closed_cb_ce680311.png",
+      "size": 9004,
+      "ext": ".png"
+    },
+    {
+      "path": "htmlcov\\main_orchestrator_py.html",
+      "size": 113213,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\run_full_test_py.html",
+      "size": 13247,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\status.json",
+      "size": 67315,
+      "ext": ".json"
+    },
+    {
+      "path": "htmlcov\\status_report_py.html",
+      "size": 140600,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\style_cb_dca529e9.css",
+      "size": 16020,
+      "ext": ".css"
+    },
+    {
+      "path": "htmlcov\\watchlist_advanced_py.html",
+      "size": 87852,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_0539a528f55cce58_selector_utils_py.html",
+      "size": 14243,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_0539a528f55cce58_stock_screener_py.html",
+      "size": 31178,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_0539a528f55cce58___init___py.html",
+      "size": 6597,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_0f30d9fadb9b8f2c_core_py.html",
+      "size": 12275,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_0f30d9fadb9b8f2c_explainability_py.html",
+      "size": 12192,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_0f30d9fadb9b8f2c_noise_models_py.html",
+      "size": 16853,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_0f30d9fadb9b8f2c_regime_detector_py.html",
+      "size": 11279,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_0f30d9fadb9b8f2c_tuner_py.html",
+      "size": 25755,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_0f30d9fadb9b8f2c___init___py.html",
+      "size": 6418,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_1840e12459afef54_broker_health_py.html",
+      "size": 15551,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_1840e12459afef54_export_helpers_py.html",
+      "size": 67551,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_1840e12459afef54_telegram_alerts_py.html",
+      "size": 33712,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_1840e12459afef54___init___py.html",
+      "size": 8996,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_19efe6e1c0a25d83_automation_py.html",
+      "size": 13589,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_19efe6e1c0a25d83_data_health_py.html",
+      "size": 24030,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_19efe6e1c0a25d83_ml_metrics_py.html",
+      "size": 24397,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_19efe6e1c0a25d83_quality_py.html",
+      "size": 16312,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_19efe6e1c0a25d83_reporting_py.html",
+      "size": 16041,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_19efe6e1c0a25d83_security_py.html",
+      "size": 15326,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_19efe6e1c0a25d83_utils_py.html",
+      "size": 25628,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_1f4cdc73c39a6604_db_utils_py.html",
+      "size": 90869,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_209d042482f181b3_audit_charts_py.html",
+      "size": 24236,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_209d042482f181b3___init___py.html",
+      "size": 7954,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_22d7c15248c2fa5a_examples_py.html",
+      "size": 53327,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_22d7c15248c2fa5a___init___py.html",
+      "size": 6179,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_25e2f40ea28517d3_export_scheduler_py.html",
+      "size": 22537,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_2fdd3ad355723383_broker_py.html",
+      "size": 97857,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_2fdd3ad355723383_feedback_py.html",
+      "size": 12575,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_2fdd3ad355723383_paper_broker_py.html",
+      "size": 39507,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_2fdd3ad355723383_scaling_py.html",
+      "size": 8603,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_2fdd3ad355723383_sizing_py.html",
+      "size": 16753,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_3935125dd4b80ed9_screener_watchlist_py.html",
+      "size": 22192,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_444b47f894cdc5b4_features_py.html",
+      "size": 23800,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_444b47f894cdc5b4_feature_extractor_py.html",
+      "size": 15882,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_444b47f894cdc5b4_feedback_py.html",
+      "size": 13487,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_444b47f894cdc5b4_meta_engine_py.html",
+      "size": 77318,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_444b47f894cdc5b4_ml_model_py.html",
+      "size": 24099,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_444b47f894cdc5b4_supercharged_engine_py.html",
+      "size": 52867,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_base_py.html",
+      "size": 18810,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_bracket_manager_py.html",
+      "size": 286333,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_execution_engine_py.html",
+      "size": 169160,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_live_broker_py.html",
+      "size": 32354,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_orchestrator_py.html",
+      "size": 424315,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_paper_provider_py.html",
+      "size": 42063,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_policy_py.html",
+      "size": 37684,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_portfolio_manager_py.html",
+      "size": 192274,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_position_manager_persistent_py.html",
+      "size": 18114,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_position_manager_py.html",
+      "size": 84545,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_position_store_py.html",
+      "size": 22073,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_risk_manager_py.html",
+      "size": 212218,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_router_py.html",
+      "size": 163508,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_signal_engine_py.html",
+      "size": 75240,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_strategy_base_py.html",
+      "size": 5360,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e_trade_classifier_py.html",
+      "size": 36160,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_564e8e27056fed0e___init___py.html",
+      "size": 9183,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_870c8b05ae87daee_main_orchestrator_py.html",
+      "size": 28867,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_9b7b1f9db13f9215_signal_engine_py.html",
+      "size": 13285,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_conftest_py.html",
+      "size": 31063,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_audit_charts_edge_py.html",
+      "size": 25994,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_audit_charts_py.html",
+      "size": 31577,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_audit_loader_py.html",
+      "size": 17944,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_auto_updater_py.html",
+      "size": 15408,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_backtesting_upgrades_py.html",
+      "size": 35507,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_bracket_manager_py.html",
+      "size": 93530,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_circuit_breaker_py.html",
+      "size": 13585,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_daily_loss_limit_py.html",
+      "size": 12083,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_daily_loss_reset_hour_py.html",
+      "size": 11367,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_daily_loss_reset_py.html",
+      "size": 10531,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_dhan_adapter_sandbox_py.html",
+      "size": 44780,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_dhan_client_py.html",
+      "size": 11113,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_dhan_live_py.html",
+      "size": 13583,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_env_config_py.html",
+      "size": 13732,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_execution_orchestrator_py.html",
+      "size": 49559,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_execution_pipeline_py.html",
+      "size": 15390,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_export_helpers_py.html",
+      "size": 15359,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_export_scheduler_py.html",
+      "size": 18705,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_feedback_integration_py.html",
+      "size": 15508,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_feedback_loop_exec_py.html",
+      "size": 20012,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_feedback_loop_portfolio_py.html",
+      "size": 34244,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_kill_switch_py.html",
+      "size": 12753,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_logging_utils_py.html",
+      "size": 14832,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_orchestrator_feedback_pnl_py.html",
+      "size": 16277,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_orchestrator_risk_controls_py.html",
+      "size": 48621,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_orchestrator_strategies_py.html",
+      "size": 43831,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_paper_broker_brackets_and_trailing_py.html",
+      "size": 26065,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_paper_broker_risk_and_brackets_py.html",
+      "size": 39371,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_paper_trading_upgrades_py.html",
+      "size": 25367,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_pnl_calculator_py.html",
+      "size": 19555,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_portfolio_manager_brackets_py.html",
+      "size": 32314,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_portfolio_manager_caps_py.html",
+      "size": 22633,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_portfolio_manager_exposure_py.html",
+      "size": 46143,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_portfolio_manager_full_py.html",
+      "size": 51263,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_portfolio_manager_symbol_caps_py.html",
+      "size": 44037,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_portfolio_manager_unit_py.html",
+      "size": 59098,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_position_manager_persistent_py.html",
+      "size": 10154,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_position_store_py.html",
+      "size": 10570,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_quality_control_py.html",
+      "size": 20303,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_risk_manager_extended_py.html",
+      "size": 11521,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_risk_manager_kill_and_caps_py.html",
+      "size": 25357,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_router_py.html",
+      "size": 34749,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_sanity_pipeline_py.html",
+      "size": 40308,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_screener_to_watchlist_py.html",
+      "size": 29011,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_screening_engine_supercharged_py.html",
+      "size": 31736,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_screening_meta_upgrade_py.html",
+      "size": 38542,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_screening_upgrades_py.html",
+      "size": 31987,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_selector_utils_py.html",
+      "size": 22039,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_signal_engine_edge_full_py.html",
+      "size": 63495,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_signal_engine_edge_param_py.html",
+      "size": 35666,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_signal_engine_edge_py.html",
+      "size": 29377,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_signal_engine_edge_week1_py.html",
+      "size": 30934,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_signal_engine_edge_week2_py.html",
+      "size": 24575,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_signal_engine_edge_week3_py.html",
+      "size": 40987,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_signal_engine_integration_py.html",
+      "size": 37903,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_signal_engine_master_py.html",
+      "size": 93200,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_signal_engine_py.html",
+      "size": 19098,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_signal_engine_supercharged_py.html",
+      "size": 34120,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_status_report_py.html",
+      "size": 61216,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_trade_classifier_py.html",
+      "size": 17482,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_a44f0ac069e85531_test_watchlist_advanced_py.html",
+      "size": 29668,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_b9c51c393dbf0014_dhan_adapter_py.html",
+      "size": 138428,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_b9c51c393dbf0014_dhan_live_py.html",
+      "size": 40534,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_b9c51c393dbf0014_logging_utils_py.html",
+      "size": 19788,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_b9c51c393dbf0014_pnl_calculator_py.html",
+      "size": 39835,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_b9c51c393dbf0014_watchlist_manager_py.html",
+      "size": 18908,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_c341a08916d2b317_signal_engine_supercharged_py.html",
+      "size": 52554,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_c810615cce0f7acb_explainability_py.html",
+      "size": 19767,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_cc2306292991aaf7_watchlist_manager_py.html",
+      "size": 28445,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_cc2306292991aaf7___init___py.html",
+      "size": 6686,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_ed5be71de260fadc_signal_ingestion_py.html",
+      "size": 23071,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_efda893aa850b0c0_ingestion_py.html",
+      "size": 16447,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\z_efda893aa850b0c0___init___py.html",
+      "size": 5688,
+      "ext": ".html"
+    },
+    {
+      "path": "htmlcov\\__init___py.html",
+      "size": 12310,
+      "ext": ".html"
+    },
+    {
+      "path": "infra\\broker_factory.py",
+      "size": 1116,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\cache.py",
+      "size": 1959,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\config.yaml",
+      "size": 105,
+      "ext": ".yaml"
+    },
+    {
+      "path": "infra\\config_loader.py",
+      "size": 239,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\db_client.py",
+      "size": 5635,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\dhan_adapter.py",
+      "size": 15442,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\dhan_adapter_sandbox.py",
+      "size": 6201,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\dhan_client.py",
+      "size": 7230,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\dhan_client_safe.py",
+      "size": 8479,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\dhan_client_sim.py",
+      "size": 5003,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\dhan_live.py",
+      "size": 4436,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\Dhan_websocket.py",
+      "size": 2665,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\health_check.py",
+      "size": 854,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\heartbeat.py",
+      "size": 1451,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\live_pnl.py",
+      "size": 1377,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\logging_utils.py",
+      "size": 1713,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\order_queue.py",
+      "size": 9341,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\pnl_calculator.py",
+      "size": 4266,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\sqlite_client.py",
+      "size": 787,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\streamer.py",
+      "size": 1137,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\watchlist_manager.py",
+      "size": 1692,
+      "ext": ".py"
+    },
+    {
+      "path": "infra\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "ingestion\\dhan_ws.py",
+      "size": 16561,
+      "ext": ".py"
+    },
+    {
+      "path": "integrations\\screener_watchlist.py",
+      "size": 2807,
+      "ext": ".py"
+    },
+    {
+      "path": "jobs\\export_jobs.py",
+      "size": 1716,
+      "ext": ".py"
+    },
+    {
+      "path": "logs\\screener_explain.jsonl",
+      "size": 481808,
+      "ext": ".jsonl"
+    },
+    {
+      "path": "logs\\system.log",
+      "size": 1322366,
+      "ext": ".log"
+    },
+    {
+      "path": "logs\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "logs\\market\\price_data.csv",
+      "size": 2333,
+      "ext": ".csv"
+    },
+    {
+      "path": "logs\\trades\\trade_log.csv",
+      "size": 113,
+      "ext": ".csv"
+    },
+    {
+      "path": "ml\\export_preds_to_parquet.py",
+      "size": 34634,
+      "ext": ".py"
+    },
+    {
+      "path": "ml\\infer_fill.py",
+      "size": 8879,
+      "ext": ".py"
+    },
+    {
+      "path": "ml\\overlay_exporter.py",
+      "size": 2007,
+      "ext": ".py"
+    },
+    {
+      "path": "ml\\predict.py",
+      "size": 3057,
+      "ext": ".py"
+    },
+    {
+      "path": "ml\\save_predictions.py",
+      "size": 1944,
+      "ext": ".py"
+    },
+    {
+      "path": "ml\\train_fill_model.py",
+      "size": 3832,
+      "ext": ".py"
+    },
+    {
+      "path": "ml\\train_fill_model_v2.py",
+      "size": 6600,
+      "ext": ".py"
+    },
+    {
+      "path": "ml\\train_fill_v3.py",
+      "size": 11315,
+      "ext": ".py"
+    },
+    {
+      "path": "ml\\helpers\\parquet_utils.py",
+      "size": 3672,
+      "ext": ".py"
+    },
+    {
+      "path": "ml\\helpers\\validation.py",
+      "size": 3099,
+      "ext": ".py"
+    },
+    {
+      "path": "modules\\signal_engine.py",
+      "size": 913,
+      "ext": ".py"
+    },
+    {
+      "path": "modules\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "monitoring\\streamlit_dashboard.py",
+      "size": 384,
+      "ext": ".py"
+    },
+    {
+      "path": "orchestrator\\full_runner.py",
+      "size": 1378,
+      "ext": ".py"
+    },
+    {
+      "path": "orchestrator\\main_orchestrator.py",
+      "size": 3205,
+      "ext": ".py"
+    },
+    {
+      "path": "paper_trading\\broker.py",
+      "size": 10912,
+      "ext": ".py"
+    },
+    {
+      "path": "paper_trading\\feedback.py",
+      "size": 852,
+      "ext": ".py"
+    },
+    {
+      "path": "paper_trading\\paper_broker.py",
+      "size": 4012,
+      "ext": ".py"
+    },
+    {
+      "path": "paper_trading\\scaling.py",
+      "size": 463,
+      "ext": ".py"
+    },
+    {
+      "path": "paper_trading\\sizing.py",
+      "size": 1464,
+      "ext": ".py"
+    },
+    {
+      "path": "paper_trading\\__init__.py",
+      "size": 139,
+      "ext": ".py"
+    },
+    {
+      "path": "pipeline\\signal_ingestion.py",
+      "size": 2293,
+      "ext": ".py"
+    },
+    {
+      "path": "pipeline\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "portfolio\\simulator.py",
+      "size": 3774,
+      "ext": ".py"
+    },
+    {
+      "path": "portfolio\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "providers\\dhan_client.py",
+      "size": 12659,
+      "ext": ".py"
+    },
+    {
+      "path": "providers\\dhan_http.py",
+      "size": 3392,
+      "ext": ".py"
+    },
+    {
+      "path": "providers\\dhan_provider.py",
+      "size": 3435,
+      "ext": ".py"
+    },
+    {
+      "path": "providers\\unified_provider.py",
+      "size": 7189,
+      "ext": ".py"
+    },
+    {
+      "path": "providers\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "qaai_system.egg-info\\dependency_links.txt",
+      "size": 1,
+      "ext": ".txt"
+    },
+    {
+      "path": "qaai_system.egg-info\\PKG-INFO",
+      "size": 149,
+      "ext": ""
+    },
+    {
+      "path": "qaai_system.egg-info\\requires.txt",
+      "size": 13,
+      "ext": ".txt"
+    },
+    {
+      "path": "qaai_system.egg-info\\SOURCES.txt",
+      "size": 0,
+      "ext": ".txt"
+    },
+    {
+      "path": "qaai_system.egg-info\\top_level.txt",
+      "size": 180,
+      "ext": ".txt"
+    },
+    {
+      "path": "reports\\classification_report.json",
+      "size": 628,
+      "ext": ".json"
+    },
+    {
+      "path": "reports\\fill_model_v3_1763711007.pr.png",
+      "size": 23337,
+      "ext": ".png"
+    },
+    {
+      "path": "reports\\fill_model_v3_1763711007.roc.png",
+      "size": 15999,
+      "ext": ".png"
+    },
+    {
+      "path": "reports\\scan_report.html",
+      "size": 591689,
+      "ext": ".html"
+    },
+    {
+      "path": "report_assets\\coverage_trend.png",
+      "size": 13534,
+      "ext": ".png"
+    },
+    {
+      "path": "risk\\risk_engine.py",
+      "size": 476,
+      "ext": ".py"
+    },
+    {
+      "path": "risk\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "screener\\engine.py",
+      "size": 330,
+      "ext": ".py"
+    },
+    {
+      "path": "screener\\explainability.py",
+      "size": 286,
+      "ext": ".py"
+    },
+    {
+      "path": "screener\\features.py",
+      "size": 2053,
+      "ext": ".py"
+    },
+    {
+      "path": "screener\\feature_extractor.py",
+      "size": 1222,
+      "ext": ".py"
+    },
+    {
+      "path": "screener\\feedback.py",
+      "size": 1036,
+      "ext": ".py"
+    },
+    {
+      "path": "screener\\meta_engine.py",
+      "size": 8552,
+      "ext": ".py"
+    },
+    {
+      "path": "screener\\ml_model.py",
+      "size": 2220,
+      "ext": ".py"
+    },
+    {
+      "path": "screener\\supercharged_engine.py",
+      "size": 5723,
+      "ext": ".py"
+    },
+    {
+      "path": "screener\\__init__.py",
+      "size": 199,
+      "ext": ".py"
+    },
+    {
+      "path": "screening\\quality_control.py",
+      "size": 3287,
+      "ext": ".py"
+    },
+    {
+      "path": "screening\\screener_config.yaml",
+      "size": 113,
+      "ext": ".yaml"
+    },
+    {
+      "path": "screening\\selector_utils.py",
+      "size": 1104,
+      "ext": ".py"
+    },
+    {
+      "path": "screening\\signal_generator.py",
+      "size": 2447,
+      "ext": ".py"
+    },
+    {
+      "path": "screening\\stock_screener.py",
+      "size": 3312,
+      "ext": ".py"
+    },
+    {
+      "path": "screening\\watchlist_ml.py",
+      "size": 4295,
+      "ext": ".py"
+    },
+    {
+      "path": "screening\\__init__.py",
+      "size": 175,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\backfill_ohlcv.py",
+      "size": 1439,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\backtest_driver.py",
+      "size": 10817,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\db_migrate.py",
+      "size": 1155,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\debug_watchlist_data.py",
+      "size": 293,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\demo_live_flow.py",
+      "size": 1163,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\dhan_healthcheck.py",
+      "size": 390,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\drift_check.py",
+      "size": 3566,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\extract_features.py",
+      "size": 1704,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\generate_signals.py",
+      "size": 582,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\ingest_dhan_ohlcv.py",
+      "size": 1084,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\ingest_dhan_ticks.py",
+      "size": 1232,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\ingest_worker.py",
+      "size": 1527,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\insert_dummy_ohlcv.py",
+      "size": 806,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\insert_sample_ohlcv.py",
+      "size": 704,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\run_auto_watchlist_now.py",
+      "size": 317,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\run_feedback_reranker.py",
+      "size": 261,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\run_momentum.py",
+      "size": 338,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\set_sqlite_wal.py",
+      "size": 735,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\sqlite_init.py",
+      "size": 1772,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\sqlite_init_prod.py",
+      "size": 1323,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\test_dhan.py",
+      "size": 446,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\test_dhan_ws.py",
+      "size": 781,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\verify_db.py",
+      "size": 624,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\ws_check.py",
+      "size": 654,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\ws_test_headers.py",
+      "size": 1490,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\ws_test_sync.py",
+      "size": 546,
+      "ext": ".py"
+    },
+    {
+      "path": "scripts\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "services\\health_watchdog.py",
+      "size": 938,
+      "ext": ".py"
+    },
+    {
+      "path": "signals\\__init__.py",
+      "size": 205,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_engine\\db_client.py",
+      "size": 1243,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_engine\\meta_feedback_loop.py",
+      "size": 2344,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_engine\\model_auto_selector.py",
+      "size": 1532,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_engine\\quality_control.py",
+      "size": 3723,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_engine\\regime_classifier.py",
+      "size": 1052,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_engine\\risk_calibrator.py",
+      "size": 1546,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_engine\\selector_utils.py",
+      "size": 2285,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_engine\\signal_engine.py",
+      "size": 138,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_engine\\signal_engine_supercharged.py",
+      "size": 5073,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_engine\\signal_generator.py",
+      "size": 14879,
+      "ext": ".py"
+    },
+    {
+      "path": "signal_engine\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "src\\config.py",
+      "size": 5608,
+      "ext": ".py"
+    },
+    {
+      "path": "src\\logging_config.py",
+      "size": 518,
+      "ext": ".py"
+    },
+    {
+      "path": "src\\router.py",
+      "size": 8134,
+      "ext": ".py"
+    },
+    {
+      "path": "src\\clients\\dhan_safe_client.py",
+      "size": 10243,
+      "ext": ".py"
+    },
+    {
+      "path": "src\\feeds\\dhan_v2_feed.py",
+      "size": 16874,
+      "ext": ".py"
+    },
+    {
+      "path": "status_checks\\automation.py",
+      "size": 976,
+      "ext": ".py"
+    },
+    {
+      "path": "status_checks\\data_health.py",
+      "size": 1863,
+      "ext": ".py"
+    },
+    {
+      "path": "status_checks\\ml_metrics.py",
+      "size": 2444,
+      "ext": ".py"
+    },
+    {
+      "path": "status_checks\\quality.py",
+      "size": 1340,
+      "ext": ".py"
+    },
+    {
+      "path": "status_checks\\reporting.py",
+      "size": 1235,
+      "ext": ".py"
+    },
+    {
+      "path": "status_checks\\security.py",
+      "size": 1191,
+      "ext": ".py"
+    },
+    {
+      "path": "status_checks\\utils.py",
+      "size": 2119,
+      "ext": ".py"
+    },
+    {
+      "path": "status_checks\\__init__.py",
+      "size": 229,
+      "ext": ".py"
+    },
+    {
+      "path": "strategies\\base.py",
+      "size": 1108,
+      "ext": ".py"
+    },
+    {
+      "path": "strategies\\examples.py",
+      "size": 6283,
+      "ext": ".py"
+    },
+    {
+      "path": "strategies\\mavg_cross.py",
+      "size": 2614,
+      "ext": ".py"
+    },
+    {
+      "path": "strategies\\momentum.py",
+      "size": 11998,
+      "ext": ".py"
+    },
+    {
+      "path": "strategies\\registry.py",
+      "size": 1447,
+      "ext": ".py"
+    },
+    {
+      "path": "strategies\\risk_wrapper.py",
+      "size": 1510,
+      "ext": ".py"
+    },
+    {
+      "path": "strategies\\sma_crossover.py",
+      "size": 1657,
+      "ext": ".py"
+    },
+    {
+      "path": "strategies\\sma_strategy.py",
+      "size": 3989,
+      "ext": ".py"
+    },
+    {
+      "path": "strategies\\strategy_base.py",
+      "size": 3386,
+      "ext": ".py"
+    },
+    {
+      "path": "strategies\\strategy_engine.py",
+      "size": 450,
+      "ext": ".py"
+    },
+    {
+      "path": "strategies\\__init__.py",
+      "size": 252,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\app.py",
+      "size": 836,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\dashboard.py",
+      "size": 6214,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\exporter_ui.py",
+      "size": 2353,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\folder_stream.txt",
+      "size": 1390,
+      "ext": ".txt"
+    },
+    {
+      "path": "streamlit_app\\state.py",
+      "size": 276,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\widgets.py",
+      "size": 2561,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\assets\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\components\\audit_charts.py",
+      "size": 1939,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\components\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\pages\\1_Signals.py",
+      "size": 4497,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\pages\\2_Trade_Audit.py",
+      "size": 3943,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\pages\\3_Alpha_Intel_Overlays.py",
+      "size": 6920,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\pages\\4_Audit_Log_Viewer.py",
+      "size": 6568,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\pages\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\signal_engine\\quality_control.py",
+      "size": 1400,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\signal_engine\\regime_classifier.py",
+      "size": 1052,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\signal_engine\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\styles\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\tasks\\backtest_results_export.py",
+      "size": 933,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\tasks\\export_scheduler.py",
+      "size": 2279,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\tasks\\signal_export.py",
+      "size": 876,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\tasks\\trade_audit_export.py",
+      "size": 1055,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\tasks\\watchlist_export.py",
+      "size": 868,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\utils\\audit_loader.py",
+      "size": 2098,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\utils\\broker_health.py",
+      "size": 1289,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\utils\\export_helpers.py",
+      "size": 7879,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\utils\\export_scheduler.py",
+      "size": 3843,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\utils\\price_fetcher.py",
+      "size": 4328,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\utils\\telegram_alerts.py",
+      "size": 3807,
+      "ext": ".py"
+    },
+    {
+      "path": "streamlit_app\\utils\\__init__.py",
+      "size": 466,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\conftest.py",
+      "size": 3570,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_audit_charts.py",
+      "size": 2734,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_audit_charts_edge.py",
+      "size": 2239,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_audit_loader.py",
+      "size": 1469,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_auto_updater.py",
+      "size": 1341,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_backtester.py",
+      "size": 1734,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_backtesting_upgrades.py",
+      "size": 3236,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_backtest_engine.py",
+      "size": 1596,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_blotter.py",
+      "size": 1079,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_bracket_manager.py",
+      "size": 8724,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_circuit_breaker.py",
+      "size": 942,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_cleaner.py",
+      "size": 344,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_config_loader.py",
+      "size": 254,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_daily_loss_limit.py",
+      "size": 753,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_daily_loss_reset.py",
+      "size": 707,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_daily_loss_reset_hour.py",
+      "size": 744,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_dhan_adapter_sandbox.py",
+      "size": 4753,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_dhan_client.py",
+      "size": 675,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_dhan_client_mock.py",
+      "size": 317,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_dhan_client_safe.py",
+      "size": 1264,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_dhan_http_provider.py",
+      "size": 1922,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_dhan_live.py",
+      "size": 947,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_dhan_safe_client_integration.py",
+      "size": 2201,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_drift_check.py",
+      "size": 758,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_drift_detector.py",
+      "size": 329,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_env_config.py",
+      "size": 988,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_execution_feedback_loop.py",
+      "size": 2294,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_execution_feedback_loop_enhanced.py",
+      "size": 8431,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_execution_flow.py",
+      "size": 1277,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_execution_orchestrator.py",
+      "size": 5046,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_execution_pipeline.py",
+      "size": 1267,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_export_helpers.py",
+      "size": 1180,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_export_helpers_extra.py",
+      "size": 544,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_export_parquet.py",
+      "size": 3589,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_export_preds.py",
+      "size": 3318,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_export_scheduler.py",
+      "size": 1726,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_feature_extraction_integration.py",
+      "size": 796,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_feature_store.py",
+      "size": 538,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_feedback_integration.py",
+      "size": 1304,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_feedback_loop_exec.py",
+      "size": 1994,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_feedback_loop_portfolio.py",
+      "size": 3957,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_feedback_re_ranker.py",
+      "size": 2558,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_health_check.py",
+      "size": 412,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_heartbeat.py",
+      "size": 439,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_indicators.py",
+      "size": 1777,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_infer_fill.py",
+      "size": 494,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_ingestion.py",
+      "size": 383,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_kill_switch.py",
+      "size": 819,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_live_pnl.py",
+      "size": 552,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_logging_utils.py",
+      "size": 1143,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_main_orchestrator.py",
+      "size": 2747,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_ohlcv_integration.py",
+      "size": 682,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_orchestrator.py",
+      "size": 6463,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_orchestrator_feedback_pnl.py",
+      "size": 1351,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_orchestrator_risk_controls.py",
+      "size": 4711,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_orchestrator_strategies.py",
+      "size": 5338,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_order_queue.py",
+      "size": 452,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_order_queue_with_risk.py",
+      "size": 2159,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_paper_broker_brackets_and_trailing.py",
+      "size": 2320,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_paper_broker_risk_and_brackets.py",
+      "size": 3771,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_paper_trading_upgrades.py",
+      "size": 2392,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_patch_fix_validation.py",
+      "size": 8309,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_patch_orchestrator_helper.py",
+      "size": 2289,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_patch_sanity.py",
+      "size": 3659,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_pnl.py",
+      "size": 1185,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_pnl_calculator.py",
+      "size": 1603,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_portfolio_manager_brackets.py",
+      "size": 3043,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_portfolio_manager_caps.py",
+      "size": 1888,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_portfolio_manager_exposure.py",
+      "size": 4766,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_portfolio_manager_full.py",
+      "size": 5122,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_portfolio_manager_symbol_caps.py",
+      "size": 3910,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_portfolio_manager_unit.py",
+      "size": 5464,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_portfolio_simulator.py",
+      "size": 1682,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_position_manager.py",
+      "size": 1538,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_position_manager_persistent.py",
+      "size": 665,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_position_provider_integration.py",
+      "size": 1543,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_position_store.py",
+      "size": 642,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_predictions.py",
+      "size": 1758,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_quality_control.py",
+      "size": 1643,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_risk_dynamic_sl.py",
+      "size": 864,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_risk_enforced_at_provider_and_unified.py",
+      "size": 1949,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_risk_integration_backtest.py",
+      "size": 2221,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_risk_manager.py",
+      "size": 3694,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_risk_manager_extended.py",
+      "size": 711,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_risk_manager_kill_and_caps.py",
+      "size": 2569,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_risk_wrapper.py",
+      "size": 1733,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_router.py",
+      "size": 3332,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_sanity_pipeline.py",
+      "size": 4046,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_schema_validator.py",
+      "size": 473,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_screener_to_watchlist.py",
+      "size": 2670,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_screening_engine_supercharged.py",
+      "size": 2792,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_screening_meta_upgrade.py",
+      "size": 3830,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_screening_upgrades.py",
+      "size": 3103,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_selector_utils.py",
+      "size": 1843,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_engine.py",
+      "size": 1471,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_engine_edge.py",
+      "size": 2653,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_engine_edge_full.py",
+      "size": 6302,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_engine_edge_param.py",
+      "size": 3327,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_engine_edge_week1.py",
+      "size": 2759,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_engine_edge_week2.py",
+      "size": 2003,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_engine_edge_week3.py",
+      "size": 3897,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_engine_integration.py",
+      "size": 3495,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_engine_master.py",
+      "size": 9533,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_engine_supercharged.py",
+      "size": 3020,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_generator.py",
+      "size": 2502,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_signal_tp_sl.py",
+      "size": 1660,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_simple_model.py",
+      "size": 1067,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_status_report.py",
+      "size": 6287,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_stock_screener.py",
+      "size": 1856,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_strategy_mavg.py",
+      "size": 1908,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_streamlit_exports.py",
+      "size": 688,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_tick_store.py",
+      "size": 743,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_trade_classifier.py",
+      "size": 1359,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_unified_orderqueue_risk_integration.py",
+      "size": 4967,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_unified_provider.py",
+      "size": 840,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_unified_provider_risk_flag.py",
+      "size": 831,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_watchlist.py",
+      "size": 497,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_watchlist_advanced.py",
+      "size": 2704,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_watchlist_manager.py",
+      "size": 1621,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\test_watchlist_ml.py",
+      "size": 1702,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\__init__.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\fixtures\\broker_stub.py",
+      "size": 895,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\integration\\test_dryrun_smoke.py",
+      "size": 1665,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\unit\\test_dhan_client.py",
+      "size": 3223,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\unit\\test_orchestrator.py",
+      "size": 1010,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\unit\\test_risk_manager.py",
+      "size": 3283,
+      "ext": ".py"
+    },
+    {
+      "path": "tests\\unit\\test_router.py",
+      "size": 977,
+      "ext": ".py"
+    },
+    {
+      "path": "tools\\apply_patch_orchestrator_fix.py",
+      "size": 4476,
+      "ext": ".py"
+    },
+    {
+      "path": "tools\\apply_patch_orchestrator_fix_fixed.py",
+      "size": 0,
+      "ext": ".py"
+    },
+    {
+      "path": "tools\\decode_token.py",
+      "size": 2304,
+      "ext": ".py"
+    },
+    {
+      "path": "tools\\extract_todos.py",
+      "size": 3882,
+      "ext": ".py"
+    },
+    {
+      "path": "tools\\print_market_events.py",
+      "size": 1510,
+      "ext": ".py"
+    },
+    {
+      "path": "tools\\repo_scan.py",
+      "size": 8188,
+      "ext": ".py"
+    },
+    {
+      "path": "tools\\start_data_feed.py",
+      "size": 4237,
+      "ext": ".py"
+    },
+    {
+      "path": "tools\\test_ws_handshake.py",
+      "size": 1917,
+      "ext": ".py"
+    },
+    {
+      "path": "tools\\validate_env.py",
+      "size": 2796,
+      "ext": ".py"
+    },
+    {
+      "path": "tools\\verify_phases0_4.py",
+      "size": 1916,
+      "ext": ".py"
+    },
+    {
+      "path": "tools\\templates\\repo_scan_report.html.j2",
+      "size": 2187,
+      "ext": ".j2"
+    },
+    {
+      "path": "utils\\explainability.py",
+      "size": 1692,
+      "ext": ".py"
+    },
+    {
+      "path": "utils\\ltp_stream.py",
+      "size": 1598,
+      "ext": ".py"
+    },
+    {
+      "path": "utils\\noise_injector.py",
+      "size": 3013,
+      "ext": ".py"
+    },
+    {
+      "path": "utils\\price_fetcher.py",
+      "size": 1021,
+      "ext": ".py"
+    },
+    {
+      "path": "utils\\risk_utils.py",
+      "size": 2896,
+      "ext": ".py"
+    },
+    {
+      "path": "utils\\signal_provider.py",
+      "size": 1137,
+      "ext": ".py"
+    },
+    {
+      "path": "utils\\trailing_stop_manager.py",
+      "size": 3852,
+      "ext": ".py"
+    },
+    {
+      "path": "utils\\__init__.py",
+      "size": 97,
+      "ext": ".py"
+    },
+    {
+      "path": "watchlist\\auto_updater.py",
+      "size": 3125,
+      "ext": ".py"
+    },
+    {
+      "path": "watchlist\\auto_watchlist_builder.py",
+      "size": 1249,
+      "ext": ".py"
+    },
+    {
+      "path": "watchlist\\base_re_ranker.py",
+      "size": 3895,
+      "ext": ".py"
+    },
+    {
+      "path": "watchlist\\feedback_re_ranker.py",
+      "size": 4563,
+      "ext": ".py"
+    },
+    {
+      "path": "watchlist\\watchlist_manager.py",
+      "size": 2562,
+      "ext": ".py"
+    },
+    {
+      "path": "watchlist\\__init__.py",
+      "size": 185,
+      "ext": ".py"
+    }
+  ],
+  "summary": {
+    "total_files": 1541,
+    "total_size_bytes": 61990334,
+    "largest_files": [
+      {
+        "path": "todo_backlog.csv",
+        "size": 15576864
+      },
+      {
+        "path": "status_report.md",
+        "size": 11869120
+      },
+      {
+        "path": "folder_structure.txt",
+        "size": 4905420
+      },
+      {
+        "path": "project_audit.json",
+        "size": 4240534
+      },
+      {
+        "path": ".mypy_cache\\3.11\\builtins.data.json",
+        "size": 1974091
+      },
+      {
+        "path": "repo_scan.json",
+        "size": 1895937
+      },
+      {
+        "path": "phase_audit_report.csv",
+        "size": 1814750
+      },
+      {
+        "path": "logs\\system.log",
+        "size": 1322366
+      },
+      {
+        "path": ".mypy_cache\\3.11\\collections\\__init__.data.json",
+        "size": 839807
+      },
+      {
+        "path": ".mypy_cache\\3.11\\typing.data.json",
+        "size": 610429
+      },
+      {
+        "path": "reports\\scan_report.html",
+        "size": 591689
+      },
+      {
+        "path": "htmlcov\\function_index.html",
+        "size": 561510
+      },
+      {
+        "path": ".mypy_cache\\3.11\\ast.data.json",
+        "size": 517414
+      },
+      {
+        "path": "logs\\screener_explain.jsonl",
+        "size": 481808
+      },
+      {
+        "path": "htmlcov\\z_564e8e27056fed0e_orchestrator_py.html",
+        "size": 424315
+      },
+      {
+        "path": ".mypy_cache\\3.11\\types.data.json",
+        "size": 385606
+      },
+      {
+        "path": ".mypy_cache\\3.11\\os\\__init__.data.json",
+        "size": 306760
+      },
+      {
+        "path": "htmlcov\\z_564e8e27056fed0e_bracket_manager_py.html",
+        "size": 286333
+      },
+      {
+        "path": ".mypy_cache\\3.11\\re.data.json",
+        "size": 270556
+      },
+      {
+        "path": ".mypy_cache\\3.11\\subprocess.data.json",
+        "size": 257585
+      },
+      {
+        "path": "htmlcov\\z_564e8e27056fed0e_risk_manager_py.html",
+        "size": 212218
+      },
+      {
+        "path": ".mypy_cache\\3.11\\email\\message.data.json",
+        "size": 208704
+      },
+      {
+        "path": ".mypy_cache\\3.11\\typing_extensions.data.json",
+        "size": 206227
+      },
+      {
+        "path": "htmlcov\\z_564e8e27056fed0e_portfolio_manager_py.html",
+        "size": 192274
+      },
+      {
+        "path": ".mypy_cache\\3.11\\sys\\__init__.data.json",
+        "size": 183188
+      },
+      {
+        "path": ".mypy_cache\\3.11\\logging\\__init__.data.json",
+        "size": 181045
+      },
+      {
+        "path": "htmlcov\\z_564e8e27056fed0e_execution_engine_py.html",
+        "size": 169160
+      },
+      {
+        "path": "htmlcov\\z_564e8e27056fed0e_router_py.html",
+        "size": 163508
+      },
+      {
+        "path": ".mypy_cache\\3.11\\contextlib.data.json",
+        "size": 155489
+      },
+      {
+        "path": "htmlcov\\class_index.html",
+        "size": 154394
+      },
+      {
+        "path": ".mypy_cache\\3.11\\codecs.data.json",
+        "size": 148431
+      },
+      {
+        "path": ".mypy_cache\\3.11\\_typeshed\\__init__.data.json",
+        "size": 144671
+      },
+      {
+        "path": "htmlcov\\status_report_py.html",
+        "size": 140600
+      },
+      {
+        "path": "htmlcov\\z_b9c51c393dbf0014_dhan_adapter_py.html",
+        "size": 138428
+      },
+      {
+        "path": ".mypy_cache\\3.11\\enum.data.json",
+        "size": 134704
+      },
+      {
+        "path": ".mypy_cache\\3.11\\posixpath.data.json",
+        "size": 132452
+      },
+      {
+        "path": ".mypy_cache\\3.11\\importlib\\metadata\\__init__.data.json",
+        "size": 130736
+      },
+      {
+        "path": ".mypy_cache\\3.11\\_io.data.json",
+        "size": 129080
+      },
+      {
+        "path": "API Documentation.txt",
+        "size": 123400
+      },
+      {
+        "path": ".mypy_cache\\3.11\\zipfile\\__init__.data.json",
+        "size": 121563
+      },
+      {
+        "path": ".mypy_cache\\3.11\\pathlib\\__init__.data.json",
+        "size": 113806
+      },
+      {
+        "path": "htmlcov\\main_orchestrator_py.html",
+        "size": 113213
+      },
+      {
+        "path": "MASTER DOCUMENT (Main System Specification).docx",
+        "size": 101209
+      },
+      {
+        "path": "htmlcov\\z_2fdd3ad355723383_broker_py.html",
+        "size": 97857
+      },
+      {
+        "path": "htmlcov\\z_a44f0ac069e85531_test_bracket_manager_py.html",
+        "size": 93530
+      },
+      {
+        "path": "Backup\\patch_orchestrator.py",
+        "size": 93428
+      },
+      {
+        "path": "htmlcov\\z_a44f0ac069e85531_test_signal_engine_master_py.html",
+        "size": 93200
+      },
+      {
+        "path": "htmlcov\\z_1f4cdc73c39a6604_db_utils_py.html",
+        "size": 90869
+      },
+      {
+        "path": ".mypy_cache\\3.11\\dataclasses.data.json",
+        "size": 90116
+      },
+      {
+        "path": ".mypy_cache\\3.11\\_winapi.data.json",
+        "size": 88580
+      }
+    ],
+    "extensions": {
+      "": 24,
+      ".txt": 20,
+      ".yaml": 6,
+      ".pdf": 1,
+      ".ps1": 1,
+      ".py": 412,
+      ".json": 147,
+      ".gz": 1,
+      ".jsonl": 731,
+      ".docx": 2,
+      ".md": 5,
+      ".csv": 7,
+      ".toml": 1,
+      ".ini": 1,
+      ".db": 5,
+      ".log": 2,
+      ".xlsx": 13,
+      ".yml": 5,
+      ".tag": 2,
+      ".sql": 1,
+      ".in": 1,
+      ".cfg": 1,
+      ".bak": 3,
+      ".html": 141,
+      ".js": 1,
+      ".png": 5,
+      ".css": 1,
+      ".j2": 1
+    },
+    "language_counts": {
+      "other": 966,
+      "yaml": 11,
+      "python": 412,
+      "json": 147,
+      "markdown": 5
+    },
+    "has_requirements.txt": true,
+    "has_pyproject.toml": true,
+    "has_setup.py": false,
+    "has_.github/workflows": true,
+    "has_tests": true,
+    "has_todo_backlog.csv": true,
+    "has_project_audit.json": true,
+    "has_status_report.md": true,
+    "python_files": 412,
+    "python_loc": 46847,
+    "files_with_todos": [
+      {
+        "path": "tools\\extract_todos.py",
+        "todos": 11
+      },
+      {
+        "path": "tools\\repo_scan.py",
+        "todos": 10
+      },
+      {
+        "path": "status_report.py",
+        "todos": 8
+      },
+      {
+        "path": ".github\\workflows\\ci.yml",
+        "todos": 4
+      },
+      {
+        "path": "RELEASE_READINESS.md",
+        "todos": 3
+      },
+      {
+        "path": "repo_snapshot.py",
+        "todos": 3
+      },
+      {
+        "path": "status_report.md",
+        "todos": 3
+      },
+      {
+        "path": "broker\\dhan_live.py",
+        "todos": 3
+      },
+      {
+        "path": "MASTER_BLUEPRINT.md",
+        "todos": 2
+      },
+      {
+        "path": "tests\\test_status_report.py",
+        "todos": 2
+      },
+      {
+        "path": "project_audit.py",
+        "todos": 1
+      },
+      {
+        "path": "execution\\execution_orchestrator.py",
+        "todos": 1
+      },
+      {
+        "path": "execution\\live_provider.py",
+        "todos": 1
+      },
+      {
+        "path": "execution\\parent_module.py",
+        "todos": 1
+      },
+      {
+        "path": "streamlit_app\\utils\\export_scheduler.py",
+        "todos": 1
+      }
+    ]
+  }
+}

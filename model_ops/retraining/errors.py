@@ -1,0 +1,2 @@
+class RetrainingError(RuntimeError):
+    pass

@@ -1,0 +1,17 @@
+# modules/qnme/config_schema.yaml
+# Canonical configuration schema for QNME components (example)
+genome:
+  window: 256
+
+regime:
+  model_path: null
+
+strategies:
+  - type: "MeanReversionStrategy"
+    strategy_id: "mr1"
+    params:
+      window: 20
+      z_entry: 1.5
+      size: 1.0
+    modes: ["default", "aggressive"]
+    supported_regimes: ["low_vol_range", "sideways_compression"]

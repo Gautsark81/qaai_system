@@ -1,0 +1,5 @@
+# promotion/rules.yaml
+mode: and
+min_trades: 30
+win_rate: 0.55
+sharpe: 1.0

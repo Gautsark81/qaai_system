@@ -1,0 +1,1 @@
+LIFECYCLE_V1 = "v1"

@@ -1,0 +1,13 @@
+# examples/fetcher_config_ack.yaml
+ws_url: "wss://dhan.example/ws"
+await_subscribe_ack: true
+subscribe_ack_timeout: 1.0
+subscribe_ack_retries: 3
+subscribe_ack_backoff: 0.2
+
+subscriptions:
+  - subkey: "tick:ABC"
+    payload:
+      op: "subscribe"
+      channel: "ticks"
+      symbol: "ABC"

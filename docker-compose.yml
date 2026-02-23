@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    container_name: amats_app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - IDEMP_SQLITE_PATH=/data/idemp.db
+    volumes:
+      - ./:/app:rw
+      - ./data:/data
+    ports:
+      - "8000:8000"   # metrics
+    depends_on:
+      - redis
+  redis:
+    image: redis:7-alpine
+    container_name: amats_redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    restart: unless-stopped

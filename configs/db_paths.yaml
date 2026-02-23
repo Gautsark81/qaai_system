@@ -1,0 +1,6 @@
+db:
+  ohlcv: "db/ohlcv.db"
+  ticks: "db/ticks.db"
+  features: "db/features.db"
+  audit: "db/audit.db"
+  preds: "data/ml_predictions.db"

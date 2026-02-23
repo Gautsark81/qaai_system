@@ -1,0 +1,2 @@
+class RollbackGovernorError(RuntimeError):
+    pass

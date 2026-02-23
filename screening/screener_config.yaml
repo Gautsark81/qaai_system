@@ -1,0 +1,6 @@
+# screening/screener_config.yaml
+
+min_volume: 1000
+sma_cross: false
+rsi_range: [0, 100]
+macd_signal: false

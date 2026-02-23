@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="3.635" timestamp="2026-01-13T16:34:02.209917+05:30" hostname="TopTalentHunt"><testcase classname="" name="core.tests.test_capital_allocator" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\topta\OneDrive\Documents\qaai_system\core\tests\test_capital_allocator.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+venv\Lib\site-packages\_pytest\python.py:498: in importtestmodule
+    mod = import_path(
+venv\Lib\site-packages\_pytest\pathlib.py:561: in import_path
+    mod = _import_module_using_spec(
+venv\Lib\site-packages\_pytest\pathlib.py:725: in _import_module_using_spec
+    spec.loader.exec_module(mod)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+venv\Lib\site-packages\_pytest\assertion\rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+core\tests\test_capital_allocator.py:3: in &lt;module&gt;
+    from core.capital.capital_allocator import (
+core\capital\capital_allocator.py:6: in &lt;module&gt;
+    from core.capital.allocator import CapitalAllocator as HardCapitalGuard
+core\capital\allocator.py:1: in &lt;module&gt;
+    from core.capital.contracts import CapitalDecisionContext
+E   ImportError: cannot import name 'CapitalDecisionContext' from 'core.capital.contracts' (C:\Users\topta\OneDrive\Documents\qaai_system\core\capital\contracts\__init__.py)</error></testcase></testsuite></testsuites>

@@ -1,0 +1,22 @@
+{
+  "system": {
+    "trading_mode": "SHADOW",
+    "kill_switch": false,
+    "broker_connected": false,
+    "capital_utilization_pct": 0.0,
+    "system_status": "GREEN",
+    "components": {},
+    "last_heartbeat_ts": "2025-12-29T13:06:46.872020"
+  },
+  "capital": {
+    "total_capital": 0.0,
+    "deployed_capital": 0.0,
+    "available_capital": 0.0,
+    "max_daily_drawdown": 0.0
+  },
+  "strategies": [],
+  "alerts": [],
+  "regime": null,
+  "explainability": null,
+  "oversight_events": null
+}

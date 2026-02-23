@@ -1,0 +1,27 @@
+{
+  "symbol": "TEST",
+  "eligible": true,
+  "failed_layer": null,
+  "confidence": 0.8,
+  "evidence": [
+    {
+      "metric": "volatility_ratio",
+      "value": 1.2,
+      "threshold": 1.5,
+      "interpretation": "Current volatility vs long-run baseline"
+    },
+    {
+      "metric": "trend_strength",
+      "value": 0.5,
+      "threshold": 0.3,
+      "interpretation": "Trend persistence strength"
+    },
+    {
+      "metric": "structural_break",
+      "value": 0.0,
+      "threshold": null,
+      "interpretation": "Structural instability detected"
+    }
+  ],
+  "explanation": "Market regime admissible"
+}

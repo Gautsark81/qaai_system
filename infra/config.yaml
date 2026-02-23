@@ -1,0 +1,3 @@
+data:
+  api_primary: "https://api.primary.com/ohlcv"
+  api_fallback: "https://api.fallback.com/ohlcv"

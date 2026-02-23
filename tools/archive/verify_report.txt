@@ -1,0 +1,376 @@
+Phase 0-4 Verification Report
+=============================
+
+pytest all tests: FAILED (rc=1)
+--- Output ---
+........................................................................ [ 19%]
+...................................................................F.F.. [ 39%]
+F.....F................................................................. [ 59%]
+...................F.................................................... [ 79%]
+........................................................................ [ 99%]
+.                                                                        [100%]
+================================== FAILURES ===================================
+_______________________ test_symbol_cap_exceeded_raises _______________________
+
+    def test_symbol_cap_exceeded_raises():
+        """Ensure symbol cap enforcement raises ValueError properly."""
+        rm = RiskManager({"max_symbol_weight": 0.5})
+        orch = ExecutionOrchestrator(
+            router=DummyRouter(),
+            risk=rm,
+            positions=DummyPositions(),
+            config={"starting_cash": 10_000},
+        )
+    
+        # Should raise ValueError since buying 10 more shares breaches 50% symbol cap
+>       with pytest.raises(ValueError, match="Symbol cap exceeded for SYM"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_patch_fix_validation.py:55: Failed
+---------------------------- Captured stderr call -----------------------------
+[DEBUG] submit_order called with order={'symbol': 'SYM', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 773, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+[DEBUG] router.submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+------------------------------ Captured log call ------------------------------
+DEBUG    patch_orchestrator:patch_orchestrator.py:234 submit_order called with order={'symbol': 'SYM', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+DEBUG    patch_orchestrator:patch_orchestrator.py:430 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:788 Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 773, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:1385 router.submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+_________ test_circuit_breaker_disallowed_trading_blocks_after_first __________
+
+    def test_circuit_breaker_disallowed_trading_blocks_after_first():
+        """Ensure trading disallowed after first order under drawdown condition."""
+        rm = RiskManager({"max_drawdown_pct": 1.0})
+        orch = ExecutionOrchestrator(
+            router=DummyRouter(),
+            risk=rm,
+            positions=DummyPositions(),
+            config={"starting_cash": 100_000},
+        )
+    
+        # First call should be filled (fallback)
+        resp1 = orch.submit_order(
+            {"symbol": "AAA", "side": "buy", "quantity": 10, "price": 100.0}
+        )
+        assert resp1["status"] == "filled"
+    
+        # Simulate drawdown exceeded
+        rm._peak_equity = 100_000
+        rm.is_trading_allowed(account_equity=98_000)  # trip breaker
+    
+        # Now any new order should be blocked or raise ValueError
+>       with pytest.raises(ValueError, match="Trading not allowed by circuit breaker"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_patch_fix_validation.py:105: Failed
+---------------------------- Captured stderr call -----------------------------
+[DEBUG] submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 737, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+[DEBUG] Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 773, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+[DEBUG] router.submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+[DEBUG] FIRST-FILL FALLBACK applied (order_id=ord_firstfill_1763702016137), reason=ROUTER_ERROR
+[DEBUG] submit_order called with order={'symbol': 'BBB', 'side': 'buy', 'quantity': 5, 'price': 50.0}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] CIRCUIT BREAKER TRIGGERED - Trading not allowed.
+------------------------------ Captured log call ------------------------------
+DEBUG    patch_orchestrator:patch_orchestrator.py:234 submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+DEBUG    patch_orchestrator:patch_orchestrator.py:430 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:759 Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 737, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:788 Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 773, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:1385 router.submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+DEBUG    patch_orchestrator:patch_orchestrator.py:1648 FIRST-FILL FALLBACK applied (order_id=ord_firstfill_1763702016137), reason=ROUTER_ERROR
+DEBUG    patch_orchestrator:patch_orchestrator.py:234 submit_order called with order={'symbol': 'BBB', 'side': 'buy', 'quantity': 5, 'price': 50.0}
+DEBUG    patch_orchestrator:patch_orchestrator.py:430 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:593 CIRCUIT BREAKER TRIGGERED - Trading not allowed.
+___________________________ test_symbol_cap_blocked ___________________________
+
+tmp_path = WindowsPath('C:/Users/topta/AppData/Local/Temp/pytest-of-topta/pytest-91/test_symbol_cap_blocked1')
+
+    def test_symbol_cap_blocked(tmp_path):
+        cfg = {"risk": {"max_symbol_weight": 0.5}}
+        orch = ExecutionOrchestrator(
+            router=DummyRouter(),
+            risk=RiskManager(cfg),
+            positions=DummyPositions(),
+            config={"starting_cash": 10000},
+        )
+        provider = orch.provider
+        provider._account_nav = 10000
+        provider._positions["SYM"] = 45
+        provider._positions["__last_price__:SYM"] = 100
+>       with pytest.raises(ValueError, match="Symbol cap exceeded for SYM"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_patch_orchestrator_helper.py:28: Failed
+---------------------------- Captured stderr call -----------------------------
+[DEBUG] submit_order called with order={'symbol': 'SYM', 'qty': 10, 'side': 'buy', 'price': 100}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 737, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+[DEBUG] Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 773, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+[DEBUG] orig submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+------------------------------ Captured log call ------------------------------
+DEBUG    patch_orchestrator:patch_orchestrator.py:234 submit_order called with order={'symbol': 'SYM', 'qty': 10, 'side': 'buy', 'price': 100}
+DEBUG    patch_orchestrator:patch_orchestrator.py:430 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:759 Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 737, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:788 Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 773, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:1395 orig submit returned: {'status': 'ERROR', 'reason': 'ROUTER_ERROR'}
+_____________ test_circuit_breaker_allows_first_order_then_blocks _____________
+
+    def test_circuit_breaker_allows_first_order_then_blocks():
+        rm = RiskManager(config={"max_drawdown_pct": 1.0})
+        orch = ExecutionOrchestrator(
+            router=DummyRouter(),
+            risk=rm,
+            positions=PositionManager(),
+            config={"starting_cash": 100_000},
+        )
+        # First order should go through
+        resp1 = orch.submit_order(
+            {"symbol": "AAA", "side": "buy", "quantity": 10, "price": 100.0}
+        )
+        assert resp1["status"] == "filled"
+    
+        # Simulate equity drop to trigger breaker
+        rm._peak_equity = 100_000
+        rm._current_equity = 90_000  # >10% drawdown
+        assert rm.is_trading_allowed(account_equity=90_000) is False
+    
+>       with pytest.raises(ValueError, match="Trading not allowed"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_patch_sanity.py:57: Failed
+---------------------------- Captured stderr call -----------------------------
+[DEBUG] submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 737, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+[DEBUG] Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 773, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+[DEBUG] router.submit returned: {'status': 'filled', 'order_id': 'dummy_1763702016196'}
+[DEBUG] submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] CIRCUIT BREAKER TRIGGERED - Trading not allowed.
+------------------------------ Captured log call ------------------------------
+DEBUG    patch_orchestrator:patch_orchestrator.py:234 submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+DEBUG    patch_orchestrator:patch_orchestrator.py:430 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:759 Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 737, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:788 Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 773, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:1385 router.submit returned: {'status': 'filled', 'order_id': 'dummy_1763702016196'}
+DEBUG    patch_orchestrator:patch_orchestrator.py:234 submit_order called with order={'symbol': 'AAA', 'side': 'buy', 'quantity': 10, 'price': 100.0}
+DEBUG    patch_orchestrator:patch_orchestrator.py:430 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:593 CIRCUIT BREAKER TRIGGERED - Trading not allowed.
+___________________ test_symbol_cap_uses_provider_positions ___________________
+
+    def test_symbol_cap_uses_provider_positions():
+        cfg = {"risk": {"max_symbol_weight": 0.5}}
+        rm = RiskManager(cfg)
+        orch = ExecutionOrchestrator(
+            router=DummyRouter(),
+            risk=rm,
+            positions=PositionManager(),
+            config={"starting_cash": 10000},
+        )
+        provider = orch.provider
+        provider._account_nav = 10000
+        provider._positions["SYM"] = 45
+        provider._positions["__last_price__:SYM"] = 100
+>       with pytest.raises(ValueError, match="Symbol cap exceeded for SYM"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_sanity_pipeline.py:98: Failed
+---------------------------- Captured stderr call -----------------------------
+[DEBUG] submit_order called with order={'symbol': 'SYM', 'side': 'buy', 'quantity': 10, 'price': 100}
+[DEBUG] Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+[DEBUG] Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 737, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+[DEBUG] Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 773, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+[DEBUG] router.submit returned: {'status': 'filled', 'order_id': 'dummy_1763702017688'}
+------------------------------ Captured log call ------------------------------
+DEBUG    patch_orchestrator:patch_orchestrator.py:234 submit_order called with order={'symbol': 'SYM', 'side': 'buy', 'quantity': 10, 'price': 100}
+DEBUG    patch_orchestrator:patch_orchestrator.py:430 Circuit-breaker quick check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 408, in patched_submit_order
+    if rm is not None and hasattr(rm, "is_trading_allowed"):
+       ^^
+UnboundLocalError: cannot access local variable 'rm' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:759 Early merged-positions symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 737, in patched_submit_order
+    if nav and max_sym_w_float and symbol:
+       ^^^
+UnboundLocalError: cannot access local variable 'nav' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:788 Early symbol-cap check failed (non-fatal)
+Traceback (most recent call last):
+  File "C:\Users\topta\OneDrive\Documents\qaai_system\patch_orchestrator.py", line 773, in patched_submit_order
+    curr_qty = float(pos.get(symbol, 0) or 0)
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'max_sym_early' where it is not associated with a value
+DEBUG    patch_orchestrator:patch_orchestrator.py:1385 router.submit returned: {'status': 'filled', 'order_id': 'dummy_1763702017688'}
+=========================== short test summary info ===========================
+FAILED tests/test_patch_fix_validation.py::test_symbol_cap_exceeded_raises - ...
+FAILED tests/test_patch_fix_validation.py::test_circuit_breaker_disallowed_trading_blocks_after_first
+FAILED tests/test_patch_orchestrator_helper.py::test_symbol_cap_blocked - Fai...
+FAILED tests/test_patch_sanity.py::test_circuit_breaker_allows_first_order_then_blocks
+FAILED tests/test_sanity_pipeline.py::test_symbol_cap_uses_provider_positions
+5 failed, 356 passed in 29.88s
+
+--------------
+
+flake8 lint: FAILED (rc=1)
+--- Output ---
+.\venv\Lib\site-packages\sympy\polys\numberfields\resolvent_lookup.py: "pyflakes[F]" failed during execution due to RecursionError('maximum recursion depth exceeded')
+Run flake8 with greater verbosity to see more details
+
+--------------
+
+mypy type check: FAILED (rc=2)
+--- Output ---
+execution\order_manager.py:203: error: Expected 'except' or 'finally' block  [syntax]
+Found 1 error in 1 file (errors prevented further checking)
+
+--------------
+

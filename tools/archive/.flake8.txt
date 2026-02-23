@@ -1,0 +1,13 @@
+[flake8]
+exclude =
+    venv,
+    .venv,
+    __pycache__,
+    .git,
+    docs,
+    build,
+    dist,
+    .eggs,
+    .tox,
+    */site-packages/*
+max-line-length = 100

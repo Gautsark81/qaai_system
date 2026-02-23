@@ -1,0 +1,6 @@
+# infra/prometheus_metrics.yaml
+# Example Prometheus scrape config (append to your prometheus.yml)
+scrape_configs:
+  - job_name: 'qnme'
+    static_configs:
+      - targets: ['localhost:8000']  # change to QNME exporter port

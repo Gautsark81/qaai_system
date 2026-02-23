@@ -1,0 +1,1 @@
+CAPITAL_CURVE_V1 = "v1"

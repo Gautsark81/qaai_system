@@ -1,0 +1,27 @@
+{
+  "symbol": "TEST",
+  "eligible": true,
+  "failed_layer": null,
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "metric": "order_pct_adv",
+      "value": 0.01,
+      "threshold": 0.05,
+      "interpretation": "Order size relative to average traded value"
+    },
+    {
+      "metric": "exit_days",
+      "value": 0.1,
+      "threshold": 3.0,
+      "interpretation": "Estimated days required to exit position"
+    },
+    {
+      "metric": "volatility_spike",
+      "value": 0.0,
+      "threshold": null,
+      "interpretation": "Stress regime detected"
+    }
+  ],
+  "explanation": "Liquidity sufficient for expected execution"
+}

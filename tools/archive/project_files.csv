@@ -1,0 +1,501 @@
+path,phase_hint,lines,functions,classes,imports,risks,parse_ok
+db_utils.py,Unclassified,54,0,0,,,True
+export_helpers.py,Unclassified,19,0,0,,,True
+bootstrap.py,Unclassified,172,0,0,,,True
+backup.py,Unclassified,43,0,0,,,True
+env_config.py,Phase 0,93,0,0,,,True
+apply_refactor.py,Unclassified,104,0,0,,,True
+conftest.py,Unclassified,20,0,0,,,True
+env_validator.py,Unclassified,42,0,0,,,True
+killtri.py,Unclassified,28,0,0,,,True
+main.py,Unclassified,27,0,0,,,True
+Live_market.py,Unclassified,36,0,0,,,True
+quick_run.py,Unclassified,15,0,0,,,True
+main_orchestrator.py,Unclassified,26,0,0,,,True
+project_super_status.py,Unclassified,368,0,0,,"infinite_loop,background_task,scheduler,reconnect_loop",True
+Live_market_New.py,Unclassified,124,0,0,,,True
+quick_smoke.py,Unclassified,10,0,0,,,True
+repo_snapshot.py,Unclassified,94,0,0,,,True
+project_audit.py,Unclassified,141,0,0,,,True
+run_phase_screening.py,Unclassified,39,0,0,,,True
+Live_market - Copy.py,Unclassified,27,0,0,,infinite_loop,True
+run_algo.py,Unclassified,143,0,0,,infinite_loop,True
+status_report.py,Unclassified,454,0,0,,,True
+run_dispatcher_example.py,Unclassified,31,0,0,,,True
+run_full_test.py,Unclassified,36,0,0,,,True
+scheduler.py,Unclassified,184,0,0,,,True
+TEST9.5.PY,Unclassified,14,0,0,,,True
+TEST9.6.PY,Unclassified,14,0,0,,,True
+TEST9.4.PY,Unclassified,15,0,0,,,True
+streamlit_export_helpers.py,Unclassified,24,0,0,,,True
+TESTPURPOS.PY,Unclassified,7,0,0,,,True
+__init__.py,Unclassified,35,0,0,,,True
+ws_test_async.py,Unclassified,35,0,0,,,True
+write_pyproject.py,Unclassified,30,0,0,,,True
+ws_try_queryparam.py,Unclassified,19,0,0,,,True
+analytics\allocator.py,Unclassified,45,0,0,,,True
+watchlist_advanced.py,Unclassified,279,0,0,,,True
+ws_try_header_variants.py,Unclassified,29,0,0,,,True
+ws_try_subprotocol.py,Unclassified,23,0,0,,,True
+analytics\canary_daily_summary.py,Unclassified,69,0,0,,,True
+analytics\model_monitor.py,Phase F,104,0,0,,,True
+analytics\paper_dashboard.py,Unclassified,68,0,0,,,True
+analytics\feature_engine.py,Phase C,263,0,0,,,True
+analytics\strategy_metrics.py,Phase D,76,0,0,,,True
+analytics\pnl_feedback.py,Unclassified,69,0,0,,,True
+analytics\promotion_engine.py,Unclassified,66,0,0,,,True
+analytics\meta_model.py,Phase E,96,0,0,,,True
+analytics\train_meta_model.py,Phase E,258,0,0,,,True
+analytics\metrics\base.py,Unclassified,80,0,0,,,True
+analytics\target_builder.py,Unclassified,51,0,0,,,True
+analytics\__init__.py,Unclassified,12,0,0,,,True
+analytics\metrics\cycle_metrics.py,Unclassified,242,0,0,,infinite_loop,True
+analytics\metrics\__init__.py,Unclassified,30,0,0,,,True
+apps\run_live_dhan.py,Unclassified,328,0,0,,,True
+analytics\reports\incidents_report.py,Unclassified,85,0,0,,,True
+apps\healthcheck.py,Phase F,21,0,0,,,True
+apps\run_live_engine.py,Unclassified,508,0,0,,infinite_loop,True
+audit\audit_charts.py,Unclassified,71,0,0,,,True
+apps\main_orchestrator.py,Unclassified,392,0,0,,,True
+apps\run_live_demo.py,Unclassified,201,0,0,,,True
+apps\__init__.py,Unclassified,11,0,0,,,True
+audit\__init__.py,Unclassified,18,0,0,,,True
+backtest\backtester.py,Unclassified,7,0,0,,,True
+backtest\blotter.py,Unclassified,4,0,0,,,True
+apps\run_daily_meta.py,Phase E,55,0,0,,,True
+audit\compliance_assertions.py,Unclassified,10,0,0,,,True
+backtest\engine.py,Unclassified,4,0,0,,,True
+backtest\noise_models.py,Unclassified,4,0,0,,,True
+backtest\__init__.py,Unclassified,8,0,0,,,True
+backtest\pnl.py,Unclassified,4,0,0,,,True
+backtest\position_manager.py,Unclassified,4,0,0,,,True
+backtester\explainability.py,Unclassified,38,0,0,,,True
+backtester\core.py,Unclassified,20,0,0,,,True
+backtest\backtest_runner.py,Unclassified,57,0,0,,,True
+backtester\benchmark.py,Unclassified,58,0,0,,,True
+backtester\tuner.py,Unclassified,15,0,0,,,True
+backtester\__init__.py,Unclassified,1,0,0,,,True
+broker\Dhan_codebase usage.py,Unclassified,59,0,0,,,True
+backtester\regime_detector.py,Unclassified,4,0,0,,,True
+broker\dhan_safe_client.py,Unclassified,536,0,0,,,True
+backtester\supercharged_backtester.py,Unclassified,39,0,0,,,True
+broker\dhan_live.py,Unclassified,33,0,0,,,True
+capital\allocator.py,Unclassified,27,0,0,,,True
+broker\__init__.py,Unclassified,1,0,0,,,True
+capital\correlation.py,Unclassified,8,0,0,,,True
+backtester\noise_models.py,Unclassified,4,0,0,,,True
+capital\caps.py,Unclassified,6,0,0,,,True
+broker\Dhan_websocket.py,Unclassified,203,0,0,,"infinite_loop,reconnect_loop",True
+capital\models.py,Unclassified,25,0,0,,,True
+capital\planner.py,Unclassified,60,0,0,,,True
+capital\decay.py,Unclassified,23,0,0,,,True
+checks\validate_structure.py,Unclassified,79,0,0,,,True
+checks\__init__.py,Unclassified,1,0,0,,,True
+capital\weighting.py,Unclassified,13,0,0,,,True
+broker\Dhan_Tradehull.py,Unclassified,2156,0,0,,,True
+clients\dhan_safe_client.py,Unclassified,132,0,0,,,True
+clients\async_order_manager.py,Phase B,54,0,0,,,True
+clients\idempotency_redis.py,Unclassified,88,0,0,,,True
+clients\__init__.py,Unclassified,1,0,0,,,True
+clients\order_manager.py,Phase B,196,0,0,,,True
+clients\idempotency_sqlite.py,Unclassified,62,0,0,,,True
+clients\metrics_server.py,Unclassified,24,0,0,,infinite_loop,True
+clients\order_reconciler.py,Phase B,90,0,0,,,True
+clients\metrics.py,Unclassified,18,0,0,,,True
+clients\sqlite_order_cache.py,Phase B,71,0,0,,,True
+config\__init__.py,Phase 0,4,0,0,,,True
+configs\__init__.py,Phase 0,1,0,0,,,True
+configs\config_loader.py,Phase 0,98,0,0,,,True
+configs\broker_factory.py,Phase 0,60,0,0,,,True
+config_backup_20251209_111247\__init__.py,Phase 0,1,0,0,,,True
+config\config_loader.py,Phase 0,67,0,0,,,True
+config_backup_20251209_111247\config_loader.py,Phase 0,98,0,0,,,True
+config_backup_20251209_111247\broker_factory.py,Phase 0,60,0,0,,,True
+core\__init__.py,Unclassified,1,0,0,,,True
+core\adaptivity\adaptation_approval.py,Unclassified,40,0,0,,,True
+context\__init__.py,Unclassified,1,0,0,,,True
+core\adaptivity\__init__.py,Unclassified,1,0,0,,,True
+core\adaptivity\adaptation_engine.py,Unclassified,52,0,0,,,True
+context\live_context.py,Unclassified,313,0,0,,,True
+core\adaptivity\adaptation_rules.py,Unclassified,32,0,0,,,True
+core\adaptivity\parameter_registry.py,Unclassified,62,0,0,,,True
+core\bootstrap\__init__.py,Unclassified,1,0,0,,,True
+core\adaptivity\parameter_contract.py,Unclassified,23,0,0,,,True
+core\capital\allocation_report.py,Unclassified,49,0,0,,,True
+core\capital\capital_contracts.py,Unclassified,43,0,0,,,True
+core\capital\__init__.py,Unclassified,1,0,0,,,True
+core\capital\correlation_matrix.py,Unclassified,18,0,0,,,True
+core\bootstrap\bootstrap_runtime.py,Unclassified,24,0,0,,,True
+core\capital\capital_allocator.py,Unclassified,243,0,0,,,True
+core\capital\allocator.py,Unclassified,42,0,0,,,True
+core\capital\allocation\allocator.py,Unclassified,107,0,0,,,True
+core\capital\capital_events.py,Unclassified,8,0,0,,,True
+core\capital\allocation\tests\test_allocator.py,Unclassified,61,0,0,,,True
+core\capital\risk_metrics.py,Phase A,30,0,0,,,True
+core\capital\attribution\attribution_report.py,Unclassified,14,0,0,,,True
+core\capital\attribution\attribution_engine.py,Unclassified,35,0,0,,,True
+core\capital\evidence_emitter.py,Unclassified,75,0,0,,,True
+core\capital\governance\approval.py,Unclassified,49,0,0,,,True
+core\capital\attribution\tests\test_attribution_engine.py,Unclassified,21,0,0,,,True
+core\capital\governance\decision.py,Unclassified,16,0,0,,,True
+core\capital\attribution\attribution_record.py,Unclassified,16,0,0,,,True
+core\capital\governance\override.py,Unclassified,25,0,0,,,True
+core\capital\governance\tests\test_governance_gate.py,Unclassified,41,0,0,,,True
+core\capital\stress\tests\test_stress_engine.py,Unclassified,21,0,0,,,True
+core\capital\tests\test_capital_evidence_emission.py,Unclassified,44,0,0,,,True
+core\capital\stress\shock_models.py,Unclassified,11,0,0,,,True
+core\capital\stress\stress_report.py,Unclassified,15,0,0,,,True
+core\capital\stress\stress_engine.py,Unclassified,32,0,0,,,True
+core\contracts\__init__.py,Unclassified,1,0,0,,,True
+core\evidence\audit_json_report.py,Unclassified,92,0,0,,,True
+core\contracts\screening.py,Unclassified,28,0,0,,,True
+core\contracts\watchlist.py,Unclassified,27,0,0,,,True
+core\evidence\audit_pdf_report.py,Unclassified,75,0,0,,,True
+core\evidence\checksum.py,Unclassified,59,0,0,,,True
+core\evidence\audit_contracts.py,Unclassified,35,0,0,,,True
+core\evidence\decision_contracts.py,Unclassified,58,0,0,,,True
+core\evidence\replay_contracts.py,Unclassified,37,0,0,,,True
+core\evidence\diff_engine.py,Unclassified,52,0,0,,,True
+core\evidence\governance_contracts.py,Unclassified,38,0,0,,,True
+core\evidence\governance_binder.py,Unclassified,54,0,0,,,True
+core\evidence\decision_store.py,Phase C,49,0,0,,,True
+core\evidence\report_contracts.py,Unclassified,64,0,0,,,True
+core\evidence\replay_engine.py,Unclassified,49,0,0,,,True
+core\evidence\report_pdf.py,Unclassified,74,0,0,,,True
+core\evidence\report_builder.py,Unclassified,84,0,0,,,True
+core\evidence\report_json.py,Unclassified,24,0,0,,,True
+core\evidence\tests\test_audit_reports.py,Unclassified,39,0,0,,,True
+core\evidence\signing.py,Unclassified,38,0,0,,,True
+core\evidence\tests\test_decision_store.py,Phase C,84,0,0,,,True
+core\evidence\tests\test_governance_signature.py,Unclassified,39,0,0,,,True
+core\evidence\tests\test_legacy_report_json.py,Unclassified,23,0,0,,,True
+core\evidence\tests\test_checksum.py,Unclassified,78,0,0,,,True
+core\evidence\tests\test_legacy_report_contracts.py,Unclassified,20,0,0,,,True
+core\evidence\tests\test_decision_contract.py,Unclassified,67,0,0,,,True
+core\evidence\tests\test_replay_and_diff.py,Unclassified,66,0,0,,,True
+core\explainability\decision_trace.py,Unclassified,104,0,0,,,True
+core\explainability\lifecycle.py,Phase E,59,0,0,,,True
+core\evidence\tests\test_legacy_report_pdf.py,Unclassified,41,0,0,,,True
+core\execution\tests\test_execution_guard_integration.py,Phase B,31,0,0,,,True
+core\evidence\tests\test_legacy_report_builder.py,Unclassified,27,0,0,,,True
+core\explainability\__init__.py,Unclassified,1,0,0,,,True
+core\explainability\strategy.py,Phase D,93,0,0,,,True
+core\execution\execution_guard.py,Phase B,14,0,0,,,True
+core\explainability\tests\test_strategy_explain.py,Phase D,28,0,0,,,True
+core\incidents\replayer.py,Unclassified,31,0,0,,,True
+core\incidents\snapshotter.py,Unclassified,49,0,0,,,True
+core\live\canary_executor.py,Unclassified,23,0,0,,,True
+core\explainability\tests\test_decision_trace.py,Unclassified,53,0,0,,,True
+core\live\canary_contracts.py,Unclassified,18,0,0,,,True
+core\explainability\tests\test_lifecycle_explain.py,Phase E,31,0,0,,,True
+core\live\canary_guards.py,Unclassified,9,0,0,,,True
+core\incidents\__init__.py,Unclassified,1,0,0,,,True
+core\live\canary_telemetry.py,Unclassified,17,0,0,,,True
+core\live\live_capital_guard.py,Unclassified,22,0,0,,,True
+core\live\live_registry.py,Unclassified,21,0,0,,,True
+core\live\__init__.py,Unclassified,1,0,0,,,True
+core\live\live_approval.py,Unclassified,26,0,0,,,True
+core\live\live_kill_switch.py,Unclassified,46,0,0,,,True
+core\live_ops\enums.py,Unclassified,21,0,0,,,True
+core\live\live_executor.py,Unclassified,51,0,0,,,True
+core\live_ops\promotion.py,Unclassified,19,0,0,,,True
+core\live_ops\strategy.py,Phase D,19,0,0,,,True
+core\live_ops\system.py,Unclassified,18,0,0,,,True
+core\live_ops\__init__.py,Unclassified,17,0,0,,,True
+core\live_ops\watchlist.py,Unclassified,30,0,0,,,True
+core\live_ops\tests\test_enums.py,Unclassified,27,0,0,,,True
+core\live_ops\screening.py,Unclassified,17,0,0,,,True
+core\live_ops\tests\test_screening_contracts.py,Unclassified,16,0,0,,,True
+core\live_ops\tests\test_promotion_contracts.py,Unclassified,18,0,0,,,True
+core\live_ops\tests\__init__.py,Unclassified,1,0,0,,,True
+core\live_ops\tests\test_strategy_contracts.py,Phase D,18,0,0,,,True
+core\live_trading\audit.py,Unclassified,32,0,0,,,True
+core\live_ops\tests\test_system_contracts.py,Unclassified,17,0,0,,,True
+core\live_trading\broker.py,Unclassified,23,0,0,,,True
+core\live_trading\alerts.py,Unclassified,13,0,0,,,True
+core\live_trading\capital.py,Unclassified,42,0,0,,,True
+core\live_trading\config.py,Phase 0,9,0,0,,,True
+core\live_trading\divergence.py,Unclassified,18,0,0,,,True
+core\live_trading\guard.py,Unclassified,29,0,0,,,True
+core\live_trading\status.py,Unclassified,12,0,0,,,True
+core\live_trading\__init__.py,Unclassified,1,0,0,,,True
+core\live_trading\kill_switch.py,Unclassified,20,0,0,,,True
+core\live_trading\tests\test_audit_and_alerts.py,Unclassified,45,0,0,,,True
+core\live_trading\telemetry.py,Unclassified,36,0,0,,,True
+core\live_trading\tests\test_kill_switch.py,Unclassified,18,0,0,,,True
+core\live_trading\tests\test_live_broker_stub.py,Unclassified,15,0,0,,,True
+core\live_trading\tests\test_divergence.py,Unclassified,15,0,0,,,True
+core\live_trading\promotion.py,Unclassified,162,0,0,,,True
+core\live_trading\tests\test_live_guard.py,Unclassified,48,0,0,,,True
+core\live_trading\tests\test_capital_limits.py,Unclassified,28,0,0,,,True
+core\logging_utils\formatters.py,Unclassified,7,0,0,,,True
+core\logging_utils\structured_logger.py,Unclassified,65,0,0,,,True
+core\live_trading\tests\test_promotion.py,Unclassified,95,0,0,,,True
+core\ml\advisory_engine.py,Unclassified,54,0,0,,,True
+core\logging_utils\handlers.py,Unclassified,22,0,0,,,True
+core\logging_utils\__init__.py,Unclassified,1,0,0,,,True
+core\live_trading\tests\test_telemetry.py,Unclassified,15,0,0,,,True
+core\ml\feature_builder.py,Phase C,31,0,0,,,True
+core\operations\ops_events.py,Unclassified,34,0,0,,,True
+core\ml\ml_events.py,Unclassified,8,0,0,,,True
+core\ml\meta_model.py,Phase E,24,0,0,,,True
+core\ml\model_registry.py,Unclassified,27,0,0,,,True
+core\ml\prediction_contract.py,Unclassified,20,0,0,,,True
+core\ml\__init__.py,Unclassified,1,0,0,,,True
+core\ml\feature_store.py,Phase C,39,0,0,,,True
+core\operations\ops_recorder.py,Phase B,49,0,0,,,True
+core\operations\ops_store.py,Phase C,54,0,0,,,True
+core\operations\drills\drill_contract.py,Unclassified,24,0,0,,,True
+core\operations\drills\drill_replay.py,Unclassified,17,0,0,,,True
+core\operator_dashboard\adapters\strategy_lifecycle_adapter.py,Phase D,101,0,0,,,True
+core\operator_dashboard\adapters\system_health_adapter.py,Phase F,20,0,0,,,True
+core\oversight\engine.py,Unclassified,69,0,0,,,True
+core\operations\drills\drill_runner.py,Unclassified,29,0,0,,,True
+core\operator_dashboard\registry.py,Unclassified,21,0,0,,,True
+core\oversight\contracts\insight.py,Unclassified,24,0,0,,,True
+core\operator_dashboard\contracts\strategy_lifecycle.py,Phase D,24,0,0,,,True
+core\operator_dashboard\contracts\governance_view.py,Unclassified,13,0,0,,,True
+core\oversight\contracts\anomaly.py,Unclassified,27,0,0,,,True
+core\oversight\contracts\finding.py,Unclassified,19,0,0,,,True
+core\operator_dashboard\contracts\system_health.py,Phase F,14,0,0,,,True
+core\oversight\contracts\correlation.py,Unclassified,23,0,0,,,True
+core\oversight\contracts\correlated_event.py,Unclassified,41,0,0,,,True
+core\oversight\correlation\contracts.py,Unclassified,93,0,0,,,True
+core\oversight\correlation\severity_policy.py,Unclassified,55,0,0,,,True
+core\oversight\contracts\severity.py,Unclassified,26,0,0,,,True
+core\oversight\correlation\engine.py,Unclassified,123,0,0,,,True
+core\oversight\contracts\__init__.py,Unclassified,12,0,0,,,True
+core\oversight\correlation\severity.py,Unclassified,21,0,0,,,True
+core\oversight\correlation\correlator.py,Unclassified,17,0,0,,,True
+core\oversight\detectors\capital_drift.py,Unclassified,106,0,0,,,True
+core\oversight\tests\test_anomaly_contract.py,Unclassified,20,0,0,,,True
+core\oversight\detectors\governance_friction.py,Unclassified,135,0,0,,,True
+core\oversight\tests\test_capital_drift_detector.py,Unclassified,61,0,0,,,True
+core\oversight\detectors\__init__.py,Unclassified,10,0,0,,,True
+core\oversight\contracts\observation.py,Unclassified,31,0,0,,,True
+core\oversight\detectors\lifecycle_anomaly.py,Phase E,125,0,0,,,True
+core\oversight\tests\test_correlation_engine.py,Unclassified,160,0,0,,,True
+core\oversight\tests\test_insight_contract.py,Unclassified,28,0,0,,,True
+core\oversight\tests\test_observation_contract.py,Unclassified,37,0,0,,,True
+core\oversight\tests\test_governance_friction_detector.py,Unclassified,115,0,0,,,True
+core\paper\paper_broker.py,Unclassified,26,0,0,,,True
+core\paper\paper_models.py,Unclassified,24,0,0,,,True
+core\oversight\tests\test_severity_policy.py,Unclassified,68,0,0,,,True
+core\oversight\tests\test_lifecycle_anomaly_detector.py,Phase E,102,0,0,,,True
+core\paper\paper_ledger.py,Unclassified,22,0,0,,,True
+core\paper\paper_summary.py,Unclassified,31,0,0,,,True
+core\paper\paper_executor.py,Unclassified,63,0,0,,,True
+core\paper\paper_telemetry.py,Unclassified,32,0,0,,,True
+core\paper\__init__.py,Unclassified,1,0,0,,,True
+core\paper_trading\ledger.py,Unclassified,17,0,0,,,True
+core\paper_trading\tests\test_paper_ledger.py,Unclassified,10,0,0,,,True
+core\paper_trading\tests\test_paper_broker.py,Unclassified,10,0,0,,,True
+core\paper_trading\engine.py,Unclassified,50,0,0,,,True
+core\paper_trading\broker.py,Unclassified,27,0,0,,,True
+core\phase_b\advisory.py,Unclassified,14,0,0,,,True
+core\phase_b\capital_allocator.py,Unclassified,60,0,0,,,True
+core\paper_trading\tests\test_paper_engine.py,Unclassified,64,0,0,,,True
+core\phase_b\confidence.py,Unclassified,24,0,0,,,True
+core\phase_b\metrics.py,Unclassified,21,0,0,,,True
+core\phase_b\tests\test_phase_b_is_advisory.py,Unclassified,24,0,0,,,True
+core\phase_b\tests\test_capital_allocator.py,Unclassified,41,0,0,,,True
+core\phase_b\tests\test_phase_b_metrics.py,Unclassified,29,0,0,,,True
+core\phase_c\alpha_generation\generator.py,Phase D,45,0,0,,,True
+core\phase_c\__init__.py,Unclassified,1,0,0,,,True
+core\phase_b\ssr.py,Unclassified,16,0,0,,,True
+core\regime\classifier.py,Unclassified,79,0,0,,,True
+core\phase_c\alpha_generation\tests\test_alpha_generator.py,Phase D,28,0,0,,,True
+core\phase_c\alpha_generation\templates.py,Phase D,14,0,0,,,True
+core\regime\activation.py,Unclassified,47,0,0,,,True
+core\phase_c\alpha_generation\__init__.py,Phase D,1,0,0,,,True
+core\regime\health.py,Phase F,96,0,0,,,True
+core\regime\taxonomy.py,Unclassified,70,0,0,,,True
+core\regime\__init__.py,Unclassified,1,0,0,,,True
+core\regime\retirement.py,Unclassified,63,0,0,,,True
+core\regime\confidence.py,Unclassified,38,0,0,,,True
+core\regime\drift.py,Unclassified,55,0,0,,,True
+core\regime\tests\test_drift.py,Unclassified,60,0,0,,,True
+core\regime\signals.py,Phase D,127,0,0,,,True
+core\regime\tests\test_classifier_labels.py,Unclassified,31,0,0,,,True
+core\regime\tests\test_activation.py,Unclassified,52,0,0,,,True
+core\regime\tests\test_classifier.py,Unclassified,16,0,0,,,True
+core\regime\tests\test_health.py,Phase F,47,0,0,,,True
+core\regime\tests\test_confidence.py,Unclassified,66,0,0,,,True
+core\runtime\deterministic_context.py,Unclassified,20,0,0,,,True
+core\regime\tests\test_retirement.py,Unclassified,59,0,0,,,True
+core\runtime\run_registry.py,Unclassified,70,0,0,,,True
+core\regime\tests\test_signals.py,Phase D,50,0,0,,,True
+core\safety\kill_switch.py,Unclassified,76,0,0,,,True
+core\runtime\__init__.py,Unclassified,2,0,0,,,True
+core\runtime\run_context.py,Unclassified,12,0,0,,,True
+core\runtime\run_states.py,Unclassified,19,0,0,,,True
+core\safety\scopes.py,Unclassified,8,0,0,,,True
+core\regime\tests\test_taxonomy.py,Unclassified,12,0,0,,,True
+core\safety\__init__.py,Unclassified,2,0,0,,,True
+core\screening\decision.py,Unclassified,53,0,0,,,True
+core\screening\engine.py,Unclassified,165,0,0,,,True
+core\screening\rules.py,Unclassified,128,0,0,,,True
+core\screening\scorer.py,Unclassified,81,0,0,,,True
+core\screening\rule_types.py,Unclassified,8,0,0,,,True
+core\screening\models.py,Unclassified,97,0,0,,,True
+core\screening\result.py,Unclassified,20,0,0,,,True
+core\screening\snapshot.py,Unclassified,20,0,0,,,True
+core\screening\__init__.py,Unclassified,4,0,0,,,True
+core\screening\tests\test_pipeline.py,Unclassified,22,0,0,,,True
+core\screening\tests\test_decision.py,Unclassified,25,0,0,,,True
+core\screening\screener_engine.py,Unclassified,65,0,0,,,True
+core\screening\tests\test_rules.py,Unclassified,18,0,0,,,True
+core\screening\universe.py,Unclassified,22,0,0,,,True
+core\screening\pipeline.py,Unclassified,256,0,0,,,True
+core\screening\tests\test_rule_types.py,Unclassified,8,0,0,,,True
+core\screening\tests\__init__.py,Unclassified,2,0,0,,,True
+core\screening\tests\test_scorer.py,Unclassified,18,0,0,,,True
+core\state\system_state.py,Unclassified,30,0,0,,,True
+core\screening\tests\test_universe.py,Unclassified,12,0,0,,,True
+core\state\state_registry.py,Unclassified,62,0,0,,,True
+core\strategy\kill_switch.py,Phase D,20,0,0,,,True
+core\strategy\strategy_loader.py,Phase D,28,0,0,,,True
+core\state\guards.py,Unclassified,25,0,0,,,True
+core\strategy\strategy_state.py,Phase D,14,0,0,,,True
+core\strategy\strategy_metadata.py,Phase C,133,0,0,,,True
+core\strategy_factory\diversity_filter.py,Phase D,25,0,0,,,True
+core\strategy\strategy_registry.py,Phase D,55,0,0,,,True
+core\strategy_factory\dna.py,Phase D,20,0,0,,,True
+core\strategy\strategy_validator.py,Phase D,28,0,0,,,True
+core\strategy_factory\exceptions.py,Phase D,16,0,0,,,True
+core\strategy_factory\elite_intraday_rules.py,Phase D,27,0,0,,,True
+core\strategy_factory\factory_registry.py,Phase D,27,0,0,,,True
+core\strategy_factory\parameter_sampler.py,Phase D,26,0,0,,,True
+core\strategy_factory\probability_map.py,Phase D,31,0,0,,,True
+core\strategy_factory\factory_pipeline.py,Phase D,28,0,0,,,True
+core\strategy_factory\lifecycle.py,Phase D,25,0,0,,,True
+core\strategy_factory\registry.py,Phase D,120,0,0,,,True
+core\strategy_factory\probability_layers.py,Phase D,41,0,0,,,True
+core\strategy_factory\spec.py,Phase D,44,0,0,,,True
+core\strategy_factory\strategy_generator.py,Phase D,51,0,0,,,True
+core\strategy_factory\strategy_candidate.py,Phase D,19,0,0,,,True
+core\strategy_factory\strategy_emitter.py,Phase D,40,0,0,,,True
+core\strategy_factory\strategy_spec.py,Phase D,19,0,0,,,True
+core\strategy_factory\symbol_context_contract.py,Phase D,28,0,0,,,True
+core\strategy_factory\tests\test_strategy_dna.py,Phase D,15,0,0,,,True
+core\strategy_factory\strategy_ranker.py,Phase D,19,0,0,,,True
+core\strategy_factory\tests\test_strategy_lifecycle.py,Phase D,28,0,0,,,True
+core\strategy_intake\models.py,Phase D,21,0,0,,,True
+core\strategy_factory\strategy_templates.py,Phase D,17,0,0,,,True
+core\strategy_intake\__init__.py,Phase D,1,0,0,,,True
+core\strategy_intake\intake.py,Phase D,36,0,0,,,True
+core\strategy_intake\builder.py,Phase D,72,0,0,,,True
+core\strategy_factory\tests\test_strategy_execution_guard.py,Phase B,11,0,0,,,True
+core\strategy_intake\tests\test_intake_to_factory.py,Phase D,20,0,0,,,True
+core\strategy_intake\tests\test_builder.py,Phase D,31,0,0,,,True
+core\strategy_factory\tests\test_strategy_spec.py,Phase D,23,0,0,,,True
+core\strategy_factory\tests\test_strategy_registry.py,Phase D,32,0,0,,,True
+core\telemetry\emitter.py,Unclassified,20,0,0,,,True
+core\telemetry\event.py,Unclassified,48,0,0,,,True
+core\telemetry\sink.py,Unclassified,11,0,0,,,True
+core\telemetry\types.py,Unclassified,21,0,0,,,True
+core\telemetry\metrics_history_store.py,Phase C,53,0,0,,,True
+core\strategy_intake\gates.py,Phase D,20,0,0,,,True
+core\strategy_intake\tests\__init__.py,Phase D,1,0,0,,,True
+core\telemetry\__init__.py,Unclassified,1,0,0,,,True
+core\telemetry\metrics_snapshot.py,Unclassified,50,0,0,,,True
+core\telemetry\sinks\null.py,Unclassified,8,0,0,,,True
+core\telemetry\sinks\__init__.py,Unclassified,1,0,0,,,True
+core\tests\test_capital_allocator.py,Unclassified,273,0,0,,,True
+core\telemetry\sinks\console.py,Unclassified,10,0,0,,,True
+core\tests\screening_tests\test_screening_pipeline_core.py,Unclassified,20,0,0,,,True
+core\tests\screening_tests\test_models.py,Unclassified,7,0,0,,,True
+core\tests\screening_tests\test_screening_engine_core.py,Unclassified,17,0,0,,,True
+core\telemetry\sinks\jsonl.py,Unclassified,17,0,0,,,True
+core\tests\screening_tests\__init__.py,Unclassified,1,0,0,,,True
+core\tests\screening_tests\test_screening_rules_core.py,Unclassified,22,0,0,,,True
+core\tests\watchlist\test_watchlist_models.py,Unclassified,7,0,0,,,True
+core\tests\watchlist\test_watchlist_builder_e2e.py,Unclassified,14,0,0,,,True
+core\tests\watchlist\test_watchlist_scorer.py,Unclassified,8,0,0,,,True
+core\tests\watchlist\test_watchlist_persistence.py,Unclassified,16,0,0,,,True
+core\tests\watchlist\test_watchlist_snapshot.py,Unclassified,12,0,0,,,True
+core\tests\watchlist\test_watchlist_builder_core.py,Unclassified,14,0,0,,,True
+core\tests\watchlist\test_watchlist_persistence_core.py,Unclassified,14,0,0,,,True
+core\tests\watchlist\__init__.py,Unclassified,1,0,0,,,True
+core\tournament\governance_contracts.py,Unclassified,30,0,0,,,True
+core\tournament\live_candidate_store.py,Phase C,53,0,0,,,True
+core\tournament\governance_store.py,Phase C,54,0,0,,,True
+core\tournament\live_governance_contracts.py,Unclassified,28,0,0,,,True
+core\tournament\live_governance_gate.py,Unclassified,39,0,0,,,True
+core\tournament\live_candidate_artifact.py,Unclassified,20,0,0,,,True
+core\tournament\live_promotion_runner.py,Unclassified,17,0,0,,,True
+core\tournament\governance_gate.py,Unclassified,35,0,0,,,True
+core\tournament\live_promotion_gate.py,Unclassified,53,0,0,,,True
+core\tournament\live_governance_store.py,Phase C,51,0,0,,,True
+core\tournament\metrics_builder.py,Unclassified,84,0,0,,,True
+core\tournament\live_promotion_persister.py,Unclassified,38,0,0,,,True
+core\tournament\metrics_contract.py,Unclassified,58,0,0,,,True
+core\tournament\metrics_schema.py,Unclassified,28,0,0,,,True
+core\tournament\live_promotion_contracts.py,Unclassified,20,0,0,,,True
+core\tournament\paper_store.py,Phase C,64,0,0,,,True
+core\tournament\paper_contracts.py,Unclassified,36,0,0,,,True
+core\tournament\promotion_artifact.py,Unclassified,27,0,0,,,True
+core\tournament\promotion_runner.py,Unclassified,27,0,0,,,True
+core\tournament\paper_metrics.py,Unclassified,54,0,0,,,True
+core\tournament\promotion_contracts.py,Unclassified,20,0,0,,,True
+core\tournament\promotion_schema.py,Unclassified,15,0,0,,,True
+core\tournament\promotion_store.py,Phase C,59,0,0,,,True
+core\tournament\tournament_engine.py,Unclassified,37,0,0,,,True
+core\tournament\promotion_gate.py,Unclassified,52,0,0,,,True
+core\tournament\tournament_promoter.py,Unclassified,33,0,0,,,True
+core\tournament\promotion_persister.py,Unclassified,47,0,0,,,True
+core\tournament\tournament_runner.py,Unclassified,31,0,0,,,True
+core\watchlist\builder.py,Unclassified,220,0,0,,,True
+core\tournament\tournament_metrics.py,Unclassified,168,0,0,,,True
+core\tournament\tournament_store.py,Phase C,32,0,0,,,True
+core\watchlist\manager.py,Unclassified,33,0,0,,,True
+core\watchlist\models.py,Unclassified,33,0,0,,,True
+core\watchlist\persistence.py,Unclassified,72,0,0,,,True
+core\watchlist\filters.py,Unclassified,57,0,0,,,True
+core\watchlist\ranker.py,Unclassified,14,0,0,,,True
+core\watchlist\watchlist_builder.py,Unclassified,54,0,0,,,True
+core\watchlist\watchlist_loader.py,Unclassified,27,0,0,,,True
+core\watchlist\watchlist_store.py,Phase C,57,0,0,,,True
+core\watchlist\snapshot.py,Unclassified,40,0,0,,,True
+core\watchlist\__init__.py,Unclassified,38,0,0,,,True
+core\watchlist\scorer.py,Unclassified,19,0,0,,,True
+core\watchlist\watchlist_builder_legacy.py,Unclassified,19,0,0,,,True
+core\watchlist\tests\test_builder.py,Unclassified,29,0,0,,,True
+core\watchlist\tests\test_watchlist_builder.py,Unclassified,38,0,0,,,True
+core\watchlist\tests\test_filters.py,Unclassified,33,0,0,,,True
+core\watchlist\tests\test_ranker.py,Unclassified,17,0,0,,,True
+dashboard\app.py,Unclassified,175,0,0,,,True
+dashboard\streamlit_dashboard.py,Unclassified,48,0,0,,,True
+dashboard\watchlist_trigger_ui.py,Unclassified,18,0,0,,,True
+core\watchlist\tests\__init__.py,Unclassified,2,0,0,,,True
+dashboard\__init__.py,Unclassified,1,0,0,,,True
+data\dhan_fetcher.py,Phase C,19,0,0,,,True
+dashboard\watchlist_ui.py,Unclassified,49,0,0,,,True
+data\cleaner.py,Phase C,9,0,0,,,True
+data\idempotency.py,Phase C,179,0,0,,,True
+data\feature_store.py,Phase C,458,0,0,,,True
+data\drift_detector.py,Phase C,43,0,0,,,True
+data\dispatcher.py,Phase C,276,0,0,,background_task,True
+data\ingestion.py,Phase C,45,0,0,,,True
+data\indicators.py,Phase C,123,0,0,,,True
+data\sanitization.py,Phase C,93,0,0,,,True
+data\ohlcv_store.py,Phase C,365,0,0,,,True
+data\models.py,Phase C,59,0,0,,,True
+data\registry.py,Phase C,74,0,0,,,True
+data\strategy.py,Phase C,55,0,0,,,True
+data\universe_loader.py,Phase C,31,0,0,,,True
+data\schema_validator.py,Phase C,7,0,0,,,True
+data\ohlcv.py,Phase C,76,0,0,,,True
+data\validators.py,Phase C,16,0,0,,,True
+data\tick_store.py,Phase C,734,0,0,,infinite_loop,True
+data\watchlist_builder.py,Phase C,53,0,0,,,True
+data\execution\reconciler.py,Phase B,28,0,0,,,True
+data\execution\state.py,Phase B,11,0,0,,,True
+data\execution\intent.py,Phase B,75,0,0,,,True
+data\__init__.py,Phase C,24,0,0,,,True
+data\execution\__init__.py,Phase B,26,0,0,,,True
+data\execution\errors.py,Phase B,13,0,0,,,True
+data\execution\store.py,Phase B,68,0,0,,,True
+data\features\definitions.py,Phase C,70,0,0,,,True
+data\execution\executor.py,Phase B,21,0,0,,,True
+data\features\errors.py,Phase C,22,0,0,,,True

@@ -1,0 +1,32 @@
+router:
+  policy:
+    type: default
+    slice_max_qty: 500
+    mkt_price_band_bps: 50
+risk:
+  max_risk_pct_per_trade: 0.01
+  max_position_size_pct: 0.10
+  max_loss_per_trade: 10000
+  max_open_trades: 10
+  max_drawdown_pct: 5.0     # circuit breaker at -5% equity drawdown
+  min_equity_buffer: 100000
+  heartbeat_interval: 60
+  max_gross_exposure: 1.0
+  max_symbol_weight: 0.25
+  max_order_notional: 250000
+  price_band_bps: 75
+  daily_loss_limit: 0.02
+  max_open_orders: 100
+  reset_hour: 6   # <-- Reset PnL counter daily at 6:00 AM
+starting_cash: 1000000
+
+ops:
+  kill_switch_file: run/kill.switch
+
+brokers:
+  live:
+    type: dhan
+    api_key: ${DHAN_API_KEY}
+    secret: ${DHAN_API_SECRET}
+    base_url: https://api.dhan.co/
+mode: dry_run   # dry_run | canary | live

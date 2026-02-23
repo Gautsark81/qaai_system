@@ -1,0 +1,26 @@
+from core.strategy_factory.promotion.gating.tiny_live_gate import (
+    TinyLiveGate,
+)
+from core.strategy_factory.promotion.eligibility import (
+    PromotionEligibilityEvaluator,
+)
+from core.strategy_factory.promotion.state_machine.promotion_state import (
+    PromotionState,
+)
+
+
+def test_paper_strategy_can_pass_tiny_live_gate():
+    eligibility = PromotionEligibilityEvaluator(ssr_threshold=0.8)
+    decision = eligibility.evaluate("STRAT_OK", ssr=0.9)
+
+    gate = TinyLiveGate()
+
+    result = gate.evaluate(
+        strategy_id="STRAT_OK",
+        current_state=PromotionState.PAPER,
+        promotion_decision=decision,
+        paper_trades=120,
+        paper_drawdown=0.04,
+    )
+
+    assert result.allowed is True

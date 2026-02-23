@@ -1,0 +1,2 @@
+GRAMMAR_VERSION = "10.1"
+grammar_version = GRAMMAR_VERSION

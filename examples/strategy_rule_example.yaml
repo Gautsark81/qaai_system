@@ -1,0 +1,26 @@
+# Example rule-based strategy configuration
+
+aggregation: priority
+
+rules:
+  high_momentum:
+    op: ">"
+    col: "close_z"
+    val: 1.0
+
+  low_vol:
+    op: "<"
+    col: "volume"
+    val: 100000
+
+  entry:
+    and: ["high_momentum", "low_vol"]
+
+signals:
+  buy:
+    rule: "entry"
+    value: 1
+    priority: 10
+
+default_size: 1.0
+max_history: 50

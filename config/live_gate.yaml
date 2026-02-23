@@ -1,0 +1,5 @@
+approved_for_live: false
+max_symbols: 1
+max_capital_pct: 0.02
+force_eod_flatten: true
+kill_switch_enabled: true

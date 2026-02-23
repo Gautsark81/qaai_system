@@ -1,0 +1,23 @@
+version: v1
+
+# --- Missing data ---
+missing_warn: 0.02
+missing_bad: 0.10
+
+# --- Stale data ---
+stale_warn: 0.01
+stale_bad: 0.05
+
+# --- Outliers ---
+outlier_warn: 0.02
+outlier_bad: 0.08
+
+# --- Clock skew (ms) ---
+clock_skew_warn_ms: 500
+clock_skew_bad_ms: 2000
+
+# --- Provider reliability ---
+provider_errors_bad: 3
+
+# --- Governance ---
+fail_score_cap: 0.25

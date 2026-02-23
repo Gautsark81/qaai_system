@@ -1,0 +1,14 @@
+version: v1
+
+# --- History window ---
+history_window: 10
+
+# --- Mismatch ---
+mismatch_ratio_bad: 0.5   # ≥50% of recent window mismatched → FAIL
+
+# --- Instability ---
+instability_warn: 3       # number of distinct regimes
+instability_bad: 5
+
+# --- Governance ---
+fail_score_cap: 0.25

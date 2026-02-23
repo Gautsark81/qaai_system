@@ -1,0 +1,70 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtualenv
+venv/
+env/
+.venv/
+pip-selfcheck.json
+
+# Python tooling
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Data / models / artifacts
+*.db
+*.sqlite
+*.sqlite3
+*.parquet
+*.h5
+*.pth
+*.pt
+*.pkl
+/models/
+data/
+artifacts/
+*.tar.gz
+*.zip
+
+# Logs & temp
+logs/
+*.log
+tmp/
+temp/
+
+# Project audit artifacts
+project_audit.json
+status_report.md
+todo_backlog.csv
+phase_audit_report.csv
+phase_summary.csv
+repo_scan.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# ENV FILES (very important)
+.env
+.env.local
+*.env
+
+# App secrets / credentials
+secrets/

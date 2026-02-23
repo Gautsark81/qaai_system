@@ -1,0 +1,607 @@
+SUPER-MASTER BLUEPRINT — EXTENDED (Merged: 5 Core Upgrade Objectives)
+
+This document extends and merges your existing SUPER-MASTER BLUEPRINT with the 5 Core Upgrade Objectives you just provided (Intelligence Layer, Modular Infrastructure, Event-Aware Engine, Performance Intelligence Dashboard, Self-Regulating Governance). It maps features to concrete modules/files, provides function signatures and logic notes, acceptance criteria, tests to add, metrics & observability hooks, and a prioritized next-step issue list you can paste into GitHub.
+
+Intended output: drop-in roadmap + file→task mapping + ready-to-implement function interfaces to integrate into your repo.
+
+1 — Summary of what's being merged
+
+You asked: add advanced logic for:
+
+Intelligence Layer — AI ranking optimizer, signal-scoring ML, auto strategy tuning, behavioral toggles.
+
+Modular Infrastructure — microservices per asset class, signal bus, live watchlist, hot-swap.
+
+Event-Aware Trading Engine — economic calendar, news sentiment, volatility-aware sizing.
+
+Performance Intelligence Dashboard — per-asset class breakdown, toggle logs, scenario replay.
+
+Self-Regulating Governance — trade throttling, cooldowns, max-correlation blocking, rule engine.
+
+All five are compatible with the existing SUPER-MASTER BLUEPRINT and are now merged in. Below is the integrated blueprint and implementation plan.
+
+2 — High-level design additions (where they fit)
+
+These items map to existing blueprint phases and modules.
+
+intelligence/ — Intelligence Layer
+
+intelligence/ranker.py — AI Ranking Optimizer (RL-driven)
+
+intelligence/signal_scorer.py — Signal Scoring AI (XGBoost/LightGBM classifier)
+
+intelligence/tuner.py — Auto Strategy Tuning (Optuna / GA)
+
+intelligence/toggle_assistant.py — Behavioral Toggle Assistant (policy recommender)
+
+infra/ — Modular infra & signal bus
+
+infra/signal_bus.py — Unified Signal Bus (Kafka/async queue wrapper)
+
+infra/asset_microservice.py — template for per-asset-class microservice
+
+infra/watchlist_service.py — Live watchlist object + streaming API (FastAPI)
+
+infra/hot_swap.py — Strategy hot-swap utilities (load/unload modules)
+
+events/ — Event-aware engine
+
+events/calendar.py — Economic calendar ingest + scheduler
+
+events/sentiment.py — News / Twitter sentiment pipeline (FinBERT wrapper)
+
+events/vol_model.py — Volatility sources (VIX, ATR, implied vol) + expected vol estimator
+
+ui/ — Performance Intelligence Dashboard & admin
+
+ui/dashboard.py — Streamlit/Grafana overlay hooks
+
+ui/replay.py — Scenario replay & toggles replay engine
+
+ui/toggle_history.py — Toggle audit UI + logs viewer
+
+governance/ — Self-regulating governance
+
+governance/rule_engine.py — Custom rule engine & DSL
+
+governance/throttle.py — Trade throttling + cooldown manager
+
+governance/correlation.py — correlation exposure monitor
+
+Integrations (existing modules)
+
+execution/portfolio_manager.py — extended to consult intelligence/toggler and governance prior to netting.
+
+learning/meta_controller.py — modified to accept ranker recommendations and update strategy weights.
+
+features/feature_store.py — extended to store signal-scoring features and toggle snapshots.
+
+3 — Key functions & interfaces (ready-to-implement)
+
+Below are canonical function signatures and short logic comments. Use these as drop-in stubs.
+
+intelligence/ranker.py
+class AIRanker:
+    def __init__(self, model_store, replay_buffer, meta_controller):
+        """
+        model_store: persistence (MLFlow / W&B)
+        replay_buffer: streaming data source for RL updates
+        meta_controller: interface to update weights
+        """
+    def suggest_weights(self, context) -> Dict[str, float]:
+        """
+        context: {regime, vol, liquidity, recent_pnl}
+        returns: {strategy_id: weight}
+        Use RL policy (PPO/TD3) or bandit (LinUCB) to produce weights.
+        """
+    def train_step(self, batch):
+        """Train policy using reward = risk-adjusted PnL from sandbox runs."""
+
+intelligence/signal_scorer.py
+class SignalScorer:
+    def __init__(self, model_path):
+        # model: XGBoost classifier or LightGBM returning probability of profitable trade
+    def score(self, signal_features: dict) -> float:
+        """Return probability 0..1. Used by Portfolio Manager to gate low-prob signals."""
+    def backtest_score(self, historical_signals) -> dict:
+        """Compute hit_rate, profit_factor for model calibration and reporting."""
+
+intelligence/tuner.py
+def auto_tune_strategy(strategy_id: str, param_space: dict, objective: Callable, method="optuna", budget=50):
+    """
+    Run hyperparameter tuning via Optuna or GA.
+    objective: function that runs backtest & returns scalar (risk-adjusted return)
+    on completion: register best candidate in infra/model_registry
+    """
+
+intelligence/toggle_assistant.py
+class ToggleAssistant:
+    def recommend(self, context) -> Dict[str,Any]:
+        """
+        Decide per-asset-class toggles: enable/disable, notional caps, cooldown.
+        context includes volatility, news_sentiment, recent drawdown.
+        """
+
+infra/signal_bus.py
+class SignalBus:
+    def __init__(self, backend="kafka", topic_prefix="signals"):
+    def publish(self, topic, payload): ...
+    def subscribe(self, topic, handler): ...
+
+infra/hot_swap.py
+def hot_swap_strategy(module_path: str, strategy_id: str) -> bool:
+    """
+    Atomically replace strategy code in a microservice; 
+    ensure dependencies & compatibility tests pass, then swap.
+    """
+
+events/sentiment.py
+class SentimentEngine:
+    def score_news(self, asset: str, text: str) -> float:
+        """Return -1..1 sentiment. Use FinBERT or similar."""
+    def aggregate_for_asset(self, asset: str, window_sec:int=3600) -> dict:
+        """Return aggregated sentiment & volume-weighted score."""
+
+governance/rule_engine.py
+class RuleEngine:
+    def __init__(self):
+        # support rules represented as JSON or DSL
+    def evaluate(self, event: dict) -> List[dict]:
+        """Return list of actions (block, throttle, cooldown) for this event."""
+    def load_rules(self, rules_json): ...
+
+4 — Where the logic plugs into flow (sequence)
+
+Signal generation (Indicator + ML) produces signals; Signal objects are published to SignalBus.
+
+SignalScorer.score() is called by the signal consumer (in asset microservice) — signals with score < threshold are filtered or reduced in size.
+
+AIRanker.suggest_weights(context) runs periodically (and on regime change) to update meta_controller weights; these influence PortfolioManager.net_orders.
+
+ToggleAssistant.recommend() outputs per-asset toggles; governance.RuleEngine.evaluate() enforces them (blocks, cooldowns). Toggle changes are logged to ui/toggle_history and are visible in dashboard.
+
+PortfolioManager calls governance and intelligence APIs before finalizing net plan.
+
+Execution Engine receives plans, slices via VWAP/iceberg, reserves margin; governance/throttle enforces trade rate.
+
+Monitoring collects metrics including toggle_changes_total, signal_score_histogram, ranker_recommendations, rule_engine_blocked_orders.
+
+5 — Acceptance Criteria (per objective)
+1. Intelligence Layer
+
+Acceptance
+
+SignalScorer achieves better-than-baseline hit rate on historical split by ≥ X% (define X per asset class).
+
+AIRanker policies change strategy weights and sandbox runs show improved risk-adjusted returns vs static weights.
+
+auto_tune_strategy() registers top candidate in model_registry and tracks via MLFlow.
+
+Tests
+
+Unit tests: scorer returns probabilities for varied feature inputs.
+
+Integration: run offline tuning for a sample strategy, ensure outcome persisted.
+
+2. Modular Infrastructure
+
+Acceptance
+
+One asset-class microservice (e.g., stocks) runs independently and can be hot-swapped without global downtime.
+
+SignalBus supports publish/subscribe and persists messages to Kafka/Redis.
+
+Tests
+
+Smoke test microservice start/stop and signal flow through SignalBus.
+
+Hot-swap unit test: load new module and verify safety checks.
+
+3. Event-Aware Engine
+
+Acceptance
+
+Economic calendar events cause automatic toggle changes (e.g., reduce notional before event) per rules engine.
+
+Sentiment scoring influences watchlist ranking in pre-market cron.
+
+Tests
+
+Inject synthetic calendar event; assert toggles applied.
+
+Feed sample news tweets; sentiment aggregation changes ranking.
+
+4. Performance Dashboard
+
+Acceptance
+
+Streamlit panel displays per-asset class PnL, win rate, live toggle history.
+
+Replay engine can run an historical window and toggle on/off strategies and produce alternate PnL curves.
+
+Tests
+
+Replay unit tests: given trades & toggles, replay returns deterministic alt-PnL.
+
+5. Governance Layer
+
+Acceptance
+
+Rule examples enforced: blocking crypto trades on weekends; no options trades post-3PM.
+
+Trade throttling prevents >N trades per symbol when recent loss rate > threshold.
+
+Tests
+
+Unit tests for rule engine: evaluate rule JSON and check actions returned.
+
+Throttling sim: inject many orders and assert excess orders are rejected/throttled.
+
+6 — File → Task mapping (copy/paste issue templates)
+Issue: Add AI Ranking Optimizer
+
+Files: intelligence/ranker.py, learning/meta_controller.py, tests/test_ranker.py
+Tasks: Implement RL policy skeleton, integrate with meta_controller, add sandbox test harness.
+Acceptance: ranker updates weights and sandbox run shows non-negative improvement.
+
+Issue: Implement Signal Scoring
+
+Files: intelligence/signal_scorer.py, features/feature_store.py, tests/test_signal_scorer.py
+Tasks: Train baseline XGBoost, scoring API, store score in feature store.
+Acceptance: scorer returns probability and improves gating.
+
+Issue: Microservice Template & Signal Bus
+
+Files: infra/asset_microservice.py, infra/signal_bus.py, infra/watchlist_service.py
+Tasks: Build FastAPI microservice template, signal bus wrapper (Kafka/Redis), publish/subscribe example.
+Acceptance: microservice publishes signals to SignalBus and another service consumes them.
+
+Issue: Event Engine & Sentiment
+
+Files: events/calendar.py, events/sentiment.py, events/vol_model.py
+Tasks: Implement calendar ingestion, sentiment scoring wrapper (stubbed), vol estimator.
+Acceptance: Injected calendar event modifies watchlist/toggles; sentiment API returns scores.
+
+Issue: Governance Rule Engine + Throttling
+
+Files: governance/rule_engine.py, governance/throttle.py, governance/correlation.py
+Tasks: DSL for rules, throttle & cooldown manager, correlation monitor.
+Acceptance: sample rules enforced; throttle blocks extra trades.
+
+7 — Recommended metrics & logs to add
+
+signal_score_{asset}_histogram (producer)
+
+ranker_weight_updates_total
+
+toggle_changes_total with labels {asset_class, reason}
+
+rule_engine_blocked_total with labels {rule_id, asset_class}
+
+throttle_events_total
+
+replay_runs_total and replay_alternate_pnl_delta
+
+Audit log per decision:
+
+{
+  "trace_id": "...",
+  "timestamp": 123456.789,
+  "event_type": "net_plan_decision",
+  "plan": {...},
+  "signal_scores": {...},
+  "ranker_weights": {...},
+  "governance_actions": [...],
+  "feature_snapshot": {...}
+}
+
+8 — Data-flow diagram (text + expanded)
+Market Feeds -> Ingestion -> Raw Tick Stream (Kafka/WS)
+                 └-> Data Enrichment -> FeatureGen -> Feature Store (TimescaleDB)
+                                └-> Signal Engines (Indicator + ML) -> SignalBus
+SignalBus -> Asset Microservice(s) -> SignalScorer -> Governance RuleEngine
+              |                         |              |
+              v                         v              v
+         AIRanker updates weights -> Portfolio Manager <- ToggleAssistant
+                                       | 
+                                       v
+                                Execution Engine (VWAP,Slice)
+                                       |
+                                       v
+                                   Dhan API
+                                       |
+                                       v
+                   Monitoring / PnL / Replay / Compliance Archive
+
+9 — Implementation priorities (first 6-week plan)
+
+Week 1–2
+
+Implement infra/signal_bus.py wrapper (Kafka/Redis) + simple FastAPI microservice template infra/asset_microservice.py.
+
+Implement intelligence/signal_scorer.py baseline (train simple XGBoost on small historical sample).
+
+Week 3
+
+Add governance/rule_engine.py skeleton + a few rules (crypto weekends, options post-3pm).
+
+Wire scorer + rule engine into execution/portfolio_manager.py’s pre-net hook.
+
+Week 4
+
+Build events/calendar.py + events/sentiment.py (stubbed sentiment scoring), hook into watchlist service to influence toggles.
+
+Week 5
+
+Implement intelligence/ranker.py bandit/linUCB version (simpler than full RL) and integrate with meta_controller.
+
+Add ui/toggle_history.py and minimal Streamlit view for toggles + per-asset PnL.
+
+Week 6
+
+Add tests for throttle, correlation check, and scorer integration. Do sandbox run to validate gating & toggle behaviors.
+
+10 — Example small patches I can produce now (pick one)
+
+I can produce ready-to-drop code for any one of these right now in this chat:
+
+intelligence/signal_scorer.py + unit tests (train/score skeleton).
+
+governance/rule_engine.py + sample rule DSL + tests.
+
+infra/signal_bus.py (Kafka + fallback Redis) wrapper & sample publish/subscribe example.
+
+infra/watchlist_service.py minimal FastAPI streaming endpoint.
+
+intelligence/ranker.py bandit / LinUCB implementation + tests.
+
+Tell me which one and I will output the full code and tests in this chat — ready to paste into your repo.
+
+11 — Final notes & guidance
+
+All modules above assume you will persist features, models, toggle history, and decisions (recommended: TimescaleDB/Postgres + S3 for artifacts and MLFlow for models).
+
+Start small: implement scorer + rule engine + signal bus; they provide the largest leverage and safety.
+
+Use the hot_swap utilities to test safe replacement of strategy modules in sandbox before canary promotion.
+
+Instrument metrics early: it's much easier to tune once you can observe signal_score and rule-engine blocks.
+
+
+
+
+
+
+
+
+
+***************************************************************************************************************************************
+
+
+Here’s your final merged file — save it as SUPER-MASTER BLUEPRINT.md at the root of your repo.
+It unifies:
+
+Your MASTER UPGRADE OBJECTIVES (neuro-adaptive, self-healing, safety).
+
+Infra+ML stack upgrades (Kafka, PPO, XGBoost, ELK, K8s).
+
+Strategic/UX/Tech upgrades (asset segmentation, dynamic toggles, replay, dashboards).
+
+Full data flow diagram + phased roadmap.
+
+SUPER-MASTER BLUEPRINT.md
+
+From Paper → Safe Live Trading → Neuro-Adaptive, Asset-Segmented, Cloud-Native Algo Trading System
+
+A. Executive Summary
+
+Current repo status (from status_report.md): 62.2% score, 74% test coverage.
+
+Completed: backtester core, CLI, basic strategies, risk metrics.
+
+In-progress: Dhan adapter sandbox, partial risk manager, bracket stubs.
+
+Pending: order persistence, reconciliation, ML engines, CI/CD.
+
+🎯 Objective: Evolve into a multi-asset, toggle-controlled, neuro-adaptive, self-upgrading system with full observability, compliance, and cloud-native deployment.
+
+B. Data Flow
+        ┌───────────────┐
+        │ Market Feeds  │  (Stocks, Options, Futures, FX, Crypto)
+        └───────┬───────┘
+                ▼
+ ┌────────────────────────┐
+ │ Ingestion Layer        │ (Kafka/WS, Tick Handlers, Event Feeds)
+ │ + Drift/Anomaly Det.   │
+ └─────────┬──────────────┘
+           ▼
+ ┌────────────────────────┐
+ │ Feature Store &        │
+ │ Asset-Specific Pipelines│
+ │ - Stocks: RSI/MACD/Vol │
+ │ - Options: Greeks, IV  │
+ │ - Futures: Yield Curve │
+ │ - Crypto: On-chain     │
+ └─────────┬──────────────┘
+           ▼
+ ┌────────────────────────┐
+ │ Watchlist Engine       │
+ │ - Dynamic Rebalancing  │
+ │ - Stability Rules      │
+ │ - Event Prioritization │
+ │ - Manual Overrides     │
+ │ - Toggle Logger        │
+ └─────────┬──────────────┘
+           ▼
+ ┌────────────────────────┐
+ │ ML & Signal Fusion     │
+ │ - Indicators (RSI/MACD)│
+ │ - XGBoost Ranking      │
+ │ - PPO RL Agent         │
+ │ - Ensemble Meta-Learn  │
+ │ - Auto Toggles (VIX)   │
+ └─────────┬──────────────┘
+           ▼
+ ┌────────────────────────┐
+ │ Portfolio Manager      │
+ │ - Ownership per segment│
+ │ - Allocation caps      │
+ │ - Netting & Margin     │
+ │ - Bracket integration  │
+ └─────────┬──────────────┘
+           ▼
+ ┌────────────────────────┐
+ │ Execution Engine       │
+ │ - VWAP/Iceberg Orders  │
+ │ - ATR/Fibonacci Stops  │
+ │ - TSL, Retry, Fallback │
+ │ - Time-window trading  │
+ └─────────┬──────────────┘
+           ▼
+     ┌───────────────┐
+     │ Dhan API      │ (Sandbox/Live)
+     └───────┬───────┘
+             ▼
+ ┌────────────────────────┐      ┌────────────────────────┐
+ │ Monitoring & Dashboards│      │ Compliance & Audit     │
+ │ - Grafana, Streamlit   │      │ - JSON + PostgreSQL    │
+ │ - PnL per asset class  │      │ - SHAP Explainability  │
+ │ - Alerts (Telegram)    │      │ - IPFS Archive, Toggles│
+ └────────────────────────┘      └────────────────────────┘
+
+C. Phase-by-Phase Roadmap
+Phase 0 — Prepare & Hardening
+
+Fix failing tests, update .env.example.
+
+Hybrid storage baseline: PostgreSQL + Redis + S3.
+
+Implement asset subdivision taxonomy (sector, option type, futures/FX/crypto classes).
+
+Add anomaly & drift detectors.
+
+Phase 1 — Execution & Safety
+
+Risk Manager: kill switch, drawdown-sensitive limits, capital-preserving logic.
+
+Portfolio Manager: ownership per asset class/segment, per-segment caps.
+
+Execution Engine: VWAP slicing, iceberg orders, ATR/Fibonacci stops, TSL.
+
+Self-healing failover: reconcile after API downtime.
+
+Phase 2 — Observability & Reconciliation
+
+Metrics per asset class (PnL, win rate, hit rate).
+
+Dashboards: asset-specific panels, anomaly heatmaps.
+
+Toggle History Logger (auto/manual changes).
+
+Compliance: SHAP logs, immutable audit (IPFS).
+
+Alerts: Slack/Telegram for watchlist/toggle changes, blocked signals.
+
+Phase 3 — Candidate Promotion & ML Loop
+
+ML Registry: track models per asset class/segment.
+
+Custom signal filters: RSI/MACD (stocks), Greeks (options), yield curve (futures), on-chain (crypto).
+
+ML: XGBoost nightly ranker, PPO RL timing agent.
+
+Online buffer: drift detection + continuous refits.
+
+Auto-toggles: enable/disable based on VIX, regime, time-of-day.
+
+Phase 4 — Meta-Learning & Self-Upgrading
+
+Meta-controller: ensemble weights per asset segment.
+
+AI-powered optimizer: suggest ON/OFF toggles.
+
+Self-adaptive rebalancing: tilt toward strong assets.
+
+Replay mode: backtest toggles historically.
+
+Event-driven prioritization: earnings, CPI, Fed, crypto forks.
+
+Phase 5 — Scale, Harden & Deploy
+
+Microservice per asset class (scalable, isolated).
+
+AWS EKS + Helm + GitHub Actions CI/CD.
+
+Cloud-based Strategy UI: toggle control, watchlists, backtests.
+
+Watchlist stability rules: minimum hold + cooldown.
+
+Priority scoring: assets ranked by volatility, momentum, volume.
+
+Failover redundancy: hot-standby workers, Redis queues.
+
+D. Strategic Control Features
+
+Manual overrides: force asset inclusion.
+
+Toggle history + performance impact logs.
+
+Alerts: assets moving in/out, blocked signals, risk cap breaches.
+
+E. AI-Enhanced Intelligence
+
+Meta-Learning Framework (learns how to learn).
+
+PPO reinforcement agents for entry/exit.
+
+Neuro-adaptive core evolving with regime shifts.
+
+Ensemble fusion: ML + RL + rule-based signals.
+
+F. Safety & Stability
+
+Drawdown-sensitive exposure control.
+
+Capital-preserving execution & hedging.
+
+Failover redundancy across microservices.
+
+Self-diagnostic subsystems with auto-recovery.
+
+G. Testing & Validation Matrix
+
+Unit tests: coverage closeout on execution/risk/portfolio.
+
+Integration: sandbox Dhan adapter, reconciliation tests.
+
+Stress: volatility spikes, API downtime, black swans.
+
+ML validation: candidate promotion w/ drift injection.
+
+Safety regression: kill-switch + drawdown tested daily.
+
+H. Next Immediate PRs
+
+execution/risk_manager.py — adaptive drawdown caps + unit tests.
+
+infra/dhan_adapter.py — sandbox-safe with retries + idempotency.
+
+db/orders.py — durable order persistence + reconciliation.
+
+features/feature_store.py — asset-segment snapshots.
+
+learning/updater.py — safe_promote() with auto-rollback.
+
+✨ With this SUPER-MASTER BLUEPRINT, your system is now:
+
+Multi-asset + segment aware (stocks, options, futures, FX, crypto).
+
+Toggle-controlled (auto + manual, logged).
+
+AI-powered (XGBoost, PPO, ensemble meta-learning).
+
+Self-upgrading (auto-tuning, self-healing, adaptive rebalancing).
+
+Cloud-native (microservices, AWS/K8s-ready).
+
+Compliance-grade (audits, explainability, immutable logs).

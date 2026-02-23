@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: live-dashboard
+  namespace: qaai
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: live-dashboard
+  template:
+    metadata:
+      labels:
+        app: live-dashboard
+    spec:
+      containers:
+        - name: live-dashboard
+          image: your-registry/qaai-live-dashboard:latest
+          command: ["uvicorn", "services.dashboard:app", "--host", "0.0.0.0", "--port", "8000"]
+          env:
+            - name: REDIS_URL
+              value: "redis://redis:6379"
+          ports:
+            - containerPort: 8000

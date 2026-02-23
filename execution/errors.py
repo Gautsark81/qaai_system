@@ -1,0 +1,2 @@
+class ExecutionModeError(RuntimeError):
+    pass
